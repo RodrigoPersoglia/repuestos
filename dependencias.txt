@@ -1,0 +1,1 @@
+el formato decimal debe estar en "." en vez de "," hay que cambiar la configuracion regional
