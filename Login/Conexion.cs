@@ -2380,16 +2380,61 @@ namespace Login
 
 
 
-		public static void AnulacionComprobante(int numero)
+		public static void AnulacionComprobante(int numero,string Usuario)
 		{
+			bool activa = true;
+			string comprobacion = "select activa from factura f where f.numero = " + numero;
 			string consulta = "update factura set activa = false where numero = " + numero;
+			string consulta2 = "select df.articulo_ID, df.cantidad from detallefactura df inner join factura f on df.factura_ID = f.id where f.numero = " + numero;
 			MySqlConnection conectar = Conexion.ObtenerConexion();
+			DataTable dt0 = new DataTable();
+			MySqlDataReader reader0;
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
 			conectar.Open();
 			try
 			{
-				MySqlCommand comand = new MySqlCommand(consulta, conectar);
-				comand.ExecuteNonQuery();
-				AutoClosingMessageBox.Show("Comprobante anulado correctamente", "Anulación de comprobantes", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+				MySqlCommand comand0 = new MySqlCommand(comprobacion, conectar);
+				reader0 = comand0.ExecuteReader();
+				dt0.Load(reader0);
+				foreach (DataRow x in dt0.Rows)
+				{
+                    if ((bool)x[0] == false)
+                    {
+						activa = false;
+                    }
+                    else { activa = true; }
+				}
+
+                if (activa)
+                {
+
+					if (Conexion.Validar(Usuario))
+					{
+
+						MySqlCommand comand = new MySqlCommand(consulta, conectar);
+						comand.ExecuteNonQuery();
+						MySqlCommand comand2 = new MySqlCommand(consulta2, conectar);
+						reader = comand2.ExecuteReader();
+						dt.Load(reader);
+
+						foreach (DataRow x in dt.Rows)
+						{
+							string consulta3 = "update articulo a set stockActual = stockActual + " + x[1].ToString() + " where id=" + x[0].ToString();
+							MySqlCommand comand3 = new MySqlCommand(consulta3, conectar);
+							comand3.ExecuteNonQuery();
+						}
+
+						AutoClosingMessageBox.Show("Comprobante anulado correctamente", "Anulación de comprobantes", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+
+					}
+					else { MessageBox.Show("Ingrese un usuario y contraseña válido"); }
+
+
+				}
+                else { AutoClosingMessageBox.Show("El comprobante ya se encuentra anulado", "Anulación de comprobantes", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600); }
+
+				
 			}
 			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 			finally { conectar.Close(); }
@@ -2438,6 +2483,141 @@ namespace Login
 			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return comprobante; }
 			finally { conectar.Close(); }
 
+		}
+
+
+		public static void AgregarPresupuesto(decimal subTotal, decimal iva, decimal total, int cliente_ID, string cliente, string direccion, string localidad, string cp, string usuario, DataTable detalleFactura, int medioPago)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand4 = new MySqlCommand("AgregarPresupuesto", conectar);
+				comand4.CommandType = CommandType.StoredProcedure;
+				comand4.Parameters.AddWithValue("@p1", DateTime.Now);
+				comand4.Parameters.AddWithValue("@p2", subTotal);
+				comand4.Parameters.AddWithValue("@p3", iva);
+				comand4.Parameters.AddWithValue("@p4", total);
+				comand4.Parameters.AddWithValue("@p5", cliente_ID);
+				comand4.Parameters.AddWithValue("@p6", cliente);
+				comand4.Parameters.AddWithValue("@p7", direccion);
+				comand4.Parameters.AddWithValue("@p8", localidad);
+				comand4.Parameters.AddWithValue("@p9", cp);
+				comand4.Parameters.AddWithValue("@p10", usuario);
+				comand4.Parameters.AddWithValue("@p11", medioPago);
+				comand4.ExecuteNonQuery();
+
+				foreach (DataRow x in detalleFactura.Rows)
+				{
+					MySqlCommand comand5 = new MySqlCommand("agregarDetallePresupuesto", conectar);
+					comand5.CommandType = CommandType.StoredProcedure;
+					comand5.Parameters.AddWithValue("@p1", x[1].ToString());
+					comand5.Parameters.AddWithValue("@p2", x[2].ToString());
+					comand5.Parameters.AddWithValue("@p3", int.Parse(x[3].ToString()));
+					comand5.Parameters.AddWithValue("@p4", decimal.Parse((x[4]).ToString()));
+					comand5.ExecuteNonQuery();
+				}
+
+
+				AutoClosingMessageBox.Show("Presupuesto Pr. nº " + GetUltimoPresupuesto().Numero.ToString() + " emitido correctamente", "Emisión de presupuestos", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+		public static Comprobante GetUltimoPresupuesto()
+		{
+			Comprobante comprobante = new Comprobante();
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "select * from presupuesto f order by f.ID desc limit 1";
+            try
+            {
+
+                MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
+
+				foreach (DataRow x in dt.Rows)
+				{
+
+					comprobante.ID = (int)x[0];
+					comprobante.Numero = (int)x[1];
+					comprobante.FechaHora = (DateTime)x[2];
+					comprobante.SubTotal = (decimal)x[3];
+					comprobante.Financiación = (decimal)x[4];
+					comprobante.Total = (decimal)x[5];
+					comprobante.ClienteID = (int)x[6];
+					comprobante.Cliente = (string)x[7];
+					comprobante.Direccion = (string)x[8];
+					comprobante.Localidad = (string)x[9];
+					comprobante.CP = (string)x[10];
+					comprobante.Usuario = (string)x[11];
+					comprobante.MedioPagoID = (int)x[12];
+				}
+				return comprobante;
+            }
+            catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return comprobante; }
+            finally { conectar.Close(); }
+
+        }
+
+
+		public static void ReestablecerContadores(string Usuario)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+
+					if (Conexion.Validar(Usuario))
+					{
+
+						MySqlCommand comand = new MySqlCommand("limpiarComprobantes", conectar);
+						comand.ExecuteNonQuery();
+						
+
+						AutoClosingMessageBox.Show("Se reestablecieron correctamente los contadores", "Reestablecer Comprobantes", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+
+					}
+					else { MessageBox.Show("Ingrese un usuario y contraseña válido"); }
+
+
+
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+		public static DataTable ObtenerReporteEmision(bool estado,DateTime fecha1, DateTime fecha2)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("verfacturas", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p0", estado);
+				comand.Parameters.AddWithValue("@p1", fecha1);
+				comand.Parameters.AddWithValue("@p2", fecha2);
+				MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+				adp.Fill(dt);
+				if (dt.Rows.Count > 0)
+				{
+
+					return dt;
+				}
+				else { MessageBox.Show("No hay registros en el intervalo seleccionado"); return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
 		}
 
 

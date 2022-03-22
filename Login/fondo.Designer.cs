@@ -38,6 +38,8 @@ namespace Login
             // 
             // Calendario
             // 
+            this.Calendario.BackColor = System.Drawing.SystemColors.Window;
+            this.Calendario.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Calendario.Location = new System.Drawing.Point(124, 141);
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 0;

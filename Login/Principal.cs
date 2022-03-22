@@ -999,5 +999,82 @@ namespace Login
 			}
 
 		}
+
+        private void emisiónPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is EmisionPresupuesto)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				EmisionPresupuesto ventana = new EmisionPresupuesto(usuario);
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+        private void ponerContadoresEnCeroToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is RestablecerContadores)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				RestablecerContadores ventana = new RestablecerContadores(usuario);
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+        private void comprobantesEmitidosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is ReporteEmision)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				ReporteEmision ventana = new ReporteEmision();
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+
 	}
 }

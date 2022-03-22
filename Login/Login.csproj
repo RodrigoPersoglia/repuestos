@@ -158,6 +158,12 @@
     <Compile Include="EliminarArticulo.Designer.cs">
       <DependentUpon>EliminarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmisionPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmisionPresupuesto.designer.cs">
+      <DependentUpon>EmisionPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,12 @@
       <DependentUpon>Puesto.cs</DependentUpon>
     </Compile>
     <Compile Include="rendimiento.cs" />
+    <Compile Include="ReporteEmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEmision.Designer.cs">
+      <DependentUpon>ReporteEmision.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteMatricesPesadas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +301,12 @@
     </Compile>
     <Compile Include="ReporteNitrurado.designer.cs">
       <DependentUpon>ReporteNitrurado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestablecerContadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestablecerContadores.designer.cs">
+      <DependentUpon>RestablecerContadores.cs</DependentUpon>
     </Compile>
     <Compile Include="SeleccionArticulo.cs">
       <SubType>Form</SubType>
@@ -377,6 +395,9 @@
     <EmbeddedResource Include="EliminarArticulo.resx">
       <DependentUpon>EliminarArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmisionPresupuesto.resx">
+      <DependentUpon>EmisionPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnProduccion.resx">
       <DependentUpon>EnProduccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -438,11 +459,17 @@
     <EmbeddedResource Include="Puesto.resx">
       <DependentUpon>Puesto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEmision.resx">
+      <DependentUpon>ReporteEmision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteMatricesPesadas.resx">
       <DependentUpon>ReporteMatricesPesadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteNitrurado.resx">
       <DependentUpon>ReporteNitrurado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestablecerContadores.resx">
+      <DependentUpon>RestablecerContadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionArticulo.resx">
       <DependentUpon>SeleccionArticulo.cs</DependentUpon>

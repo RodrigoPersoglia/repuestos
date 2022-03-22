@@ -63,13 +63,7 @@ namespace Login
 				switch (result)
 				{
 					case DialogResult.Yes:
-						if (Conexion.Validar(UsuarioCBX.Text))
-						{
-							Conexion.AnulacionComprobante(int.Parse(NumCompNumeric.Value.ToString()));
-
-						}
-						else { MessageBox.Show("Ingrese un usuario y contraseña válido"); }
-
+						Conexion.AnulacionComprobante(int.Parse(NumCompNumeric.Value.ToString()), UsuarioCBX.Text);
 						break;
 					case DialogResult.No:
 						break;

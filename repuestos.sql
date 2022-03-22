@@ -173,6 +173,43 @@ COMMIT;
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento repuestos.agregarDetallePresupuesto
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `agregarDetallePresupuesto`(
+	IN `p1` varchar(50),
+	IN `p2` varchar(100),
+	IN `p3` int,
+	IN `p4` decimal(15,2)
+
+
+
+
+)
+BEGIN
+START TRANSACTION;
+insert into detallepresupuesto (codigo,descripcion,cantidad,precio,presupuesto_ID,articulo_ID)
+values(p1,p2,p3,p4,
+(select f.ID
+from presupuesto f
+order by f.id desc
+limit 1
+),
+(select a.ID
+from articulo a
+where a.codigo = p1
+limit 1)
+);
+
+
+UPDATE articulo a2
+SET
+a2.stockActual= a2.stockActual -p3
+where a2.codigo = p1;
+
+COMMIT;
+END//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento repuestos.AgregarEquivalencia
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarEquivalencia`(
@@ -279,6 +316,44 @@ COMMIT;
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento repuestos.AgregarPresupuesto
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarPresupuesto`(
+	IN `p1` datetime,
+	IN `p2` decimal(15,2),
+	IN `p3` decimal(15,2),
+	IN `p4` decimal(15,2),
+	IN `p5` int,
+	IN `p6` varchar(60),
+	IN `p7` varchar(45),
+	IN `p8` varchar(45),
+	IN `p9` varchar(10),
+	IN `p10` varchar(45)
+
+
+
+
+,
+	IN `p11` INT
+
+
+)
+BEGIN
+START TRANSACTION;
+insert into presupuesto (numero,fechaHora,subTotal,financiacion,total,cliente_ID,cliente,direccion,localidad,cp,usuario,medioPagoID)
+values(
+(
+select 1+ifnull(
+(select f.numero
+from presupuesto f
+order by f.ID desc
+limit 1),0)
+),
+p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11);
+commit;
+END//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento repuestos.AgregarPuesto
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarPuesto`(p1 varchar(60), p2 varchar(60), p3 varchar(60))
@@ -372,15 +447,15 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   CONSTRAINT `articulo_ibfk_4` FOREIGN KEY (`Rubro_ID`) REFERENCES `rubro` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=1739 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.articulo: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.articulo: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
 REPLACE INTO `articulo` (`ID`, `codigo`, `codigoProveedor`, `numeroPieza`, `descripcion`, `precio`, `stockMin`, `stockMax`, `stockActual`, `observaciones`, `Marca_ID`, `Rubro_ID`, `Lado_ID`, `Proveedor_ID`, `Ubicacion`) VALUES
-	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 1315.50, 5, 10, -22, 'palio corsa', 3, 6, 32, 830, 'B5'),
-	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 1839.30, 5, 10, 0, '  ', 6, 6, 32, 831, 'B6'),
-	(1735, '1000', '1000', '1000', 'kit Distribucion', 2150.00, 3, 10, -192, 'corsa', 1, 6, 32, 830, 'B7'),
-	(1736, '5050', '5050', '5050', 'prueba', 15000.00, 10, 100, 5, '', 4, 2, 32, 830, ''),
-	(1737, '989898', '989898', '989898', 'ruleman', 1500.00, 10, 100, -4, 'palio', 2, 4, 32, 831, 'bbb'),
-	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.00, 1, 1, -2, '', 1, 3, 32, 830, '');
+	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 1315.50, 5, 10, 41, 'palio corsa', 3, 6, 32, 830, 'B5'),
+	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 1839.30, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6'),
+	(1735, '1000', '1000', '1000', 'kit Distribucion', 2150.00, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7'),
+	(1736, '5050', '5050', '5050', 'prueba', 15000.00, 10, 100, 50, '', 4, 2, 32, 830, ''),
+	(1737, '989898', '989898', '989898', 'ruleman', 1500.00, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb'),
+	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.00, 1, 1, 50, '', 1, 3, 32, 830, '');
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento repuestos.BuscarArticulo
@@ -653,69 +728,35 @@ CREATE TABLE IF NOT EXISTS `detallefactura` (
   KEY `FK_detalleFactura_articulo` (`articulo_ID`),
   CONSTRAINT `FK__factura` FOREIGN KEY (`factura_ID`) REFERENCES `factura` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_detalleFactura_articulo` FOREIGN KEY (`articulo_ID`) REFERENCES `articulo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.detallefactura: ~57 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.detallefactura: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `detallefactura` DISABLE KEYS */;
 REPLACE INTO `detallefactura` (`ID`, `codigo`, `descripcion`, `cantidad`, `precio`, `factura_ID`, `articulo_ID`) VALUES
-	(1, '10', 'correa 50mm', 1, 100.00, 10, 1733),
-	(2, '100', 'Correa Distribucion 50 cm ', 1, 1747.34, 14, 1734),
-	(3, '100', 'Correa Distribucion 50 cm ', 2, 1747.34, 14, 1734),
-	(4, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1328.66, 15, 1733),
-	(5, '1000', 'kit Distribucion', 1, 2042.50, 16, 1735),
-	(6, '1000', 'kit Distribucion', 2, 2042.50, 16, 1735),
-	(7, '1000', 'kit Distribucion', 7, 2171.50, 17, 1735),
-	(8, '5050', 'prueba', 1, 15150.00, 18, 1736),
-	(9, '5050', 'prueba', 2, 15150.00, 18, 1736),
-	(10, '100', 'Correa Distribucion 50 cm ', 1, 1857.69, 19, 1734),
-	(11, '100', 'Correa Distribucion 50 cm ', 1, 1857.69, 20, 1734),
-	(12, '1000', 'kit Distribucion', 1, 2171.50, 21, 1735),
-	(13, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1328.66, 23, 1733),
-	(14, '989898', 'ruleman', 2, 1500.00, 24, 1737),
-	(15, '989898', 'ruleman', 5, 1500.00, 24, 1737),
-	(16, '5050', 'prueba', 1, 14250.00, 25, 1736),
-	(17, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1249.73, 26, 1733),
-	(18, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1328.66, 27, 1733),
-	(19, '5050', 'prueba', 1, 15000.00, 28, 1736),
-	(20, '5050', 'prueba', 1, 15000.00, 29, 1736),
-	(23, '989898', 'ruleman', 6, 1515.00, 32, 1737),
-	(24, '1000', 'kit Distribucion', 1, 2472.50, 33, 1735),
-	(25, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1315.50, 34, 1733),
-	(26, '1000', 'kit Distribucion', 2, 2150.00, 34, 1735),
-	(27, '989898', 'ruleman', 2, 1500.00, 34, 1737),
-	(28, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1512.83, 35, 1733),
-	(29, '1000', 'kit Distribucion', 2, 2472.50, 35, 1735),
-	(30, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1315.50, 36, 1733),
-	(31, '1000', 'kit Distribucion', 2, 2150.00, 36, 1735),
-	(32, '5050', 'prueba', 1, 15000.00, 36, 1736),
-	(33, '5050', 'prueba', 3, 15000.00, 36, 1736),
-	(34, '1000', 'kit Distribucion', 1, 2150.00, 37, 1735),
-	(35, '1000', 'kit Distribucion', 2, 2150.00, 37, 1735),
-	(36, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1315.50, 38, 1733),
-	(37, '10', 'Correa Distribucion 50 cm 40 dientes', 3, 1315.50, 38, 1733),
-	(38, '10', 'Correa Distribucion 50 cm 40 dientes', 8, 1315.50, 38, 1733),
-	(39, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1315.50, 39, 1733),
-	(40, '10', 'Correa Distribucion 50 cm 40 dientes', 5, 1315.50, 39, 1733),
-	(41, '10', 'Correa Distribucion 50 cm 40 dientes', 1, 1512.83, 40, 1733),
-	(42, '100', 'Correa Distribucion 50 cm ', 1, 2115.20, 41, 1734),
-	(43, '5050', 'prueba', 1, 15000.00, 42, 1736),
-	(44, '1000', 'kit Distribucion', 2, 2150.00, 43, 1735),
-	(45, '1000', 'kit Distribucion', 3, 2150.00, 44, 1735),
-	(46, '1000', 'kit Distribucion', 150, 2150.00, 45, 1735),
-	(47, '1000', 'kit Distribucion', 1, 2472.50, 46, 1735),
-	(48, '1000', 'kit Distribucion', 2, 2472.50, 46, 1735),
-	(49, '1000', 'kit Distribucion', 3, 2472.50, 46, 1735),
-	(50, '1000', 'kit Distribucion', 4, 2472.50, 46, 1735),
-	(51, '1000', 'kit Distribucion', 5, 2472.50, 46, 1735),
-	(52, '1000', 'kit Distribucion', 6, 2472.50, 46, 1735),
-	(53, '1000', 'kit Distribucion', 7, 2472.50, 46, 1735),
-	(54, '1000', 'kit Distribucion', 1, 2150.00, 47, 1735),
-	(55, '989898', 'ruleman', 1, 1500.00, 48, 1737),
-	(56, '989898', 'ruleman', 2, 1500.00, 48, 1737),
-	(57, '10', 'Correa Distribucion 50 cm 40 dientes', 2, 1315.50, 48, 1733),
-	(58, 'SC', 'Rodamiento 3/8"', 1, 1.00, 49, 1738),
-	(59, 'SC', 'Parilla Land Rover', 1, 1800.15, 50, 1738);
+	(65, '10', 'Correa Distribucion 50 cm 40 dientes', 4, 1315.50, 55, 1733),
+	(66, '100', 'Correa Distribucion 50 cm ', 2, 2115.20, 56, 1734),
+	(67, '1000', 'kit Distribucion', 6, 2150.00, 57, 1735);
 /*!40000 ALTER TABLE `detallefactura` ENABLE KEYS */;
+
+-- Volcando estructura para tabla repuestos.detallepresupuesto
+CREATE TABLE IF NOT EXISTS `detallepresupuesto` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` varchar(50) NOT NULL,
+  `descripcion` varchar(100) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` decimal(15,2) NOT NULL,
+  `presupuesto_ID` int(11) NOT NULL,
+  `articulo_ID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK__factura` (`presupuesto_ID`),
+  KEY `FK_detalleFactura_articulo` (`articulo_ID`),
+  CONSTRAINT `detallepresupuesto_ibfk_1` FOREIGN KEY (`presupuesto_ID`) REFERENCES `presupuesto` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `detallepresupuesto_ibfk_2` FOREIGN KEY (`articulo_ID`) REFERENCES `articulo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- Volcando datos para la tabla repuestos.detallepresupuesto: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `detallepresupuesto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `detallepresupuesto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla repuestos.direccion
 CREATE TABLE IF NOT EXISTS `direccion` (
@@ -948,51 +989,14 @@ CREATE TABLE IF NOT EXISTS `factura` (
   KEY `FK_factura_mediodepago` (`medioPagoID`),
   CONSTRAINT `FK__cliente` FOREIGN KEY (`cliente_ID`) REFERENCES `cliente` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_factura_mediodepago` FOREIGN KEY (`medioPagoID`) REFERENCES `mediodepago` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.factura: ~37 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.factura: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `factura` DISABLE KEYS */;
 REPLACE INTO `factura` (`ID`, `numero`, `fechaHora`, `subTotal`, `financiacion`, `total`, `cliente_ID`, `cliente`, `direccion`, `localidad`, `cp`, `usuario`, `medioPagoID`, `activa`) VALUES
-	(10, 1, '2022-03-15 16:18:00', 100.00, 21.00, 121.00, 4, '.exe', 'barzi', 'varela', '1888', 'rodrigo', 1, 1),
-	(11, 2, '2022-03-16 00:00:00', 4300.00, 903.00, 5203.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(12, 3, '2022-03-16 00:00:00', 5314.62, 0.00, 5314.62, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(13, 4, '2022-03-16 00:00:00', 5314.62, 0.00, 5314.62, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(14, 5, '2022-03-16 00:00:00', 5242.01, 0.00, 5242.01, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(15, 6, '2022-03-16 00:00:00', 1328.66, 0.00, 1328.66, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(16, 7, '2022-03-16 00:00:00', 6127.50, 0.00, 6127.50, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(17, 8, '2022-03-16 00:00:00', 15200.50, 0.00, 15200.50, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(18, 9, '2022-03-16 00:00:00', 45450.00, 0.00, 45450.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(19, 10, '2022-03-16 00:00:00', 1857.69, 0.00, 1857.69, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(20, 11, '2022-03-18 00:00:00', 1857.69, 0.00, 1857.69, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(21, 12, '2022-03-18 00:00:00', 2171.50, 456.02, 2627.52, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(23, 13, '2022-03-18 00:00:00', 1328.66, 39.86, 1368.51, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 3, 1),
-	(24, 14, '2022-03-18 00:00:00', 10500.00, 105.00, 10605.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 7, 1),
-	(25, 15, '2022-03-18 00:00:00', 14250.00, 0.00, 14250.00, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(26, 16, '2022-03-18 00:00:00', 1249.73, 0.00, 1249.73, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(27, 17, '2022-03-18 12:07:08', 1328.66, 0.00, 1328.66, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(28, 18, '2022-03-18 12:12:39', 15000.00, 0.00, 15000.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(29, 19, '2022-03-18 12:15:44', 15000.00, 0.00, 15000.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(30, 20, '2022-03-18 13:14:46', 3030.00, 0.00, 3030.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 0),
-	(31, 21, '2022-03-18 13:15:43', 1515.00, 0.00, 1515.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(32, 22, '2022-03-18 13:19:35', 9090.00, 0.00, 9090.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(33, 23, '2022-03-21 09:36:44', 2472.50, 0.00, 2472.50, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(34, 24, '2022-03-21 09:57:18', 8615.50, 0.00, 8615.50, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(35, 25, '2022-03-21 09:59:36', 6457.83, 0.00, 6457.83, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(36, 26, '2022-03-21 10:04:54', 65615.50, 0.00, 65615.50, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(37, 27, '2022-03-21 10:09:32', 6450.00, 0.00, 6450.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(38, 28, '2022-03-21 10:13:34', 15786.00, 0.00, 15786.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(39, 29, '2022-03-21 10:16:40', 7893.00, 0.00, 7893.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(40, 30, '2022-03-21 10:18:50', 1512.83, 0.00, 1512.83, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(41, 31, '2022-03-21 14:33:51', 2115.20, 0.00, 2115.20, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(42, 32, '2022-03-21 14:39:17', 15000.00, 0.00, 15000.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(43, 33, '2022-03-21 14:46:54', 4300.00, 0.00, 4300.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(44, 34, '2022-03-21 14:51:33', 6450.00, 0.00, 6450.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
-	(45, 35, '2022-03-21 14:55:53', 322500.00, 0.00, 322500.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(46, 36, '2022-03-21 15:02:53', 69230.00, 2076.90, 71306.90, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 3, 1),
-	(47, 37, '2022-03-21 15:08:02', 2150.00, 64.50, 2214.50, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 3, 1),
-	(48, 38, '2022-03-21 15:13:05', 7131.00, 855.72, 7986.72, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 6, 1),
-	(49, 39, '2022-03-21 15:27:59', 1.00, 0.00, 1.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
-	(50, 40, '2022-03-21 15:34:41', 1800.15, 0.00, 1800.15, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1);
+	(55, 1, '2022-03-22 16:38:20', 5262.00, 0.00, 5262.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
+	(56, 2, '2022-03-22 16:38:40', 4230.39, 0.00, 4230.39, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 0),
+	(57, 3, '2022-03-22 16:39:13', 12900.00, 0.00, 12900.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1);
 /*!40000 ALTER TABLE `factura` ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento repuestos.guardarDireccion
@@ -1074,6 +1078,21 @@ REPLACE INTO `lado` (`ID`, `descripcion`, `precio`) VALUES
 	(32, 'Pieza única', 0.00),
 	(33, 'Izquierdo - Derecho', 0.00);
 /*!40000 ALTER TABLE `lado` ENABLE KEYS */;
+
+-- Volcando estructura para procedimiento repuestos.limpiarComprobantes
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `limpiarComprobantes`()
+BEGIN
+START TRANSACTION;
+
+delete from detallefactura;
+delete from detallepresupuesto;
+delete from factura;
+delete from presupuesto;
+
+COMMIT;
+END//
+DELIMITER ;
 
 -- Volcando estructura para tabla repuestos.localidad
 CREATE TABLE IF NOT EXISTS `localidad` (
@@ -1262,7 +1281,7 @@ CREATE TABLE IF NOT EXISTS `mediodepago` (
   `recargo` decimal(15,3) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `numero` (`numero`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla repuestos.mediodepago: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `mediodepago` DISABLE KEYS */;
@@ -2975,6 +2994,32 @@ CREATE TABLE IF NOT EXISTS `pedidodetalle` (
 /*!40000 ALTER TABLE `pedidodetalle` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pedidodetalle` ENABLE KEYS */;
 
+-- Volcando estructura para tabla repuestos.presupuesto
+CREATE TABLE IF NOT EXISTS `presupuesto` (
+  `ID` int(10) NOT NULL AUTO_INCREMENT,
+  `numero` int(10) NOT NULL,
+  `fechaHora` datetime NOT NULL,
+  `subTotal` decimal(15,2) NOT NULL,
+  `financiacion` decimal(15,2) NOT NULL,
+  `total` decimal(15,2) NOT NULL,
+  `cliente_ID` int(10) NOT NULL,
+  `cliente` varchar(60) NOT NULL,
+  `direccion` varchar(45) NOT NULL,
+  `localidad` varchar(45) NOT NULL,
+  `cp` varchar(10) NOT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `medioPagoID` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK__cliente` (`cliente_ID`),
+  KEY `FK_factura_mediodepago` (`medioPagoID`),
+  CONSTRAINT `presupuesto_ibfk_1` FOREIGN KEY (`cliente_ID`) REFERENCES `cliente` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `presupuesto_ibfk_2` FOREIGN KEY (`medioPagoID`) REFERENCES `mediodepago` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- Volcando datos para la tabla repuestos.presupuesto: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `presupuesto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `presupuesto` ENABLE KEYS */;
+
 -- Volcando estructura para tabla repuestos.prioridad
 CREATE TABLE IF NOT EXISTS `prioridad` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -3481,7 +3526,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `modificaMatrices` int(1) NOT NULL,
   `nitruradoMatrices` int(1) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla repuestos.usuario: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
@@ -3553,6 +3598,32 @@ FROM PEDIDO P
 INNER JOIN ESTADO E ON P.ESTADO_ID = E.ID
 WHERE P.NUMERO = p1
 ;END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento repuestos.verfacturas
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verfacturas`(
+	IN `p0` TINYINT(1),
+	IN `p1` DATE,
+	IN `p2` DATE
+)
+begin
+if p0!=true and p0!=false 
+			then
+         select f.fechaHora,f.numero,f.cliente,f.total,mp.descripcion,f.usuario
+			from factura f 
+			inner join mediodepago mp on f.medioPagoID = mp.id
+			-- where f.fechaHora >= p1 and f.fechaHora <= concat(p2,' 23:59:59')
+	 ;
+  
+  else
+  select f.fechaHora,f.numero,f.cliente,f.total,mp.descripcion,f.usuario
+	from factura f 
+	inner join mediodepago mp on f.medioPagoID = mp.id
+	where f.fechaHora >= p1 and f.fechaHora <= concat(p2,' 23:59:59')
+	and f.activa = p0;
+  end if;
+end//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.verLocalidad

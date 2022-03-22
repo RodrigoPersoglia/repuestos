@@ -376,3 +376,6 @@ C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Repuestos.exe
 C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Repuestos.pdb
 C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Repuestos.pdb
 C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\es-AR\Repuestos.resources.dll
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EmisionPresupuesto.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.RestablecerContadores.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteEmision.resources
