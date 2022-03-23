@@ -8,7 +8,6 @@ namespace Login
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.DataGridView Cuadro;
-		private System.Windows.Forms.TextBox txtCodigo;
 		private System.Windows.Forms.TextBox txtDescripcion;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label3;
@@ -62,7 +61,6 @@ namespace Login
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,6 +91,7 @@ namespace Login
             this.Telefono2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button2 = new System.Windows.Forms.Button();
             this.CambiaRec = new System.Windows.Forms.Button();
             this.CambiaBon = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -113,7 +112,7 @@ namespace Login
             this.SubTotalNUM = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -227,15 +226,6 @@ namespace Login
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
             this.Subtotal.Width = 120;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(70, 170);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(103, 20);
-            this.txtCodigo.TabIndex = 2;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtDescripcion
             // 
@@ -383,7 +373,7 @@ namespace Login
             this.NumCliTXT.Margin = new System.Windows.Forms.Padding(2);
             this.NumCliTXT.Name = "NumCliTXT";
             this.NumCliTXT.Size = new System.Drawing.Size(68, 20);
-            this.NumCliTXT.TabIndex = 0;
+            this.NumCliTXT.TabIndex = 1;
             this.NumCliTXT.TextChanged += new System.EventHandler(this.NumCliTXT_TextChanged);
             // 
             // label5
@@ -617,6 +607,7 @@ namespace Login
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitContainer1.Panel1.Controls.Add(this.txtCodigo);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.CambiaRec);
             this.splitContainer1.Panel1.Controls.Add(this.CambiaBon);
@@ -624,7 +615,6 @@ namespace Login
             this.splitContainer1.Panel1.Controls.Add(this.label10);
             this.splitContainer1.Panel1.Controls.Add(this.RecargoNum);
             this.splitContainer1.Panel1.Controls.Add(this.PrecioNum);
-            this.splitContainer1.Panel1.Controls.Add(this.txtCodigo);
             this.splitContainer1.Panel1.Controls.Add(this.txtDescripcion);
             this.splitContainer1.Panel1.Controls.Add(this.Limpiar);
             this.splitContainer1.Panel1.Controls.Add(this.PrecioFinalNum);
@@ -647,6 +637,17 @@ namespace Login
             this.splitContainer1.Size = new System.Drawing.Size(908, 462);
             this.splitContainer1.SplitterDistance = 270;
             this.splitContainer1.TabIndex = 110;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(187, 230);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 20);
+            this.button2.TabIndex = 111;
+            this.button2.Text = "Cambiar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CambiaRec
             // 
@@ -941,16 +942,15 @@ namespace Login
             this.label12.Text = "Sub-Total:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button2
+            // txtCodigo
             // 
-            this.button2.Location = new System.Drawing.Point(187, 230);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 20);
-            this.button2.TabIndex = 111;
-            this.button2.Text = "Cambiar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.txtCodigo.Location = new System.Drawing.Point(70, 171);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(103, 20);
+            this.txtCodigo.TabIndex = 112;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged_2);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // EmisionComprobantes
             // 
@@ -1032,5 +1032,6 @@ namespace Login
         private System.Windows.Forms.NumericUpDown RecFinanNum;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

@@ -128,8 +128,8 @@ namespace Login
 				txtDescripcion.Text = articulo.Descripcion;
 				PrecioNum.Value = Convert.ToDecimal(articulo.Precio);
 				ActualizarPrecioFinal();
-                if (articulo.Codigo == "SC") { txtDescripcion.ReadOnly = false; }
-                else { txtDescripcion.ReadOnly = true; }
+				if (articulo.Codigo == "SC") { txtDescripcion.ReadOnly = false; PrecioNum.ReadOnly = false; PrecioNum.Increment = 1; }
+				else { txtDescripcion.ReadOnly = true; ; PrecioNum.ReadOnly = true; PrecioNum.Increment = 0; }
 
 
 				try

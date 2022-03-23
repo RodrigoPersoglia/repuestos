@@ -123,23 +123,30 @@ namespace Login
 		{
             if (Cliente.Text != "")
             {
-				Articulo articulo = Conexion.ObtenerArticulo(txtCodigo.Text, this);
-				txtCodigo.Text = articulo.Codigo;
-				txtDescripcion.Text = articulo.Descripcion;
-				PrecioNum.Value = Convert.ToDecimal(articulo.Precio);
-				ActualizarPrecioFinal();
-                if (articulo.Codigo == "SC") { txtDescripcion.ReadOnly = false; }
-                else { txtDescripcion.ReadOnly = true; }
+				string texto = txtCodigo.Text.ToString();
+				Articulo articulo = Conexion.ObtenerArticulo(texto, this);
+                if (articulo != null)
+                {
+					txtCodigo.Text = articulo.Codigo.ToString();
+					txtDescripcion.Text = articulo.Descripcion;
+					PrecioNum.Value = Convert.ToDecimal(articulo.Precio);
+					ActualizarPrecioFinal();
+					if (articulo.Codigo == "SC") { txtDescripcion.ReadOnly = false; PrecioNum.ReadOnly = false; PrecioNum.Increment = 1; }
+					else { txtDescripcion.ReadOnly = true; ; PrecioNum.ReadOnly = true; PrecioNum.Increment = 0; }
 
 
-				try
-				{
-					byte[] imageBytes = File.ReadAllBytes(Conexion.rutaImagen(articulo.Codigo));
-					MemoryStream buf = new MemoryStream(imageBytes);
-					pictureBox1.Image = Image.FromStream(buf);
+					try
+					{
+						byte[] imageBytes = File.ReadAllBytes(Conexion.rutaImagen(articulo.Codigo));
+						MemoryStream buf = new MemoryStream(imageBytes);
+						pictureBox1.Image = Image.FromStream(buf);
+					}
+					catch (Exception) { pictureBox1.Image = null; }
 				}
-				catch (Exception) { pictureBox1.Image = null; }
+
+                else { MessageBox.Show("No selecciono ningun artículo", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 			}
+				
             else
             {
 				MessageBox.Show("Debe seleccionar un cliente primero", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -612,6 +619,23 @@ namespace Login
 				PrecioNum.ReadOnly = false;
 			}
 			else { MessageBox.Show("Necesita permiso del Administrador"); }
+		}
+
+
+
+        private void txtCodigo_TextChanged_2(object sender, EventArgs e)
+        {
+			LimpiarArticulo();
+		}
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				BuscarClick(sender, e);
+				cant.Focus(); ;
+
+			}
 		}
     }
 }

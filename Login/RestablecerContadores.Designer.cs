@@ -64,7 +64,7 @@ namespace Login
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(91, 33);
             this.Cancelar.TabIndex = 13;
-            this.Cancelar.Text = "No, Salir";
+            this.Cancelar.Text = "No, salir";
             this.Cancelar.UseVisualStyleBackColor = true;
             this.Cancelar.Click += new System.EventHandler(this.CancelarClick);
             // 
@@ -100,7 +100,7 @@ namespace Login
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 18);
             this.label1.TabIndex = 114;
-            this.label1.Text = "ADEVERTENCIA!!!";
+            this.label1.Text = "ADVERTENCIA!!!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2

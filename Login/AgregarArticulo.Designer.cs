@@ -101,6 +101,8 @@ namespace Login
             this.codigoEquivalencia = new System.Windows.Forms.TextBox();
             this.codCompatibilidad = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.UsuarioCBX = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockMinNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockMaxNum)).BeginInit();
@@ -164,7 +166,7 @@ namespace Login
             this.DescripcionTxt.MaxLength = 60;
             this.DescripcionTxt.Name = "DescripcionTxt";
             this.DescripcionTxt.Size = new System.Drawing.Size(200, 19);
-            this.DescripcionTxt.TabIndex = 4;
+            this.DescripcionTxt.TabIndex = 2;
             // 
             // label8
             // 
@@ -185,6 +187,8 @@ namespace Login
             this.Codigotxt.Name = "Codigotxt";
             this.Codigotxt.Size = new System.Drawing.Size(200, 19);
             this.Codigotxt.TabIndex = 1;
+            this.Codigotxt.TextChanged += new System.EventHandler(this.Codigotxt_TextChanged);
+            this.Codigotxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Codigotxt_KeyPress);
             // 
             // PrecioNum
             // 
@@ -197,7 +201,7 @@ namespace Login
             0});
             this.PrecioNum.Name = "PrecioNum";
             this.PrecioNum.Size = new System.Drawing.Size(200, 19);
-            this.PrecioNum.TabIndex = 5;
+            this.PrecioNum.TabIndex = 3;
             // 
             // stockMinNum
             // 
@@ -209,7 +213,12 @@ namespace Login
             0});
             this.stockMinNum.Name = "stockMinNum";
             this.stockMinNum.Size = new System.Drawing.Size(90, 19);
-            this.stockMinNum.TabIndex = 6;
+            this.stockMinNum.TabIndex = 7;
+            this.stockMinNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // Crear
             // 
@@ -217,7 +226,7 @@ namespace Login
             this.Crear.Location = new System.Drawing.Point(162, 450);
             this.Crear.Name = "Crear";
             this.Crear.Size = new System.Drawing.Size(90, 27);
-            this.Crear.TabIndex = 15;
+            this.Crear.TabIndex = 4;
             this.Crear.Text = "Crear";
             this.Crear.UseVisualStyleBackColor = true;
             this.Crear.Click += new System.EventHandler(this.CrearClick);
@@ -229,7 +238,7 @@ namespace Login
             this.Cancelar.Location = new System.Drawing.Point(274, 450);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(90, 27);
-            this.Cancelar.TabIndex = 16;
+            this.Cancelar.TabIndex = 15;
             this.Cancelar.Text = "Salir";
             this.Cancelar.UseVisualStyleBackColor = true;
             this.Cancelar.Click += new System.EventHandler(this.CancelarClick);
@@ -255,7 +264,12 @@ namespace Login
             0});
             this.stockMaxNum.Name = "stockMaxNum";
             this.stockMaxNum.Size = new System.Drawing.Size(88, 19);
-            this.stockMaxNum.TabIndex = 7;
+            this.stockMaxNum.TabIndex = 8;
+            this.stockMaxNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // MarcaCBX
             // 
@@ -343,7 +357,7 @@ namespace Login
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(516, 30);
+            this.label12.Location = new System.Drawing.Point(517, 44);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 23);
             this.label12.TabIndex = 32;
@@ -381,6 +395,11 @@ namespace Login
             this.stockActualNum.Name = "stockActualNum";
             this.stockActualNum.Size = new System.Drawing.Size(200, 19);
             this.stockActualNum.TabIndex = 8;
+            this.stockActualNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numPiezaTXT
             // 
@@ -388,7 +407,7 @@ namespace Login
             this.numPiezaTXT.MaxLength = 20;
             this.numPiezaTXT.Name = "numPiezaTXT";
             this.numPiezaTXT.Size = new System.Drawing.Size(200, 19);
-            this.numPiezaTXT.TabIndex = 3;
+            this.numPiezaTXT.TabIndex = 6;
             // 
             // label15
             // 
@@ -408,7 +427,7 @@ namespace Login
             this.CodigoProvTXT.MaxLength = 20;
             this.CodigoProvTXT.Name = "CodigoProvTXT";
             this.CodigoProvTXT.Size = new System.Drawing.Size(200, 19);
-            this.CodigoProvTXT.TabIndex = 2;
+            this.CodigoProvTXT.TabIndex = 5;
             // 
             // label16
             // 
@@ -685,12 +704,35 @@ namespace Login
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(597, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(598, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(570, 6);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(76, 18);
+            this.label18.TabIndex = 113;
+            this.label18.Text = "Usuario:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // UsuarioCBX
+            // 
+            this.UsuarioCBX.Enabled = false;
+            this.UsuarioCBX.ForeColor = System.Drawing.Color.Red;
+            this.UsuarioCBX.FormattingEnabled = true;
+            this.UsuarioCBX.Location = new System.Drawing.Point(651, 7);
+            this.UsuarioCBX.Name = "UsuarioCBX";
+            this.UsuarioCBX.Size = new System.Drawing.Size(135, 21);
+            this.UsuarioCBX.TabIndex = 112;
             // 
             // AgregarArticulo
             // 
@@ -701,6 +743,8 @@ namespace Login
             this.CancelButton = this.Cancelar;
             this.ClientSize = new System.Drawing.Size(798, 512);
             this.ControlBox = false;
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.UsuarioCBX);
             this.Controls.Add(this.codCompatibilidad);
             this.Controls.Add(this.codigoEquivalencia);
             this.Controls.Add(this.label17);
@@ -808,5 +852,7 @@ namespace Login
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox UsuarioCBX;
     }
 }

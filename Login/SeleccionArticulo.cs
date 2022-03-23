@@ -66,7 +66,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[12].Value = (int)x[12];
 						Cuadro.Rows[n].Cells[13].Value = (int)x[13];
 						Cuadro.Rows[n].Cells[14].Value = (string)x[14];
-						Cuadro.Rows[n].Cells[15].Value = (string)x[17];
+						Cuadro.Rows[n].Cells[15].Value = (string)x[19];
 
 					}
 			}
@@ -89,8 +89,8 @@ namespace Login
 			string codigo = (string)Cuadro.Rows[n].Cells[2].Value;
 			try
 			{
-				string ruta = "//Rodrigo/imagenes/" + codigo + ".bmp";
-				byte[] imageBytes = File.ReadAllBytes(ruta);
+
+				byte[] imageBytes = File.ReadAllBytes(Conexion.rutaImagen(codigo)) ;
 				MemoryStream buf = new MemoryStream(imageBytes);
 				pictureBox1.Image = Image.FromStream(buf);
 			}
@@ -116,9 +116,9 @@ namespace Login
 			ArticuloSeleccionado.Lado = int.Parse(Cuadro.Rows[n].Cells[12].Value.ToString());
 			ArticuloSeleccionado.Proveedor = int.Parse(Cuadro.Rows[n].Cells[13].Value.ToString());
 			ArticuloSeleccionado.Ubicacion = Cuadro.Rows[n].Cells[14].Value.ToString();
-			ArticuloSeleccionado.NombreProveedor = Cuadro.Rows[n].Cells[15].Value.ToString();
+            ArticuloSeleccionado.NombreProveedor = Cuadro.Rows[n].Cells[15].Value.ToString();
 
-			this.Close();
+            this.Close();
 
 		}
 
@@ -164,10 +164,10 @@ namespace Login
 						Cuadro.Rows[n].Cells[12].Value = (int)x[12];
 						Cuadro.Rows[n].Cells[13].Value = (int)x[13];
 						Cuadro.Rows[n].Cells[14].Value = (string)x[14];
-						Cuadro.Rows[n].Cells[15].Value = (string)x[17];
+                        Cuadro.Rows[n].Cells[15].Value = (string)x[19];
 
-					}
-				}
+                    }
+                }
 
 				else { MessageBox.Show("No se encontraron registros"); }
 			}

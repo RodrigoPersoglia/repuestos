@@ -66,11 +66,12 @@ namespace Login
             this.emisiónPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anulaciónDeComprobantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprobantesEmitidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ponerContadoresEnCeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprobantesEmitidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -280,9 +281,16 @@ namespace Login
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comprobantesEmitidosToolStripMenuItem});
+            this.comprobantesEmitidosToolStripMenuItem,
+            this.stockToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
+            // 
+            // comprobantesEmitidosToolStripMenuItem
+            // 
+            this.comprobantesEmitidosToolStripMenuItem.Name = "comprobantesEmitidosToolStripMenuItem";
+            resources.ApplyResources(this.comprobantesEmitidosToolStripMenuItem, "comprobantesEmitidosToolStripMenuItem");
+            this.comprobantesEmitidosToolStripMenuItem.Click += new System.EventHandler(this.comprobantesEmitidosToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
@@ -309,11 +317,11 @@ namespace Login
             resources.ApplyResources(this.ayudaToolStripMenuItem, "ayudaToolStripMenuItem");
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
-            // comprobantesEmitidosToolStripMenuItem
+            // stockToolStripMenuItem
             // 
-            this.comprobantesEmitidosToolStripMenuItem.Name = "comprobantesEmitidosToolStripMenuItem";
-            resources.ApplyResources(this.comprobantesEmitidosToolStripMenuItem, "comprobantesEmitidosToolStripMenuItem");
-            this.comprobantesEmitidosToolStripMenuItem.Click += new System.EventHandler(this.comprobantesEmitidosToolStripMenuItem_Click);
+            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            resources.ApplyResources(this.stockToolStripMenuItem, "stockToolStripMenuItem");
+            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -356,5 +364,6 @@ namespace Login
         private System.Windows.Forms.ToolStripMenuItem ponerContadoresEnCeroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprobantesEmitidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
     }
 }

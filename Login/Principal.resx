@@ -727,6 +727,12 @@
   <data name="comprobantesEmitidosToolStripMenuItem.Text" xml:space="preserve">
     <value>Comprobantes Emitidos</value>
   </data>
+  <data name="stockToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="stockToolStripMenuItem.Text" xml:space="preserve">
+    <value>Stock</value>
+  </data>
   <data name="reportesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 24</value>
   </data>
@@ -5441,6 +5447,12 @@
   <data name="&gt;&gt;reportesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;comprobantesEmitidosToolStripMenuItem.Name" xml:space="preserve">
+    <value>comprobantesEmitidosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;comprobantesEmitidosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;usuarioToolStripMenuItem.Name" xml:space="preserve">
     <value>usuarioToolStripMenuItem</value>
   </data>
@@ -5465,10 +5477,10 @@
   <data name="&gt;&gt;ayudaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comprobantesEmitidosToolStripMenuItem.Name" xml:space="preserve">
-    <value>comprobantesEmitidosToolStripMenuItem</value>
+  <data name="&gt;&gt;stockToolStripMenuItem.Name" xml:space="preserve">
+    <value>stockToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;comprobantesEmitidosToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;stockToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

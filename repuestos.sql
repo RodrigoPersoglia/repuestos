@@ -47,12 +47,15 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarArticulo`(
 	IN `p11` INT,
 	IN `p12` INT,
 	IN `p13` INT,
-	IN `P14` VARCHAR(50)
+	IN `p14` VARCHAR(50)
 
 
+,
+	IN `p15` DATE,
+	IN `p16` VARCHAR(50)
 )
-INSERT INTO articulo (codigo,codigoProveedor,numeroPieza,descripcion,precio, stockMin,stockMax,StockActual,observaciones,Marca_ID,Rubro_ID,Lado_ID,Proveedor_ID,Ubicacion) 
-VALUES (p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14)//
+INSERT INTO articulo (codigo,codigoProveedor,numeroPieza,descripcion,precio, stockMin,stockMax,StockActual,observaciones,Marca_ID,Rubro_ID,Lado_ID,Proveedor_ID,Ubicacion,creacion,usuario) 
+VALUES (p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16)//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.AgregarCompatibilidad
@@ -434,6 +437,8 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `Lado_ID` int(11) NOT NULL,
   `Proveedor_ID` int(11) NOT NULL,
   `Ubicacion` varchar(50) NOT NULL DEFAULT '',
+  `creacion` date NOT NULL,
+  `usuario` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `codigo_UNIQUE` (`codigo`),
   KEY `Aleacion_ID` (`Marca_ID`),
@@ -445,23 +450,30 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   CONSTRAINT `articulo_ibfk_2` FOREIGN KEY (`Lado_ID`) REFERENCES `lado` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `articulo_ibfk_3` FOREIGN KEY (`Proveedor_ID`) REFERENCES `proveedor` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `articulo_ibfk_4` FOREIGN KEY (`Rubro_ID`) REFERENCES `rubro` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1739 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1745 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.articulo: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.articulo: ~12 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
-REPLACE INTO `articulo` (`ID`, `codigo`, `codigoProveedor`, `numeroPieza`, `descripcion`, `precio`, `stockMin`, `stockMax`, `stockActual`, `observaciones`, `Marca_ID`, `Rubro_ID`, `Lado_ID`, `Proveedor_ID`, `Ubicacion`) VALUES
-	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 1315.50, 5, 10, 41, 'palio corsa', 3, 6, 32, 830, 'B5'),
-	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 1839.30, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6'),
-	(1735, '1000', '1000', '1000', 'kit Distribucion', 2150.00, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7'),
-	(1736, '5050', '5050', '5050', 'prueba', 15000.00, 10, 100, 50, '', 4, 2, 32, 830, ''),
-	(1737, '989898', '989898', '989898', 'ruleman', 1500.00, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb'),
-	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.00, 1, 1, 50, '', 1, 3, 32, 830, '');
+REPLACE INTO `articulo` (`ID`, `codigo`, `codigoProveedor`, `numeroPieza`, `descripcion`, `precio`, `stockMin`, `stockMax`, `stockActual`, `observaciones`, `Marca_ID`, `Rubro_ID`, `Lado_ID`, `Proveedor_ID`, `Ubicacion`, `creacion`, `usuario`) VALUES
+	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 1315.50, 5, 10, 2, 'palio corsa', 3, 6, 32, 830, 'B5', '2022-03-22', 'Rodrigo'),
+	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 1839.30, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6', '2022-03-22', 'Rodrigo'),
+	(1735, '1000', '1000', '1000', 'kit Distribucion', 2150.00, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7', '2022-03-22', 'Rodrigo'),
+	(1736, '5050', '5050', '5050', 'prueba', 15000.00, 10, 100, 50, '', 4, 2, 32, 830, '', '2022-03-22', 'Rodrigo'),
+	(1737, '989898', '989898', '989898', 'ruleman', 1500.00, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb', '2022-03-22', 'Rodrigo'),
+	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.00, 1, 1, 49, '', 1, 3, 32, 830, '', '2022-03-22', 'Rodrigo'),
+	(1739, 'A12-0138-001', 'A12-0138-001', 'A12-0138-001', 'PARRILLA DERECHA PEUGEOT 206', 2000.15, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
+	(1740, '23032022', '23032022', '23032022', 'prueba del dia', 1800.19, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
+	(1741, '1006', '1006', '1006', 'Paño fijo', 6.15, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1742, '721450764938', '721450764938', '721450764938', 'toner', 150.00, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1743, '721450764937', '721450764937', '721450764937', 'toner hp', 150.15, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1744, '3726860776493', '3726860776493', '3726860776493', 'otro articulo', 123.00, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo');
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento repuestos.BuscarArticulo
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `BuscarArticulo`(
-	IN `busqueda` varchar(40)
+	IN `busqueda` VARCHAR(60)
+
 
 
 
@@ -728,14 +740,15 @@ CREATE TABLE IF NOT EXISTS `detallefactura` (
   KEY `FK_detalleFactura_articulo` (`articulo_ID`),
   CONSTRAINT `FK__factura` FOREIGN KEY (`factura_ID`) REFERENCES `factura` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_detalleFactura_articulo` FOREIGN KEY (`articulo_ID`) REFERENCES `articulo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla repuestos.detallefactura: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `detallefactura` DISABLE KEYS */;
 REPLACE INTO `detallefactura` (`ID`, `codigo`, `descripcion`, `cantidad`, `precio`, `factura_ID`, `articulo_ID`) VALUES
 	(65, '10', 'Correa Distribucion 50 cm 40 dientes', 4, 1315.50, 55, 1733),
 	(66, '100', 'Correa Distribucion 50 cm ', 2, 2115.20, 56, 1734),
-	(67, '1000', 'kit Distribucion', 6, 2150.00, 57, 1735);
+	(67, '1000', 'kit Distribucion', 6, 2150.00, 57, 1735),
+	(68, 'SC', 'reparacion amortiguador delantero', 1, 8000.00, 58, 1738);
 /*!40000 ALTER TABLE `detallefactura` ENABLE KEYS */;
 
 -- Volcando estructura para tabla repuestos.detallepresupuesto
@@ -752,7 +765,7 @@ CREATE TABLE IF NOT EXISTS `detallepresupuesto` (
   KEY `FK_detalleFactura_articulo` (`articulo_ID`),
   CONSTRAINT `detallepresupuesto_ibfk_1` FOREIGN KEY (`presupuesto_ID`) REFERENCES `presupuesto` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `detallepresupuesto_ibfk_2` FOREIGN KEY (`articulo_ID`) REFERENCES `articulo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Volcando datos para la tabla repuestos.detallepresupuesto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `detallepresupuesto` DISABLE KEYS */;
@@ -989,14 +1002,15 @@ CREATE TABLE IF NOT EXISTS `factura` (
   KEY `FK_factura_mediodepago` (`medioPagoID`),
   CONSTRAINT `FK__cliente` FOREIGN KEY (`cliente_ID`) REFERENCES `cliente` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_factura_mediodepago` FOREIGN KEY (`medioPagoID`) REFERENCES `mediodepago` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla repuestos.factura: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `factura` DISABLE KEYS */;
 REPLACE INTO `factura` (`ID`, `numero`, `fechaHora`, `subTotal`, `financiacion`, `total`, `cliente_ID`, `cliente`, `direccion`, `localidad`, `cp`, `usuario`, `medioPagoID`, `activa`) VALUES
 	(55, 1, '2022-03-22 16:38:20', 5262.00, 0.00, 5262.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
 	(56, 2, '2022-03-22 16:38:40', 4230.39, 0.00, 4230.39, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 0),
-	(57, 3, '2022-03-22 16:39:13', 12900.00, 0.00, 12900.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1);
+	(57, 3, '2022-03-22 16:39:13', 12900.00, 0.00, 12900.00, 4, '.EXE DESARROLLOS INFORMÁTICOS', 'Barzi 719', 'Florencio Varela', '1888', 'Rodrigo', 1, 1),
+	(58, 4, '2022-03-23 12:02:21', 8000.00, 0.00, 8000.00, 3, 'MR. MAC SOLUCIONES ', 'Tomas Edison 1800', 'Florencio Varela', '1888', 'Rodrigo', 1, 1);
 /*!40000 ALTER TABLE `factura` ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento repuestos.guardarDireccion
@@ -3014,7 +3028,7 @@ CREATE TABLE IF NOT EXISTS `presupuesto` (
   KEY `FK_factura_mediodepago` (`medioPagoID`),
   CONSTRAINT `presupuesto_ibfk_1` FOREIGN KEY (`cliente_ID`) REFERENCES `cliente` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `presupuesto_ibfk_2` FOREIGN KEY (`medioPagoID`) REFERENCES `mediodepago` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Volcando datos para la tabla repuestos.presupuesto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `presupuesto` DISABLE KEYS */;
@@ -3700,6 +3714,14 @@ and p.fecha <= fecha2
 group by p.ID 
 order by p.numero
 ;END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento repuestos.verStock
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verStock`()
+select a.codigo, a.descripcion, a.stockActual, a.stockMin, a.stockMax,(a.stockMin - a.stockActual) as puntoPedido,( a.stockActual - a.stockMax) as sobrestock, a.creacion,a.usuario
+from articulo a
+order by a.creacion desc//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.verUsuarios

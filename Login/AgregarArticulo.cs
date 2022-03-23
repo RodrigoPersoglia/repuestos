@@ -10,7 +10,12 @@ namespace Login
 {
 	public partial class AgregarArticulo : Form
 	{
-		public AgregarArticulo() {InitializeComponent();}
+		Usuario usuario;
+		public AgregarArticulo( Usuario user) {
+
+			InitializeComponent();
+			usuario = user;
+		}
 
 		// Carga los Combobox iniciales desde la base de datos
 		void AgregarArticuloLoad(object sender, EventArgs e)
@@ -28,8 +33,8 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
+				//newRow["descripcion"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
 				MarcaCBX.DataSource = dt;
 				MarcaCBX.DisplayMember = "descripcion";
 				MarcaCBX.ValueMember = "ID";
@@ -46,8 +51,8 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
+				//newRow["descripcion"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
 				RubroCBX.DataSource = dt;
 				RubroCBX.DisplayMember = "descripcion";
 				RubroCBX.ValueMember = "ID";
@@ -63,8 +68,8 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
+				//newRow["descripcion"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
 				LadoCBX.DataSource = dt;
 				LadoCBX.DisplayMember = "descripcion";
 				LadoCBX.ValueMember = "ID";
@@ -81,14 +86,36 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["Alias"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
+				//newRow["Alias"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
 				ProveedorCBX.DataSource = dt;
 				ProveedorCBX.DisplayMember = "Alias";
 				ProveedorCBX.ValueMember = "ID";
 			}
 			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error); }
+
+
+
+
+			// COMBOBOX USUARIO
+			//MySqlDataReader reader;
+			string consulta6 = "Select ID,usuario From usuario a order by a.usuario";
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta6, conectar);
+				reader = comand.ExecuteReader();
+				DataTable dt = new DataTable();
+				dt.Load(reader);
+				UsuarioCBX.DataSource = dt;
+				UsuarioCBX.DisplayMember = "usuario";
+				UsuarioCBX.ValueMember = "ID";
+
+			}
+			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
 			finally { conectar.Close(); } // Cerramos la conexion a la base de datos
+
+			UsuarioCBX.Text = usuario.User;
 		}
 
 
@@ -144,7 +171,7 @@ namespace Login
 					if ( CodigoProvTXT.Text!="" && numPiezaTXT.Text!="" && _descripcion != "" && _stockMin > 0  && _stockMax > 0 && MarcaCBX.Text != "Seleccione" && RubroCBX.Text != "Seleccione" && LadoCBX.Text != "Seleccione" &&  ProveedorCBX.Text != "Seleccione")
 					{
 
-						Conexion.AgregarArticulo(Codigotxt.Text, CodigoProvTXT.Text, numPiezaTXT.Text, DescripcionTxt.Text, PrecioNum.Value, decimal.ToInt32(stockMinNum.Value), decimal.ToInt32(stockMaxNum.Value), decimal.ToInt32(stockActualNum.Value), OberservacionesTXT.Text, (int)MarcaCBX.SelectedValue, (int)RubroCBX.SelectedValue, (int)LadoCBX.SelectedValue, (int)ProveedorCBX.SelectedValue, UbicacionTXT.Text);
+						Conexion.AgregarArticulo(Codigotxt.Text, CodigoProvTXT.Text, numPiezaTXT.Text, DescripcionTxt.Text, PrecioNum.Value, decimal.ToInt32(stockMinNum.Value), decimal.ToInt32(stockMaxNum.Value), decimal.ToInt32(stockActualNum.Value), OberservacionesTXT.Text, (int)MarcaCBX.SelectedValue, (int)RubroCBX.SelectedValue, (int)LadoCBX.SelectedValue, (int)ProveedorCBX.SelectedValue, UbicacionTXT.Text,DateTime.Today,UsuarioCBX.Text);
 
 						if (Cuadro.Rows.Count > 1)
                         {
@@ -377,5 +404,19 @@ namespace Login
 
 			catch (Exception) { }
 		}
+
+        private void Codigotxt_TextChanged(object sender, EventArgs e)
+        {
+			CodigoProvTXT.Text = Codigotxt.Text;
+			numPiezaTXT.Text = Codigotxt.Text;
+		}
+
+        private void Codigotxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+				DescripcionTxt.Focus();
+            }
+        }
     }
 }

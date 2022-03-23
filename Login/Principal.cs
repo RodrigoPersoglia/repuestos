@@ -39,7 +39,7 @@ namespace Login
 			}
 			if (contador == 0)
 			{
-				AgregarArticulo nuevoart = new AgregarArticulo();
+				AgregarArticulo nuevoart = new AgregarArticulo(usuario);
 				nuevoart.MdiParent = this;
 				nuevoart.Show();
 			}
@@ -794,56 +794,56 @@ namespace Login
 			contador = 0;
 		}
 
-        private void reporteDeNitruradoToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			int contador = 0;
-			foreach (Form f in Application.OpenForms)
-			{
-				if (f is ReporteNitrurado)
-				{
-					f.Show();
-					if (f.WindowState == FormWindowState.Minimized)
-						f.WindowState = FormWindowState.Normal;
-					f.BringToFront();
-					contador++;
-					return;
-				}
+  //      private void reporteDeNitruradoToolStripMenuItem_Click(object sender, EventArgs e)
+		//{
+		//	int contador = 0;
+		//	foreach (Form f in Application.OpenForms)
+		//	{
+		//		if (f is ReporteNitrurado)
+		//		{
+		//			f.Show();
+		//			if (f.WindowState == FormWindowState.Minimized)
+		//				f.WindowState = FormWindowState.Normal;
+		//			f.BringToFront();
+		//			contador++;
+		//			return;
+		//		}
 
-			}
-			if (contador == 0)
-			{
-				ReporteNitrurado ventana = new ReporteNitrurado();
-				ventana.MdiParent = this;
-				ventana.Show();
-			}
-			contador = 0;
-		}
+		//	}
+		//	if (contador == 0)
+		//	{
+		//		ReporteNitrurado ventana = new ReporteNitrurado();
+		//		ventana.MdiParent = this;
+		//		ventana.Show();
+		//	}
+		//	contador = 0;
+		//}
 
-        private void reporteMatricesPesadasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-			int contador = 0;
-			foreach (Form f in Application.OpenForms)
-			{
-				if (f is ReporteMatricesPesadas)
-				{
-					f.Show();
-					if (f.WindowState == FormWindowState.Minimized)
-						f.WindowState = FormWindowState.Normal;
-					f.BringToFront();
-					contador++;
-					return;
-				}
+  //      private void reporteMatricesPesadasToolStripMenuItem_Click(object sender, EventArgs e)
+  //      {
+		//	int contador = 0;
+		//	foreach (Form f in Application.OpenForms)
+		//	{
+		//		if (f is ReporteMatricesPesadas)
+		//		{
+		//			f.Show();
+		//			if (f.WindowState == FormWindowState.Minimized)
+		//				f.WindowState = FormWindowState.Normal;
+		//			f.BringToFront();
+		//			contador++;
+		//			return;
+		//		}
 
-			}
-			if (contador == 0)
-			{
-				ReporteMatricesPesadas ventana = new ReporteMatricesPesadas();
-				ventana.MdiParent = this;
-				ventana.Show();
-			}
-			contador = 0;
+		//	}
+		//	if (contador == 0)
+		//	{
+		//		ReporteMatricesPesadas ventana = new ReporteMatricesPesadas();
+		//		ventana.MdiParent = this;
+		//		ventana.Show();
+		//	}
+		//	contador = 0;
 
-		}
+		//}
 
         private void facturarToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -1074,6 +1074,33 @@ namespace Login
 			}
 
 		}
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is ReporteStock)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				ReporteStock ventana = new ReporteStock();
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+
 
 
 	}

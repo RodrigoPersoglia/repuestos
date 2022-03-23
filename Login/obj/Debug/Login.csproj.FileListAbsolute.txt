@@ -214,8 +214,6 @@ C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Prioridad.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Properties.Resources.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Proyeccion.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Puesto.resources
-C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteMatricesPesadas.resources
-C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteNitrurado.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.SeleccionArticulo.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Terminacion.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.User.resources
@@ -379,3 +377,4 @@ C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\es-AR\Repuestos.resour
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EmisionPresupuesto.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.RestablecerContadores.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteEmision.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteStock.resources

@@ -37,7 +37,7 @@ namespace Login
 		}
 
 
-		public static void AgregarArticulo(string codigo,string codigoProveedor,string numeroProducto,string descripcion,decimal precio,int stockMin, int stockMax, int stockActual,string observaciones,int Marca_ID,int Rubro_ID,int Lado_ID, int Proveedor_ID,string ubicacion)
+		public static void AgregarArticulo(string codigo,string codigoProveedor,string numeroProducto,string descripcion,decimal precio,int stockMin, int stockMax, int stockActual,string observaciones,int Marca_ID,int Rubro_ID,int Lado_ID, int Proveedor_ID,string ubicacion,DateTime fecha, string usuario)
 		{
 			MySqlConnection conectar = Conexion.ObtenerConexion();
 			conectar.Open();
@@ -59,6 +59,8 @@ namespace Login
 				comand.Parameters.AddWithValue("@p12", Lado_ID);
 				comand.Parameters.AddWithValue("@p13", Proveedor_ID);
 				comand.Parameters.AddWithValue("@p14", ubicacion);
+				comand.Parameters.AddWithValue("@p15", fecha);
+				comand.Parameters.AddWithValue("@p16", usuario);
 
 				comand.ExecuteNonQuery();
 				AutoClosingMessageBox.Show("Artículo creado correctamente", "Artículo", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
@@ -982,7 +984,7 @@ namespace Login
 						articulo.Lado = (int)x[12];
 						articulo.Proveedor = (int)x[13];
 						articulo.Ubicacion = (string)x[14];
-						articulo.NombreProveedor = (string)x[17];
+						articulo.NombreProveedor = (string)x[19];
 
 					}
 					return articulo;
@@ -994,12 +996,12 @@ namespace Login
 					return selec.ArticuloSeleccionado;
 				}
 
+            }
+            catch (Exception ex) { MessageBox.Show("Error al buscar en conexion" + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+            finally { conectar.Close(); }
+
+
         }
-			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error); return null; }
-			finally { conectar.Close(); }
-
-
-		}
 
 
 
@@ -2188,7 +2190,7 @@ namespace Login
 			}
 			catch (Exception) { }
 
-			return "//"+servidor+ "/imagenes/" + codigo + ".bmp";
+			return "imagenes/" + codigo + ".jpg";
 		}
 
 		public static string rutaImagenLogo(string codigo)
@@ -2621,7 +2623,29 @@ namespace Login
 		}
 
 
+		public static DataTable ObtenerReporteStock()
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("verStock", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+				adp.Fill(dt);
+				if (dt.Rows.Count > 0)
+				{
 
+					return dt;
+				}
+				else { MessageBox.Show("No hay registros en el intervalo seleccionado"); return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
 
 
 
