@@ -455,19 +455,43 @@ CREATE TABLE IF NOT EXISTS `articulo` (
 -- Volcando datos para la tabla repuestos.articulo: ~12 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
 REPLACE INTO `articulo` (`ID`, `codigo`, `codigoProveedor`, `numeroPieza`, `descripcion`, `precio`, `stockMin`, `stockMax`, `stockActual`, `observaciones`, `Marca_ID`, `Rubro_ID`, `Lado_ID`, `Proveedor_ID`, `Ubicacion`, `creacion`, `usuario`) VALUES
-	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 1315.50, 5, 10, 2, 'palio corsa', 3, 6, 32, 830, 'B5', '2022-03-22', 'Rodrigo'),
-	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 1839.30, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6', '2022-03-22', 'Rodrigo'),
-	(1735, '1000', '1000', '1000', 'kit Distribucion', 2150.00, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7', '2022-03-22', 'Rodrigo'),
-	(1736, '5050', '5050', '5050', 'prueba', 15000.00, 10, 100, 50, '', 4, 2, 32, 830, '', '2022-03-22', 'Rodrigo'),
-	(1737, '989898', '989898', '989898', 'ruleman', 1500.00, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb', '2022-03-22', 'Rodrigo'),
-	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.00, 1, 1, 49, '', 1, 3, 32, 830, '', '2022-03-22', 'Rodrigo'),
-	(1739, 'A12-0138-001', 'A12-0138-001', 'A12-0138-001', 'PARRILLA DERECHA PEUGEOT 206', 2000.15, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
-	(1740, '23032022', '23032022', '23032022', 'prueba del dia', 1800.19, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
-	(1741, '1006', '1006', '1006', 'Paño fijo', 6.15, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
-	(1742, '721450764938', '721450764938', '721450764938', 'toner', 150.00, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
-	(1743, '721450764937', '721450764937', '721450764937', 'toner hp', 150.15, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
-	(1744, '3726860776493', '3726860776493', '3726860776493', 'otro articulo', 123.00, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo');
+	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 2108.77, 5, 10, 2, 'palio corsa', 3, 6, 32, 830, 'B5', '2022-03-22', 'Rodrigo'),
+	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 2948.41, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6', '2022-03-22', 'Rodrigo'),
+	(1735, '1000', '1000', '1000', 'kit Distribucion', 3446.47, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7', '2022-03-22', 'Rodrigo'),
+	(1736, '5050', '5050', '5050', 'prueba', 21859.22, 10, 100, 50, '', 4, 2, 32, 830, '', '2022-03-22', 'Rodrigo'),
+	(1737, '989898', '989898', '989898', 'ruleman', 2185.92, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb', '2022-03-22', 'Rodrigo'),
+	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.45, 1, 1, 49, '', 1, 3, 32, 830, '', '2022-03-22', 'Rodrigo'),
+	(1739, 'A12-0138-001', 'A12-0138-001', 'A12-0138-001', 'PARRILLA DERECHA PEUGEOT 206', 2914.78, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
+	(1740, '23032022', '23032022', '23032022', 'prueba del dia', 2623.39, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
+	(1741, '1006', '1006', '1006', 'Paño fijo', 8.97, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1742, '721450764938', '721450764938', '721450764938', 'toner', 218.59, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1743, '721450764937', '721450764937', '721450764937', 'toner hp', 218.81, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1744, '3726860776493', '3726860776493', '3726860776493', 'otro articulo', 179.25, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo');
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
+
+-- Volcando estructura para procedimiento repuestos.aumentoPrecios
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `aumentoPrecios`(
+	IN `p0` INT,
+	IN `p1` DECIMAL(10,3)
+)
+begin
+if p0=0
+			then
+			update articulo a
+			set
+			a.precio = a.precio * p1
+	 ;
+  
+  else
+			update articulo a
+			set
+			a.precio = a.precio * p1
+			where a.Rubro_ID = p0
+			;
+  end if;
+end//
+DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.BuscarArticulo
 DELIMITER //
