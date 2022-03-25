@@ -196,7 +196,6 @@ C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.csproj.ResolveComRefere
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarArticulo.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarCiudad.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarMatriz.resources
-C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Aleacion.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Ciudad.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Clasificacion.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Contacto.resources
@@ -381,3 +380,5 @@ C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteStock.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.CambioPrecios.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EntradasSalidas.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteMovimientos.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Marca.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.MarcaVehiculo.resources

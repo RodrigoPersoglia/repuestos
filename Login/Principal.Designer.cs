@@ -75,6 +75,7 @@ namespace Login
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ponerContadoresEnCeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +106,8 @@ namespace Login
             this.aleaciónToolStripMenuItem,
             this.templeToolStripMenuItem,
             this.clasificaciónToolStripMenuItem,
-            this.mediosDePagoToolStripMenuItem});
+            this.mediosDePagoToolStripMenuItem,
+            this.marcaVehiculoToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             resources.ApplyResources(this.archivoToolStripMenuItem, "archivoToolStripMenuItem");
             // 
@@ -361,6 +363,13 @@ namespace Login
             resources.ApplyResources(this.ponerContadoresEnCeroToolStripMenuItem, "ponerContadoresEnCeroToolStripMenuItem");
             this.ponerContadoresEnCeroToolStripMenuItem.Click += new System.EventHandler(this.ponerContadoresEnCeroToolStripMenuItem_Click);
             // 
+            // marcaVehiculoToolStripMenuItem
+            // 
+            this.marcaVehiculoToolStripMenuItem.Image = global::Login.Properties.Resources.configDatos;
+            this.marcaVehiculoToolStripMenuItem.Name = "marcaVehiculoToolStripMenuItem";
+            resources.ApplyResources(this.marcaVehiculoToolStripMenuItem, "marcaVehiculoToolStripMenuItem");
+            this.marcaVehiculoToolStripMenuItem.Click += new System.EventHandler(this.marcaVehiculoToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -408,5 +417,6 @@ namespace Login
         private System.Windows.Forms.ToolStripMenuItem porImporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradasSalidasDeArtículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimientosDeArtículosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcaVehiculoToolStripMenuItem;
     }
 }

@@ -2747,6 +2747,92 @@ namespace Login
 
 
 
+		public static DataTable GetMarcaVehiculo()
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "SELECT * FROM marcavehiculo a order by a.descripcion";
+			try
+			{
+
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
+
+				if (dt.Rows.Count > 0)
+				{
+
+					return dt;
+				}
+				else { return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
+
+		public static void AddMarcaVehiculo(string descripcion)
+		{
+			string consulta = "insert into marcavehiculo (descripcion) values ('" + descripcion + "')";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Marca creada correctamente", "Marca", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+		public static void SetMarcaVehiculo(int id, string descripcion)
+		{
+			string consulta = "update marcavehiculo a set descripcion = '" + descripcion + "' where a.id = " + id.ToString();
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Marca modificada correctamente", "Marca", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+		public static void DeleteMarcaVehiculo(int id)
+		{
+			string consulta = "delete from marcavehiculo where id = '" + id.ToString() + "'";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Marca eliminada correctamente", "Marca", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

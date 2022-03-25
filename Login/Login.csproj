@@ -111,11 +111,11 @@
     <Compile Include="AgregarMatriz.designer.cs">
       <DependentUpon>AgregarMatriz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aleacion.cs">
+    <Compile Include="Marca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aleacion.designer.cs">
-      <DependentUpon>Aleacion.cs</DependentUpon>
+    <Compile Include="Marca.designer.cs">
+      <DependentUpon>Marca.cs</DependentUpon>
     </Compile>
     <Compile Include="AnulacionComprobantes.cs">
       <SubType>Form</SubType>
@@ -218,6 +218,12 @@
     </Compile>
     <Compile Include="ListadoProveedores.designer.cs">
       <DependentUpon>ListadoProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarcaVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcaVehiculo.designer.cs">
+      <DependentUpon>MarcaVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Matriz.cs" />
     <Compile Include="MediosPago.cs">
@@ -386,8 +392,8 @@
     <EmbeddedResource Include="AgregarMatriz.resx">
       <DependentUpon>AgregarMatriz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aleacion.resx">
-      <DependentUpon>Aleacion.cs</DependentUpon>
+    <EmbeddedResource Include="Marca.resx">
+      <DependentUpon>Marca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnulacionComprobantes.resx">
       <DependentUpon>AnulacionComprobantes.cs</DependentUpon>
@@ -436,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoProveedores.resx">
       <DependentUpon>ListadoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcaVehiculo.resx">
+      <DependentUpon>MarcaVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MediosPago.resx">
       <DependentUpon>MediosPago.cs</DependentUpon>

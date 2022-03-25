@@ -724,7 +724,7 @@ namespace Login
 			int contador = 0;
 			foreach (Form f in Application.OpenForms)
 			{
-				if (f is Aleacion)
+				if (f is Marca)
 				{
 					f.Show();
 					if (f.WindowState == FormWindowState.Minimized)
@@ -737,7 +737,7 @@ namespace Login
 			}
 			if (contador == 0)
 			{
-				Aleacion ventana = new Aleacion();
+				Marca ventana = new Marca();
 				ventana.MdiParent = this;
 				ventana.Show();
 			}
@@ -1194,6 +1194,31 @@ namespace Login
 			if (contador == 0)
 			{
 				ReporteMovimientos ventana = new ReporteMovimientos();
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+        private void marcaVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is MarcaVehiculo)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				MarcaVehiculo ventana = new MarcaVehiculo();
 				ventana.MdiParent = this;
 				ventana.Show();
 			}
