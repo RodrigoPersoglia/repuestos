@@ -2649,6 +2649,107 @@ namespace Login
 
 
 
+		public static void ModificarPrecioPorcentaje(int rubroID,decimal modificacion,int proveedorID )
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("CambioPreciosPorcentaje", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p0", rubroID);
+				comand.Parameters.AddWithValue("@p1", modificacion);
+				comand.Parameters.AddWithValue("@p2", proveedorID);
+
+				comand.ExecuteNonQuery();
+				MessageBox.Show("Precio actualizado correctamente", "Modificación de Precios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			}
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+		public static void ModificarPrecioImporte(int rubroID, decimal modificacion, int proveedorID)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("CambioPreciosImporte", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p0", rubroID);
+				comand.Parameters.AddWithValue("@p1", modificacion);
+				comand.Parameters.AddWithValue("@p2", proveedorID);
+
+				comand.ExecuteNonQuery();
+				MessageBox.Show("Precio actualizado correctamente", "Modificación de Precios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			}
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+
+		public static void MovimientoStock(DateTime fecha,int articuloID, int tipoMovimientoID,string usuario,string observaciones,int cantidad)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("AgregarMovimientoStock", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p1", fecha);
+				comand.Parameters.AddWithValue("@p2", articuloID);
+				comand.Parameters.AddWithValue("@p3", tipoMovimientoID);
+				comand.Parameters.AddWithValue("@p4", usuario);
+				comand.Parameters.AddWithValue("@p5", observaciones);
+				comand.Parameters.AddWithValue("@p6", cantidad);
+
+
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Operación confirmada", "Movimiento de artículos", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+		public static DataTable ObtenerReporteMovimietos(DateTime fecha1, DateTime fecha2)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("verMovimientos", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p1", fecha1);
+				comand.Parameters.AddWithValue("@p2", fecha2);
+				MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+				adp.Fill(dt);
+				if (dt.Rows.Count > 0)
+				{
+
+					return dt;
+				}
+				else { MessageBox.Show("No hay registros en el intervalo seleccionado"); return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
+
+
+
+
+
+
+
+
+
+
 	}
 
 

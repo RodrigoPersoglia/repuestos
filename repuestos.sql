@@ -292,6 +292,45 @@ values (p1,p2,p3,p4,p5,0);
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento repuestos.AgregarMovimientoStock
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarMovimientoStock`(
+	IN `p1` date,
+	IN `p2` int,
+	IN `p3` int,
+	IN `p4` varchar(60),
+	IN `p5` varchar(200)
+,
+	IN `p6` INT
+
+)
+begin
+start transaction;
+insert into movimientostock (fecha,articuloID,tipoMovimientoID,usuario,observaciones,cantidad)
+values(p1,p2,p3,p4,p5,p6);
+
+ IF     
+ 			  p3 = 1 THEN  
+ 			  
+				update articulo a
+				set
+				a.stockActual = a.stockActual + p6
+				where a.ID = p2
+				
+				;
+ 	 ELSEIF p3 = 2  THEN 
+	  			update articulo a
+				set
+				a.stockActual = a.stockActual - p6
+				where a.ID = p2
+				;
+    END IF;
+
+
+commit;
+end//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento repuestos.AgregarNitrurado
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `AgregarNitrurado`(
@@ -452,46 +491,22 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   CONSTRAINT `articulo_ibfk_4` FOREIGN KEY (`Rubro_ID`) REFERENCES `rubro` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=1745 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.articulo: ~12 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.articulo: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
 REPLACE INTO `articulo` (`ID`, `codigo`, `codigoProveedor`, `numeroPieza`, `descripcion`, `precio`, `stockMin`, `stockMax`, `stockActual`, `observaciones`, `Marca_ID`, `Rubro_ID`, `Lado_ID`, `Proveedor_ID`, `Ubicacion`, `creacion`, `usuario`) VALUES
-	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 2108.77, 5, 10, 2, 'palio corsa', 3, 6, 32, 830, 'B5', '2022-03-22', 'Rodrigo'),
-	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 2948.41, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6', '2022-03-22', 'Rodrigo'),
-	(1735, '1000', '1000', '1000', 'kit Distribucion', 3446.47, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7', '2022-03-22', 'Rodrigo'),
-	(1736, '5050', '5050', '5050', 'prueba', 21859.22, 10, 100, 50, '', 4, 2, 32, 830, '', '2022-03-22', 'Rodrigo'),
-	(1737, '989898', '989898', '989898', 'ruleman', 2185.92, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb', '2022-03-22', 'Rodrigo'),
-	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1.45, 1, 1, 49, '', 1, 3, 32, 830, '', '2022-03-22', 'Rodrigo'),
-	(1739, 'A12-0138-001', 'A12-0138-001', 'A12-0138-001', 'PARRILLA DERECHA PEUGEOT 206', 2914.78, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
-	(1740, '23032022', '23032022', '23032022', 'prueba del dia', 2623.39, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
-	(1741, '1006', '1006', '1006', 'Paño fijo', 8.97, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
-	(1742, '721450764938', '721450764938', '721450764938', 'toner', 218.59, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
-	(1743, '721450764937', '721450764937', '721450764937', 'toner hp', 218.81, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
-	(1744, '3726860776493', '3726860776493', '3726860776493', 'otro articulo', 179.25, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo');
+	(1733, '10', 'rodrigo persoglia', '10', 'Correa Distribucion 50 cm 40 dientes', 4587.46, 5, 10, 2, 'palio corsa', 3, 6, 32, 830, 'B5', '2022-03-22', 'Rodrigo'),
+	(1734, '100', '1000', '100', 'Correa Distribucion 50 cm ', 4317.77, 5, 10, 50, '  ', 6, 6, 32, 831, 'B6', '2022-03-22', 'Rodrigo'),
+	(1735, '1000', '1000', '1000', 'kit Distribucion', 6545.98, 3, 10, 42, 'corsa', 1, 6, 32, 830, 'B7', '2022-03-22', 'Rodrigo'),
+	(1736, '5050', '5050', '5050', 'prueba', 27949.65, 10, 100, 50, '', 4, 2, 32, 830, '', '2022-03-22', 'Rodrigo'),
+	(1737, '989898', '989898', '989898', 'ruleman', 2910.46, 10, 100, 45, 'palio', 2, 4, 32, 831, 'bbb', '2022-03-22', 'Rodrigo'),
+	(1738, 'SC', 'SC', 'SC', 'Escribir detalle', 1501.76, 1, 1, 49, '', 1, 3, 32, 830, '', '2022-03-22', 'Rodrigo'),
+	(1739, 'A12-0138-001', 'A12-0138-001', 'A12-0138-001', 'PARRILLA DERECHA PEUGEOT 206', 5026.89, 1, 1, 6, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
+	(1740, '23032022', '23032022', '23032022', 'prueba del dia', 4674.30, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-22', 'Rodrigo'),
+	(1741, '1006', '1006', '1006', 'Paño fijo', 1510.86, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1742, '721450764938', '721450764938', '721450764938', 'toner', 1764.50, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1743, '721450764937', '721450764937', '721450764937', 'toner hp', 1764.76, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo'),
+	(1744, '3726860776493', '3726860776493', '3726860776493', 'otro articulo', 1716.90, 1, 1, 1, '', 4, 3, 30, 830, '', '2022-03-23', 'Rodrigo');
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
-
--- Volcando estructura para procedimiento repuestos.aumentoPrecios
-DELIMITER //
-CREATE DEFINER=`root`@`localhost` PROCEDURE `aumentoPrecios`(
-	IN `p0` INT,
-	IN `p1` DECIMAL(10,3)
-)
-begin
-if p0=0
-			then
-			update articulo a
-			set
-			a.precio = a.precio * p1
-	 ;
-  
-  else
-			update articulo a
-			set
-			a.precio = a.precio * p1
-			where a.Rubro_ID = p0
-			;
-  end if;
-end//
-DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.BuscarArticulo
 DELIMITER //
@@ -579,6 +594,87 @@ select m.ID,m.descripcion,m.`año`,m.Marca_ID,ma.descripcion
 from modelo m 
 inner join marcavehiculo ma on m.Marca_ID = ma.ID 
 where m.ID= busqueda//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento repuestos.CambioPreciosImporte
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CambioPreciosImporte`(
+	IN `p0` INT,
+	IN `p1` DECIMAL(10,3)
+,
+	IN `p2` INT
+
+
+
+)
+begin
+ IF     
+ 			  p0 = 0 and p2 = 0 THEN  
+				update articulo a
+				set
+				a.precio = a.precio + p1
+				;
+ 	 ELSEIF p0 = 0 and p2 > 0 THEN 
+	  				update articulo a
+				set
+				a.precio = a.precio + p1
+				where a.Proveedor_ID = p2
+				;
+	 ELSEIF p0 > 0 and p2 = 0 THEN 
+	 				update articulo a
+				set
+				a.precio = a.precio + p1
+				where a.Rubro_ID = p0
+				;
+    ELSEIF p0 > 0 and p2 > 0 THEN 
+	 				update articulo a
+				set
+				a.precio = a.precio + p1
+				where a.Rubro_ID = p0 and a.Proveedor_ID = p2
+				;
+    END IF;
+
+end//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento repuestos.CambioPreciosPorcentaje
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CambioPreciosPorcentaje`(
+	IN `p0` INT,
+	IN `p1` DECIMAL(10,3)
+,
+	IN `p2` INT
+
+
+)
+begin
+ IF     
+ 			  p0 = 0 and p2 = 0 THEN  
+				update articulo a
+				set
+				a.precio = a.precio * p1
+				;
+ 	 ELSEIF p0 = 0 and p2 > 0 THEN 
+	  				update articulo a
+				set
+				a.precio = a.precio * p1
+				where a.Proveedor_ID = p2
+				;
+	 ELSEIF p0 > 0 and p2 = 0 THEN 
+	 				update articulo a
+				set
+				a.precio = a.precio * p1
+				where a.Rubro_ID = p0
+				;
+    ELSEIF p0 > 0 and p2 > 0 THEN 
+	 				update articulo a
+				set
+				a.precio = a.precio * p1
+				where a.Rubro_ID = p0 and a.Proveedor_ID = p2
+				;
+    END IF;
+
+end//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.cantidadNitturados
@@ -766,7 +862,7 @@ CREATE TABLE IF NOT EXISTS `detallefactura` (
   CONSTRAINT `FK_detalleFactura_articulo` FOREIGN KEY (`articulo_ID`) REFERENCES `articulo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.detallefactura: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.detallefactura: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `detallefactura` DISABLE KEYS */;
 REPLACE INTO `detallefactura` (`ID`, `codigo`, `descripcion`, `cantidad`, `precio`, `factura_ID`, `articulo_ID`) VALUES
 	(65, '10', 'Correa Distribucion 50 cm 40 dientes', 4, 1315.50, 55, 1733),
@@ -1028,7 +1124,7 @@ CREATE TABLE IF NOT EXISTS `factura` (
   CONSTRAINT `FK_factura_mediodepago` FOREIGN KEY (`medioPagoID`) REFERENCES `mediodepago` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla repuestos.factura: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla repuestos.factura: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `factura` DISABLE KEYS */;
 REPLACE INTO `factura` (`ID`, `numero`, `fechaHora`, `subTotal`, `financiacion`, `total`, `cliente_ID`, `cliente`, `direccion`, `localidad`, `cp`, `usuario`, `medioPagoID`, `activa`) VALUES
 	(55, 1, '2022-03-22 16:38:20', 5262.00, 0.00, 5262.00, 2, 'CONSUMIDOR FINAL', ' ', 'Florencio Varela', ' ', 'Rodrigo', 1, 1),
@@ -2769,6 +2865,30 @@ where  c.ID = p0 and  d.ID =  c.Dir_Ent_ID
 END//
 DELIMITER ;
 
+-- Volcando estructura para tabla repuestos.movimientostock
+CREATE TABLE IF NOT EXISTS `movimientostock` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha` date NOT NULL,
+  `articuloID` int(11) NOT NULL,
+  `tipoMovimientoID` int(11) NOT NULL,
+  `Usuario` varchar(50) NOT NULL,
+  `observaciones` varchar(200) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK_movimientostock_articulo` (`articuloID`),
+  KEY `FK_movimientostock_tipomovimiento` (`tipoMovimientoID`),
+  CONSTRAINT `FK_movimientostock_articulo` FOREIGN KEY (`articuloID`) REFERENCES `articulo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_movimientostock_tipomovimiento` FOREIGN KEY (`tipoMovimientoID`) REFERENCES `tipomovimiento` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla repuestos.movimientostock: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `movimientostock` DISABLE KEYS */;
+REPLACE INTO `movimientostock` (`ID`, `fecha`, `articuloID`, `tipoMovimientoID`, `Usuario`, `observaciones`, `cantidad`) VALUES
+	(1, '2022-03-25', 1735, 1, 'Rodrigo', 'primer prueba', 1),
+	(4, '2022-03-25', 1735, 2, 'Rodrigo', '', 1),
+	(5, '2022-03-25', 1739, 1, 'Rodrigo', '', 5);
+/*!40000 ALTER TABLE `movimientostock` ENABLE KEYS */;
+
 -- Volcando estructura para tabla repuestos.nitrurado
 CREATE TABLE IF NOT EXISTS `nitrurado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -3483,6 +3603,20 @@ REPLACE INTO `tipodocumento` (`ID`, `descripcion`) VALUES
 	(4, 'Pasaporte');
 /*!40000 ALTER TABLE `tipodocumento` ENABLE KEYS */;
 
+-- Volcando estructura para tabla repuestos.tipomovimiento
+CREATE TABLE IF NOT EXISTS `tipomovimiento` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(60) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- Volcando datos para la tabla repuestos.tipomovimiento: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `tipomovimiento` DISABLE KEYS */;
+REPLACE INTO `tipomovimiento` (`ID`, `descripcion`) VALUES
+	(1, 'Entrada'),
+	(2, 'Salida');
+/*!40000 ALTER TABLE `tipomovimiento` ENABLE KEYS */;
+
 -- Volcando estructura para tabla repuestos.topologia
 CREATE TABLE IF NOT EXISTS `topologia` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -3702,6 +3836,19 @@ inner join estadoMatriz e on m.EstadoMatriz_ID = e.ID
 where a.codigo = parametro1 and m.EstadoMatriz_ID <3
 order by m.pesoActual desc
 ;END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento repuestos.verMovimientos
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verMovimientos`(
+	IN `p1` DATE,
+	IN `p2` DATE
+)
+select m.fecha,a.codigo,a.descripcion,m.cantidad,t.descripcion,m.Usuario,m.observaciones
+from movimientostock m
+inner join articulo a on m.articuloID = a.ID
+inner join tipomovimiento t on m.tipoMovimientoID = t.id
+where m.fecha >=p1 and m.fecha <= p2//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento repuestos.verPedidos

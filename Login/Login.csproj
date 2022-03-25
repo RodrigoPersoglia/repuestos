@@ -131,6 +131,12 @@
     <Compile Include="BusquedaRapida.designer.cs">
       <DependentUpon>BusquedaRapida.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambioPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambioPrecios.Designer.cs">
+      <DependentUpon>CambioPrecios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ciudad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     </Compile>
     <Compile Include="EnProduccion.Designer.cs">
       <DependentUpon>EnProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntradasSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradasSalidas.Designer.cs">
+      <DependentUpon>EntradasSalidas.cs</DependentUpon>
     </Compile>
     <Compile Include="Exportar.cs" />
     <Compile Include="EmisionComprobantes.cs">
@@ -290,6 +302,12 @@
     <Compile Include="ReporteEmision.Designer.cs">
       <DependentUpon>ReporteEmision.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMovimientos.designer.cs">
+      <DependentUpon>ReporteMovimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +395,9 @@
     <EmbeddedResource Include="BusquedaRapida.resx">
       <DependentUpon>BusquedaRapida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambioPrecios.resx">
+      <DependentUpon>CambioPrecios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ciudad.resx">
       <DependentUpon>Ciudad.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Acceso.resx">
       <DependentUpon>Acceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradasSalidas.resx">
+      <DependentUpon>EntradasSalidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fondo.resx">
       <DependentUpon>fondo.cs</DependentUpon>
@@ -455,6 +479,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteEmision.resx">
       <DependentUpon>ReporteEmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMovimientos.resx">
+      <DependentUpon>ReporteMovimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteStock.resx">
       <DependentUpon>ReporteStock.cs</DependentUpon>
@@ -538,6 +565,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono redondo.ico" />
+    <None Include="Resources\Advertencia.png" />
+    <None Include="Resources\flechas.png" />
+    <None Include="Resources\porcentaje.png" />
+    <None Include="Resources\dolar.png" />
     <None Include="Resources\fondo10.gif" />
     <None Include="Resources\fondo10.tif" />
     <None Include="Resources\fondo9.jpg" />

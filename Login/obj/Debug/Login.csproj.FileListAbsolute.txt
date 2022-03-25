@@ -378,3 +378,6 @@ C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EmisionPresupuesto.reso
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.RestablecerContadores.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteEmision.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteStock.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.CambioPrecios.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EntradasSalidas.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteMovimientos.resources

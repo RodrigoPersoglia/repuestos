@@ -130,7 +130,7 @@ namespace Login
 			//reportesToolStripMenuItem.Visible = usuario.TablaReporte;
 			//opciones de articulos
 			AgregarArticuloMenu.Visible = usuario.AltaArticulos;
-			EliminarArticuloMenu.Visible = usuario.BajaArticulos;
+			//EliminarArticuloMenu.Visible = usuario.BajaArticulos;
 			ModifArt.Visible = usuario.ModificaArticulos;
 			//opciones de cliente
 			agregarToolStripMenuItem1.Visible = usuario.AltaClientes;
@@ -1100,8 +1100,104 @@ namespace Login
 
 		}
 
+        private void porPorcentajeToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is CambioPrecios)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
 
+			}
+			if (contador == 0)
+			{
+				CambioPrecios ventana = new CambioPrecios(usuario,"Porcentaje",true);
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
 
+		}
 
+        private void porImporteToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is CambioPrecios)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				CambioPrecios ventana = new CambioPrecios(usuario, "Importe", false);
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+        private void entradasSalidasDeArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is EntradasSalidas)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				EntradasSalidas ventana = new EntradasSalidas(usuario);
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
+
+        private void movimientosDeArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is ReporteMovimientos)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				ReporteMovimientos ventana = new ReporteMovimientos();
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
 	}
 }
