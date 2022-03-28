@@ -1224,5 +1224,30 @@ namespace Login
 			}
 
 		}
+
+        private void modeloVehículoToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			int contador = 0;
+			foreach (Form f in Application.OpenForms)
+			{
+				if (f is ModeloAuto)
+				{
+					f.Show();
+					if (f.WindowState == FormWindowState.Minimized)
+						f.WindowState = FormWindowState.Normal;
+					f.BringToFront();
+					contador++;
+					return;
+				}
+
+			}
+			if (contador == 0)
+			{
+				ModeloAuto ventana = new ModeloAuto();
+				ventana.MdiParent = this;
+				ventana.Show();
+			}
+
+		}
 	}
 }

@@ -41,19 +41,13 @@ namespace Login
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ciudadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aleaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.templeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clasificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AgregarArticuloMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ModifArt = new System.Windows.Forms.ToolStripMenuItem();
             this.verListadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,21 +55,28 @@ namespace Login
             this.porPorcentajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porImporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradasSalidasDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verListadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emisiónPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anulaciónDeComprobantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprobantesEmitidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ponerContadoresEnCeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcaVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloVehículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,77 +108,10 @@ namespace Login
             this.templeToolStripMenuItem,
             this.clasificaciónToolStripMenuItem,
             this.mediosDePagoToolStripMenuItem,
-            this.marcaVehiculoToolStripMenuItem});
+            this.marcaVehiculoToolStripMenuItem,
+            this.modeloVehículoToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             resources.ApplyResources(this.archivoToolStripMenuItem, "archivoToolStripMenuItem");
-            // 
-            // artículosToolStripMenuItem
-            // 
-            this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AgregarArticuloMenu,
-            this.ModifArt,
-            this.verListadoToolStripMenuItem,
-            this.cambioDePreciosToolStripMenuItem,
-            this.entradasSalidasDeArtículosToolStripMenuItem});
-            this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            resources.ApplyResources(this.artículosToolStripMenuItem, "artículosToolStripMenuItem");
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem1,
-            this.modificarToolStripMenuItem,
-            this.verListadoToolStripMenuItem1});
-            this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            resources.ApplyResources(this.clientesToolStripMenuItem, "clientesToolStripMenuItem");
-            // 
-            // clientesToolStripMenuItem1
-            // 
-            this.clientesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem,
-            this.modificarToolStripMenuItem1,
-            this.listadoToolStripMenuItem});
-            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            resources.ApplyResources(this.clientesToolStripMenuItem1, "clientesToolStripMenuItem1");
-            // 
-            // facturaciónToolStripMenuItem
-            // 
-            this.facturaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.facturarToolStripMenuItem,
-            this.emisiónPresupuestosToolStripMenuItem,
-            this.anulaciónDeComprobantesToolStripMenuItem});
-            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            resources.ApplyResources(this.facturaciónToolStripMenuItem, "facturaciónToolStripMenuItem");
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comprobantesEmitidosToolStripMenuItem,
-            this.stockToolStripMenuItem,
-            this.movimientosDeArtículosToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
-            // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            resources.ApplyResources(this.usuarioToolStripMenuItem, "usuarioToolStripMenuItem");
-            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
-            // 
-            // mantenimientoToolStripMenuItem
-            // 
-            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ponerContadoresEnCeroToolStripMenuItem});
-            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            resources.ApplyResources(this.mantenimientoToolStripMenuItem, "mantenimientoToolStripMenuItem");
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            resources.ApplyResources(this.ayudaToolStripMenuItem, "ayudaToolStripMenuItem");
-            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
             // ciudadesToolStripMenuItem
             // 
@@ -213,6 +147,25 @@ namespace Login
             this.mediosDePagoToolStripMenuItem.Name = "mediosDePagoToolStripMenuItem";
             resources.ApplyResources(this.mediosDePagoToolStripMenuItem, "mediosDePagoToolStripMenuItem");
             this.mediosDePagoToolStripMenuItem.Click += new System.EventHandler(this.mediosDePagoToolStripMenuItem_Click);
+            // 
+            // marcaVehiculoToolStripMenuItem
+            // 
+            this.marcaVehiculoToolStripMenuItem.Image = global::Login.Properties.Resources.configDatos;
+            this.marcaVehiculoToolStripMenuItem.Name = "marcaVehiculoToolStripMenuItem";
+            resources.ApplyResources(this.marcaVehiculoToolStripMenuItem, "marcaVehiculoToolStripMenuItem");
+            this.marcaVehiculoToolStripMenuItem.Click += new System.EventHandler(this.marcaVehiculoToolStripMenuItem_Click);
+            // 
+            // artículosToolStripMenuItem
+            // 
+            this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AgregarArticuloMenu,
+            this.ModifArt,
+            this.verListadoToolStripMenuItem,
+            this.cambioDePreciosToolStripMenuItem,
+            this.entradasSalidasDeArtículosToolStripMenuItem});
+            this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
+            resources.ApplyResources(this.artículosToolStripMenuItem, "artículosToolStripMenuItem");
             // 
             // AgregarArticuloMenu
             // 
@@ -265,6 +218,16 @@ namespace Login
             resources.ApplyResources(this.entradasSalidasDeArtículosToolStripMenuItem, "entradasSalidasDeArtículosToolStripMenuItem");
             this.entradasSalidasDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.entradasSalidasDeArtículosToolStripMenuItem_Click);
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarToolStripMenuItem1,
+            this.modificarToolStripMenuItem,
+            this.verListadoToolStripMenuItem1});
+            this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            resources.ApplyResources(this.clientesToolStripMenuItem, "clientesToolStripMenuItem");
+            // 
             // agregarToolStripMenuItem1
             // 
             this.agregarToolStripMenuItem1.Image = global::Login.Properties.Resources.agregar;
@@ -295,6 +258,15 @@ namespace Login
             resources.ApplyResources(this.salirToolStripMenuItem, "salirToolStripMenuItem");
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // clientesToolStripMenuItem1
+            // 
+            this.clientesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarToolStripMenuItem,
+            this.modificarToolStripMenuItem1,
+            this.listadoToolStripMenuItem});
+            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
+            resources.ApplyResources(this.clientesToolStripMenuItem1, "clientesToolStripMenuItem1");
+            // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Image = global::Login.Properties.Resources.agregar;
@@ -316,6 +288,15 @@ namespace Login
             resources.ApplyResources(this.listadoToolStripMenuItem, "listadoToolStripMenuItem");
             this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
             // 
+            // facturaciónToolStripMenuItem
+            // 
+            this.facturaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facturarToolStripMenuItem,
+            this.emisiónPresupuestosToolStripMenuItem,
+            this.anulaciónDeComprobantesToolStripMenuItem});
+            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
+            resources.ApplyResources(this.facturaciónToolStripMenuItem, "facturaciónToolStripMenuItem");
+            // 
             // facturarToolStripMenuItem
             // 
             resources.ApplyResources(this.facturarToolStripMenuItem, "facturarToolStripMenuItem");
@@ -334,6 +315,15 @@ namespace Login
             this.anulaciónDeComprobantesToolStripMenuItem.Name = "anulaciónDeComprobantesToolStripMenuItem";
             resources.ApplyResources(this.anulaciónDeComprobantesToolStripMenuItem, "anulaciónDeComprobantesToolStripMenuItem");
             this.anulaciónDeComprobantesToolStripMenuItem.Click += new System.EventHandler(this.anulaciónDeComprobantesToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comprobantesEmitidosToolStripMenuItem,
+            this.stockToolStripMenuItem,
+            this.movimientosDeArtículosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            resources.ApplyResources(this.reportesToolStripMenuItem, "reportesToolStripMenuItem");
             // 
             // comprobantesEmitidosToolStripMenuItem
             // 
@@ -356,6 +346,19 @@ namespace Login
             resources.ApplyResources(this.movimientosDeArtículosToolStripMenuItem, "movimientosDeArtículosToolStripMenuItem");
             this.movimientosDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.movimientosDeArtículosToolStripMenuItem_Click);
             // 
+            // usuarioToolStripMenuItem
+            // 
+            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
+            resources.ApplyResources(this.usuarioToolStripMenuItem, "usuarioToolStripMenuItem");
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
+            // 
+            // mantenimientoToolStripMenuItem
+            // 
+            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ponerContadoresEnCeroToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            resources.ApplyResources(this.mantenimientoToolStripMenuItem, "mantenimientoToolStripMenuItem");
+            // 
             // ponerContadoresEnCeroToolStripMenuItem
             // 
             this.ponerContadoresEnCeroToolStripMenuItem.Image = global::Login.Properties.Resources.Advertencia;
@@ -363,12 +366,18 @@ namespace Login
             resources.ApplyResources(this.ponerContadoresEnCeroToolStripMenuItem, "ponerContadoresEnCeroToolStripMenuItem");
             this.ponerContadoresEnCeroToolStripMenuItem.Click += new System.EventHandler(this.ponerContadoresEnCeroToolStripMenuItem_Click);
             // 
-            // marcaVehiculoToolStripMenuItem
+            // ayudaToolStripMenuItem
             // 
-            this.marcaVehiculoToolStripMenuItem.Image = global::Login.Properties.Resources.configDatos;
-            this.marcaVehiculoToolStripMenuItem.Name = "marcaVehiculoToolStripMenuItem";
-            resources.ApplyResources(this.marcaVehiculoToolStripMenuItem, "marcaVehiculoToolStripMenuItem");
-            this.marcaVehiculoToolStripMenuItem.Click += new System.EventHandler(this.marcaVehiculoToolStripMenuItem_Click);
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            resources.ApplyResources(this.ayudaToolStripMenuItem, "ayudaToolStripMenuItem");
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
+            // 
+            // modeloVehículoToolStripMenuItem
+            // 
+            this.modeloVehículoToolStripMenuItem.Image = global::Login.Properties.Resources.configDatos;
+            this.modeloVehículoToolStripMenuItem.Name = "modeloVehículoToolStripMenuItem";
+            resources.ApplyResources(this.modeloVehículoToolStripMenuItem, "modeloVehículoToolStripMenuItem");
+            this.modeloVehículoToolStripMenuItem.Click += new System.EventHandler(this.modeloVehículoToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -418,5 +427,6 @@ namespace Login
         private System.Windows.Forms.ToolStripMenuItem entradasSalidasDeArtículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimientosDeArtículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaVehiculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modeloVehículoToolStripMenuItem;
     }
 }

@@ -382,3 +382,4 @@ C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EntradasSalidas.resourc
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteMovimientos.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Marca.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.MarcaVehiculo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ModeloAuto.resources

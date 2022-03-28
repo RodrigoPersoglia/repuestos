@@ -2822,6 +2822,78 @@ namespace Login
 
 
 
+		public static DataTable GetModeloAuto()
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "SELECT * FROM modelo c order by c.descripcion";
+			try
+			{
+
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
+
+				if (dt.Rows.Count > 0)
+				{
+
+					return dt;
+				}
+				else { return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
+
+		public static void AddModeloAuto(string descripcion, int año, int marcaID)
+		{
+			string consulta = "insert into modelo (descripcion,año,Marca_ID) values ('" + descripcion + "', '" + año + "', '" + marcaID + "')";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Modelo creado correctamente", "Modelo", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+
+		public static void SetModeloAuto(int id, string descripcion, int año, int marcaID)
+		{
+			string consulta = "update modelo c set descripcion = '" + descripcion + "', año = '" + año + "', Marca_ID = '" + marcaID + "' where c.id = '" + id.ToString() + "'";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Modelo modificado correctamente", "Modelo", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
+		public static void DeleteModeloAuto(int id)
+		{
+			string consulta = "delete from modelo where id = '" + id.ToString() + "'";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Modelo eliminado correctamente", "Modelo", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
 
 
 

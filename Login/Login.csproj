@@ -233,6 +233,12 @@
       <DependentUpon>MediosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo.cs" />
+    <Compile Include="ModeloAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeloAuto.designer.cs">
+      <DependentUpon>ModeloAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MediosPago.resx">
       <DependentUpon>MediosPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModeloAuto.resx">
+      <DependentUpon>ModeloAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.cs</DependentUpon>
