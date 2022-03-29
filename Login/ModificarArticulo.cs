@@ -10,16 +10,12 @@ namespace Login
 {
 	public partial class ModificarArticulo : Form
 	{
-		public ModificarArticulo() 
-		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
+		Usuario usuario;
+		Articulo articulo = new Articulo();
+		public ModificarArticulo( Usuario user) {
+
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
+			usuario = user;
 		}
 
 		// Carga los Combobox iniciales desde la base de datos
@@ -27,9 +23,9 @@ namespace Login
 		{
 			MySqlConnection conectar = Conexion.ObtenerConexion();
 
-			// COMBOBOX ALEACION
+			// COMBOBOX MARCA
 			MySqlDataReader reader;
-			string consulta = "Select ID,descripcion From Aleacion a order by a.descripcion";
+			string consulta = "Select ID,descripcion From marca a order by a.descripcion";
 			conectar.Open();
 
 			try{
@@ -38,18 +34,17 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
-				AleacionComboBox.DataSource = dt;
-				AleacionComboBox.DisplayMember = "descripcion";
-				AleacionComboBox.ValueMember = "ID";
-				
+				//newRow["descripcion"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
+				MarcaCBX.DataSource = dt;
+				MarcaCBX.DisplayMember = "descripcion";
+				MarcaCBX.ValueMember = "ID";
 
 			}
 			catch (MySqlException ex){MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error);}
 
-			// COMBOBOX TEMPLE
-			string consulta2 = "Select ID,descripcion From Temple t order by t.descripcion";
+			// COMBOBOX RUBRO
+			string consulta2 = "Select ID,descripcion From rubro t order by t.descripcion";
 			try
 			{
 				MySqlCommand comand = new MySqlCommand(consulta2, conectar);
@@ -57,16 +52,16 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
-				TempleComboBox.DataSource = dt;
-				TempleComboBox.DisplayMember = "descripcion";
-				TempleComboBox.ValueMember = "ID";
+				//newRow["descripcion"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
+				RubroCBX.DataSource = dt;
+				RubroCBX.DisplayMember = "descripcion";
+				RubroCBX.ValueMember = "ID";
 			}
 			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error); }
 
-			// COMBOBOX CLASIFICACION
-			string consulta3 = "Select ID,descripcion From Clasificacion c order by c.descripcion ";
+			// COMBOBOX LADO
+			string consulta3 = "Select ID,descripcion From lado c order by c.descripcion ";
 			try
 			{
 				MySqlCommand comand = new MySqlCommand(consulta3, conectar);
@@ -74,33 +69,17 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
-				ClasificacionComboBox.DataSource = dt;
-				ClasificacionComboBox.DisplayMember = "descripcion";
-				ClasificacionComboBox.ValueMember = "ID";
+				//newRow["descripcion"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
+				LadoCBX.DataSource = dt;
+				LadoCBX.DisplayMember = "descripcion";
+				LadoCBX.ValueMember = "ID";
 			}
 			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error); }
 
-			// COMBOBOX TOPOLOGIA
-			string consulta4 = "Select ID,descripcion From Topologia t order by t.descripcion";
-			try
-			{
-				MySqlCommand comand = new MySqlCommand(consulta4, conectar);
-				reader = comand.ExecuteReader();
-				DataTable dt = new DataTable();
-				dt.Load(reader);
-				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
-				TopologiaComboBox.DataSource = dt;
-				TopologiaComboBox.DisplayMember = "descripcion";
-				TopologiaComboBox.ValueMember = "ID";
-			}
-			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error); }
 
-			// COMBOBOX CLIENTE
-			string consulta5 = "Select ID,Alias From Cliente c order by c.Alias";
+			// COMBOBOX PROVEEDOR
+			string consulta5 = "Select ID,Alias From proveedor c order by c.Alias";
 			try
 			{
 				MySqlCommand comand = new MySqlCommand(consulta5, conectar);
@@ -108,159 +87,406 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				newRow["Alias"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
-				ClienteComboBox.DataSource = dt;
-				ClienteComboBox.DisplayMember = "Alias";
-				ClienteComboBox.ValueMember = "ID";
+				//newRow["Alias"] = "Seleccione";
+				//dt.Rows.InsertAt(newRow, 0);
+				ProveedorCBX.DataSource = dt;
+				ProveedorCBX.DisplayMember = "Alias";
+				ProveedorCBX.ValueMember = "ID";
 			}
 			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message,"Atención",MessageBoxButtons.OK,MessageBoxIcon.Error); }
-			// COMBOBOX PRENSA
-			string consulta6 = "Select ID,descripcion From Puesto p order by p.descripcion";
+
+
+
+
+			// COMBOBOX USUARIO
+			//MySqlDataReader reader;
+			string consulta6 = "Select ID,usuario From usuario a order by a.usuario";
 			try
 			{
 				MySqlCommand comand = new MySqlCommand(consulta6, conectar);
 				reader = comand.ExecuteReader();
 				DataTable dt = new DataTable();
 				dt.Load(reader);
-				DataRow newRow = dt.NewRow();
-				newRow["descripcion"] = "Seleccione";
-				dt.Rows.InsertAt(newRow, 0);
-				PrensaCBX.DataSource = dt;
-				PrensaCBX.DisplayMember = "descripcion";
-				PrensaCBX.ValueMember = "ID";
+				UsuarioCBX.DataSource = dt;
+				UsuarioCBX.DisplayMember = "usuario";
+				UsuarioCBX.ValueMember = "ID";
+
 			}
 			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
 			finally { conectar.Close(); } // Cerramos la conexion a la base de datos
 
+			UsuarioCBX.Text = usuario.User;
 		}
+
 
 
 
 		void CancelarClick(object sender, EventArgs e)
 		{this.Close();
 		}
+
+		private void limpiar()
+        {
+			CodigoTXT.Text = "";
+			CodigoProvTXT.Text = "";
+			numPiezaTXT.Text = "";
+			DescripcionTxt.Text = "";
+			PrecioNum.Value = 0;
+			stockMinNum.Value = 0;
+			stockMaxNum.Value = 0;
+			stockActualNum.Value = 0;
+			//MarcaCBX.Text = "Seleccione";
+			//ProveedorCBX.Text = "Seleccione";
+			//LadoCBX.Text = "Seleccione";
+			//RubroCBX.Text = "Seleccione";
+			UbicacionTXT.Text = "";
+			CompatibilidadTXT.Text = "";
+			Cuadro.Rows.Clear();
+			Cuadro2.Rows.Clear();
+			productoTXT.Text = "";
+			vehiculoCompTXT.Text = "";
+		}
 		
 		
 		
 		void CrearClick(object sender, EventArgs e)
 		{
-			try
-			{
-				String _codigo = Codigotxt.Text;
+            try
+            {
+                String _codigo = CodigoTXT.Text;
 				String _descripcion = DescripcionTxt.Text;
-				double _pesoNominal = double.Parse(PesoNominalTxt.Text);
-				int _tolerancia = int.Parse(ToleranciaTxt.Text);
-				int _multiplos = int.Parse(MultiplosTxt.Text);
-				int _aleacionID = (int)AleacionComboBox.SelectedValue;
-				int _templeID = (int)TempleComboBox.SelectedValue;
-				int _clasificacionID = (int)ClasificacionComboBox.SelectedValue;
-				int _topologiaID = (int)TopologiaComboBox.SelectedValue;
-				int _clienteID = (int)ClienteComboBox.SelectedValue;
+				double _pesoNominal = double.Parse(PrecioNum.Text);
+				int _stockMin = int.Parse(stockMinNum.Text);
+				int _stockMax = int.Parse(stockMaxNum.Text);
+				int _stockActual = int.Parse(stockActualNum.Text);
+				int _aleacionID = (int)MarcaCBX.SelectedValue;
+				int _templeID = (int)RubroCBX.SelectedValue;
+				int _clasificacionID = (int)LadoCBX.SelectedValue;
+				int _clienteID = (int)ProveedorCBX.SelectedValue;
 
-				if (Conexion.ExisteArticulo(_codigo)==false) { MessageBox.Show("el codigo ingresado no existe."); }
+				if (articulo==null) { MessageBox.Show("Seleccione un articulo a modificar"); }
 				else
 				{
 
-					if (_codigo != "" && _descripcion != "" && _tolerancia > 0 && _tolerancia < 50 && _multiplos < 6000 && AleacionComboBox.Text != "Seleccione" && TempleComboBox.Text != "Seleccione" && ClasificacionComboBox.Text != "Seleccione" && TopologiaComboBox.Text != "Seleccione" && ClienteComboBox.Text != "Seleccione" && PrensaCBX.Text != "Seleccione")
+					if ( CodigoProvTXT.Text!="" && numPiezaTXT.Text!="" && _descripcion != "" && _stockMin > 0  && _stockMax > 0 && MarcaCBX.Text != "Seleccione" && RubroCBX.Text != "Seleccione" && LadoCBX.Text != "Seleccione" &&  ProveedorCBX.Text != "Seleccione")
 					{
-						
-						string sql = "UPDATE articulo SET  codigo='" + _codigo + "', descripcion= '" + _descripcion + "', Ubicacion= '" + UbicacionTXT.Text + "',pesoNominal= '" + _pesoNominal + "', tolerancia= '" + _tolerancia + "', multiplo=  '" + _multiplos + "',  Aleacion_ID='" + _aleacionID + "',Temple_ID='" + _templeID + "', Clasificacion_ID='" + _clasificacionID + "', Topologia_ID='" + _topologiaID + "', Cliente_ID='" + _clienteID + "',  Puesto_ID='" + PrensaCBX.SelectedValue + "' WHERE ID='" + IDTex.Text+"'";
-						MySqlConnection conexionBD = Conexion.ObtenerConexion();
-						conexionBD.Open();
 
-						try
-						{
-							MySqlCommand comando = new MySqlCommand(sql, conexionBD);
-							comando.ExecuteNonQuery();
-							MessageBox.Show("Registro Modificado");
+						Conexion.ModificarArticulo(articulo.ID,CodigoTXT.Text, CodigoProvTXT.Text, numPiezaTXT.Text, DescripcionTxt.Text, PrecioNum.Value, decimal.ToInt32(stockMinNum.Value), decimal.ToInt32(stockMaxNum.Value), decimal.ToInt32(stockActualNum.Value), CompatibilidadTXT.Text, (int)MarcaCBX.SelectedValue, (int)RubroCBX.SelectedValue, (int)LadoCBX.SelectedValue, (int)ProveedorCBX.SelectedValue, UbicacionTXT.Text,DateTime.Today,UsuarioCBX.Text);
 
-							//limpiar();
-							Codigotxt.Text = "";
-							DescripcionTxt.Text = "";
-							PesoNominalTxt.Value = 0;
-							ToleranciaTxt.Value = 0;
-							MultiplosTxt.Value = 0;
-							AleacionComboBox.Text = "Seleccione";
-							TempleComboBox.Text = "Seleccione";
-							ClasificacionComboBox.Text = "Seleccione";
-							TopologiaComboBox.Text = "Seleccione";
-							ClienteComboBox.Text = "Seleccione";
-							pictureBox1.Image = null;
-							UbicacionTXT.Text = "";
+						if (Cuadro.Rows.Count > 1)
+                        {
+							try
+							{
+								for (int fila = 0; fila < Cuadro.Rows.Count - 1; fila++)
+								{
+									Conexion.AgregarEquivalencia(CodigoTXT.Text,(int)Cuadro.Rows[fila].Cells[1].Value);
+								}
+							}
+							catch (Exception ex) { MessageBox.Show("error al cargar las equivalencias: " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 						}
 
 
-						catch (MySqlException ex)
+						if (Cuadro2.Rows.Count > 1)
 						{
-							MessageBox.Show("Error al guardar: " + ex.Message);
+							try
+							{
+								for (int fila = 0; fila < Cuadro2.Rows.Count - 1; fila++)
+								{
+									Conexion.AgregarCompatibilidad(CodigoTXT.Text, (int)Cuadro2.Rows[fila].Cells[1].Value);
+								}
+							}
+							catch (Exception ex) { MessageBox.Show("error al cargar las equivalencias: " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 						}
-						finally
-						{
-							conexionBD.Close();
-						}
+
+
+						limpiar();
+
 					}
 					else
 					{
 						MessageBox.Show("Debe completar todos los campos");
 					}
 				}
-			}
+        }
 			catch (FormatException fex)
 			{
 				MessageBox.Show("Datos incorrectos: " + fex.Message);
 			}
 
 
+}
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+		Articulo equivalencia = null;
+
+        private void BuscarBTN_Click(object sender, EventArgs e)
+        {
+			equivalencia = Conexion.ObtenerArticulo(productoTXT.Text, this);
+
+            if (equivalencia != null)
+            {
+				productoTXT.Text = equivalencia.Descripcion;
+				codigoEquivalencia.Text = equivalencia.Codigo;	
+            }
+        }
+
+        private void AgregarBtn_Click(object sender, EventArgs e)
+        {
+			if (codigoEquivalencia.Text !="")
+			{
+				int n = Cuadro.Rows.Add();
+				Cuadro.Rows[n].Cells[0].Value = false;
+				Cuadro.Rows[n].Cells[1].Value = equivalencia.ID;
+				Cuadro.Rows[n].Cells[2].Value = equivalencia.Codigo;
+				Cuadro.Rows[n].Cells[3].Value = equivalencia.Descripcion;
+				Cuadro.Rows[n].Cells[4].Value = equivalencia.NombreProveedor;
+			}
+			else { MessageBox.Show("Seleccione un artículo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
 		}
 
-        private void BuscarBoton_Click(object sender, EventArgs e)
+		int n;
+		private void Cuadro_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-			Articulo articulo = Conexion.ObtenerArticulo(Codigotxt.Text,this);
-			
-			Codigotxt.Text = articulo.Codigo;
-			IDTex.Text = articulo.ID.ToString();
-			DescripcionTxt.Text = articulo.Descripcion;
-			//PesoNominalTxt.Value = (decimal)articulo.PesoNominal;
-			//ToleranciaTxt.Value = articulo.Tolerancia;
-			//MultiplosTxt.Value = articulo.Multiplo;
-
-			//AleacionComboBox.Text = articulo.Aleacion;
-			//TempleComboBox.Text = articulo.Temple;
-			//ClasificacionComboBox.Text = articulo.Clasificacion;
-			//TopologiaComboBox.Text = articulo.Topologia;
-			//ClienteComboBox.Text = articulo.Cliente;
-			//PrensaCBX.SelectedValue = articulo.Prensa;
-			UbicacionTXT.Text = articulo.Ubicacion;
 			try
 			{
-				string ruta = "//Rodrigo/imagenes/" + articulo.Codigo + ".bmp";
-				byte[] imageBytes = File.ReadAllBytes(ruta);
+				n = e.RowIndex;
+				if ((bool)Cuadro.Rows[n].Cells[0].Value == true)
+				{
+					Cuadro.Rows[n].Cells[0].Value = false;
+					Cuadro.Rows[n].DefaultCellStyle.BackColor = Color.White;
+				}
+				else
+				{
+					try
+					{
+						for (int fila = 0; fila < Cuadro.Rows.Count; fila++)
+						{
+							Cuadro.Rows[fila].Cells[0].Value = false;
+							Cuadro.Rows[fila].DefaultCellStyle.BackColor = Color.White;
 
-				//byte[] imageBytes = articulo.RutaImagen;
-				MemoryStream buf = new MemoryStream(imageBytes);
-				pictureBox1.Image = Image.FromStream(buf);
+						}
+						Cuadro.CurrentRow.DefaultCellStyle.BackColor = Color.Yellow;
+						Cuadro.Rows[n].Cells[0].Value = true;
+					}
+					catch (Exception) { }
+				}
 			}
-			catch (Exception) { MessageBox.Show("No se encontro una imagen"); pictureBox1.Image = null; }
 
+			catch (Exception) { }
+		}
+
+        private void QuitarBtn_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				bool check = false;
+				for (int fila = 0; fila < Cuadro.Rows.Count; fila++)
+				{
+					if ((bool)Cuadro.Rows[fila].Cells[0].Value == true)
+					{
+						check = true; break;
+					}
+				}
+
+				if (check == true)
+				{
+					Cuadro.Rows.RemoveAt(n);
+				}
+
+
+				else { MessageBox.Show("No hay ningun registro seleccionado"); }
+			}
+			catch (Exception) { }
+		}
+
+        private void productoTXT_TextChanged(object sender, EventArgs e)
+        {
+			codigoEquivalencia.Text = "";
 
 		}
 
+        private void vehiculoCompTXT_TextChanged(object sender, EventArgs e)
+        {
+			codCompatibilidad.Text = "";
+        }
+
+
+		Modelo modelo = new Modelo();
+        private void button1_Click(object sender, EventArgs e)
+        {
+			string busqueda = "";
+            if (vehiculoCompTXT.Text != null) { busqueda = vehiculoCompTXT.Text; }
+			modelo = Conexion.ObtenerModelo(busqueda);
+
+			if (modelo != null)
+			{
+				vehiculoCompTXT.Text = modelo.Descripcion;
+				codCompatibilidad.Text = modelo.ID.ToString();
+			}
+
+		}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+			if (codCompatibilidad.Text != "")
+			{
+				int n = Cuadro2.Rows.Add();
+				Cuadro2.Rows[n].Cells[0].Value = false;
+				Cuadro2.Rows[n].Cells[1].Value = modelo.ID;
+				Cuadro2.Rows[n].Cells[2].Value = modelo.Marca;
+				Cuadro2.Rows[n].Cells[3].Value = modelo.Descripcion;
+				Cuadro2.Rows[n].Cells[4].Value = modelo.Año;
+			}
+			else { MessageBox.Show("Seleccione un artículo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+
+		}
+
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				bool check = false;
+				for (int fila = 0; fila < Cuadro2.Rows.Count; fila++)
+				{
+					if ((bool)Cuadro2.Rows[fila].Cells[0].Value == true)
+					{
+						check = true; break;
+					}
+				}
+
+				if (check == true)
+				{
+					Cuadro2.Rows.RemoveAt(n);
+				}
+
+
+				else { MessageBox.Show("No hay ningun registro seleccionado"); }
+			}
+			catch (Exception) { }
+
+		}
+
+
+		int n2;
+        private void Cuadro2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+			try
+			{
+				n2 = e.RowIndex;
+				if ((bool)Cuadro2.Rows[n2].Cells[0].Value == true)
+				{
+					Cuadro2.Rows[n2].Cells[0].Value = false;
+					Cuadro2.Rows[n2].DefaultCellStyle.BackColor = Color.White;
+				}
+				else
+				{
+					try
+					{
+						for (int fila = 0; fila < Cuadro2.Rows.Count; fila++)
+						{
+							Cuadro2.Rows[fila].Cells[0].Value = false;
+							Cuadro2.Rows[fila].DefaultCellStyle.BackColor = Color.White;
+
+						}
+						Cuadro2.CurrentRow.DefaultCellStyle.BackColor = Color.Yellow;
+						Cuadro2.Rows[n2].Cells[0].Value = true;
+					}
+					catch (Exception) { }
+				}
+			}
+
+			catch (Exception) { }
+		}
 
         private void Codigotxt_TextChanged(object sender, EventArgs e)
         {
-			IDTex.Text = "";
-			DescripcionTxt.Text = "";
-			PesoNominalTxt.Value = 0;
-			ToleranciaTxt.Value = 0;
-			MultiplosTxt.Value = 0;
-			AleacionComboBox.Text = "Seleccione";
-			TempleComboBox.Text = "Seleccione";
-			ClasificacionComboBox.Text = "Seleccione";
-			TopologiaComboBox.Text = "Seleccione";
-			ClienteComboBox.Text = "Seleccione";
-			pictureBox1.Image = null;
-			PrensaCBX.Text = "Seleccione";
+			CodigoProvTXT.Text = CodigoTXT.Text;
+			numPiezaTXT.Text = CodigoTXT.Text;
 		}
+
+        private void Codigotxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+				DescripcionTxt.Focus();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+			articulo = null;
+			articulo = Conexion.ObtenerArticulo(CodigoTXT.Text,this);
+            if (articulo != null)
+            {
+				CodigoTXT.Text = articulo.Codigo;
+				CodigoProvTXT.Text = articulo.CodigoProveedor;
+				numPiezaTXT.Text = articulo.NumeroPieza;
+				DescripcionTxt.Text = articulo.Descripcion;
+				PrecioNum.Value = (decimal)articulo.Precio;
+				stockActualNum.Value = articulo.StockActual;
+				stockMinNum.Value = articulo.StockMin;
+				stockMaxNum.Value = articulo.StockMax;
+				MarcaCBX.SelectedValue = articulo.Marca;
+				ProveedorCBX.SelectedValue = articulo.Proveedor;
+				RubroCBX.SelectedValue = articulo.Rubro;
+				LadoCBX.SelectedValue = articulo.Lado;
+				UbicacionTXT.Text = articulo.Ubicacion;
+				CompatibilidadTXT.Text = articulo.Observaciones;
+
+				DataTable dt1, dt2;
+
+				try
+				{
+					
+
+					dt1 = Conexion.ObtenerEquivalencias(articulo.ID);
+
+					Cuadro.Rows.Clear();
+					if (dt1 != null)
+					{
+						foreach (DataRow x in dt1.Rows)
+						{
+							int n = Cuadro.Rows.Add();
+							Cuadro.Rows[n].Cells[0].Value = false;
+							Cuadro.Rows[n].Cells[1].Value = (int)x[0];
+							Cuadro.Rows[n].Cells[2].Value = (string)x[1];
+							Cuadro.Rows[n].Cells[3].Value = (string)x[2];
+							Cuadro.Rows[n].Cells[4].Value = (string)x[3];
+						}
+					}
+				}
+				catch (Exception) { }
+
+				try
+				{
+					
+					dt2 = Conexion.ObtenerCompatibilidad(articulo.ID);
+					Cuadro2.Rows.Clear();
+					if (dt2 != null)
+					{
+						foreach (DataRow x in dt2.Rows)
+						{
+							int n = Cuadro2.Rows.Add();
+							Cuadro2.Rows[n].Cells[0].Value = false;
+							Cuadro2.Rows[n].Cells[1].Value = (int)x[0];
+							Cuadro2.Rows[n].Cells[2].Value = (string)x[1];
+							Cuadro2.Rows[n].Cells[3].Value = (string)x[2];
+							Cuadro2.Rows[n].Cells[4].Value = (int)x[3];
+						}
+					}
+				}
+				catch (Exception) { }
+
+
+			}
+        }
     }
 }

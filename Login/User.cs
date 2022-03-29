@@ -299,12 +299,15 @@ namespace Login
                 ModificaArticulos.Checked = false;
                 BajaArticulos.Enabled = false;
                 BajaArticulos.Checked = false;
+                NitruradoMatrices.Enabled = false;
+                NitruradoMatrices.Checked = false;
             }
             else
             {
                 AltaArticulos.Enabled = true;
                 ModificaArticulos.Enabled = true;
                 BajaArticulos.Enabled = true;
+                NitruradoMatrices.Enabled = true;
             }
 
         }
@@ -337,14 +340,13 @@ namespace Login
                 AltaMatrices.Checked = false;
                 ModificaMatrices.Enabled = false;
                 ModificaMatrices.Checked = false;
-                NitruradoMatrices.Enabled = false;
-                NitruradoMatrices.Checked = false;
+
             }
             else
             {
                 AltaMatrices.Enabled = true;
                 ModificaMatrices.Enabled = true;
-                NitruradoMatrices.Enabled = true;
+                
             }
         }
     }

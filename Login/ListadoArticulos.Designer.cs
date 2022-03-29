@@ -45,22 +45,12 @@ namespace Login
             this.label2 = new System.Windows.Forms.Label();
             this.Cerrar = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Busqueda2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ExportarBTN = new System.Windows.Forms.Button();
             this.VerTodos = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.Cuadro = new System.Windows.Forms.DataGridView();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.Cuadro2 = new System.Windows.Forms.DataGridView();
-            this.ID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cuadro3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Busqueda2 = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +68,16 @@ namespace Login
             this.ProveedorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.Cuadro2 = new System.Windows.Forms.DataGridView();
+            this.ID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cuadro3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -164,6 +164,17 @@ namespace Login
             this.splitContainer1.Size = new System.Drawing.Size(634, 525);
             this.splitContainer1.SplitterDistance = 157;
             this.splitContainer1.TabIndex = 29;
+            // 
+            // Busqueda2
+            // 
+            this.Busqueda2.Location = new System.Drawing.Point(11, 104);
+            this.Busqueda2.Margin = new System.Windows.Forms.Padding(2);
+            this.Busqueda2.Name = "Busqueda2";
+            this.Busqueda2.Size = new System.Drawing.Size(67, 24);
+            this.Busqueda2.TabIndex = 2;
+            this.Busqueda2.Text = "Buscar";
+            this.Busqueda2.UseVisualStyleBackColor = true;
+            this.Busqueda2.Click += new System.EventHandler(this.Busqueda2_Click);
             // 
             // pictureBox1
             // 
@@ -263,7 +274,112 @@ namespace Login
             this.Cuadro.Size = new System.Drawing.Size(634, 230);
             this.Cuadro.TabIndex = 3;
             this.Cuadro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cuadro_CellClick);
+            this.Cuadro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cuadro_CellContentClick);
             this.Cuadro.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cuadro_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 80;
+            // 
+            // CodigoProv
+            // 
+            this.CodigoProv.HeaderText = "Codigo Prov.";
+            this.CodigoProv.Name = "CodigoProv";
+            this.CodigoProv.Width = 80;
+            // 
+            // NumPieza
+            // 
+            this.NumPieza.HeaderText = "Num. Pieza";
+            this.NumPieza.Name = "NumPieza";
+            this.NumPieza.Width = 80;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 150;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 60;
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            // 
+            // stock1
+            // 
+            this.stock1.HeaderText = "stock Min";
+            this.stock1.Name = "stock1";
+            this.stock1.Visible = false;
+            this.stock1.Width = 60;
+            // 
+            // stockmax
+            // 
+            this.stockmax.HeaderText = "stock Max";
+            this.stockmax.Name = "stockmax";
+            this.stockmax.Visible = false;
+            this.stockmax.Width = 60;
+            // 
+            // stockActual
+            // 
+            this.stockActual.HeaderText = "Stock";
+            this.stockActual.Name = "stockActual";
+            this.stockActual.Width = 60;
+            // 
+            // Clasificacion
+            // 
+            this.Clasificacion.HeaderText = "Compatibilidad";
+            this.Clasificacion.Name = "Clasificacion";
+            this.Clasificacion.Width = 200;
+            // 
+            // MarcaID
+            // 
+            this.MarcaID.HeaderText = "MarcaID";
+            this.MarcaID.Name = "MarcaID";
+            this.MarcaID.Visible = false;
+            this.MarcaID.Width = 60;
+            // 
+            // RubroID
+            // 
+            this.RubroID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.RubroID.HeaderText = "RubroID";
+            this.RubroID.Name = "RubroID";
+            this.RubroID.Visible = false;
+            // 
+            // LadoID
+            // 
+            this.LadoID.HeaderText = "LadoID";
+            this.LadoID.Name = "LadoID";
+            this.LadoID.Visible = false;
+            // 
+            // ProveedorID
+            // 
+            this.ProveedorID.HeaderText = "ProveedorID";
+            this.ProveedorID.Name = "ProveedorID";
+            this.ProveedorID.Visible = false;
+            // 
+            // Ubicacion
+            // 
+            this.Ubicacion.HeaderText = "Ubicacion";
+            this.Ubicacion.Name = "Ubicacion";
+            this.Ubicacion.Width = 80;
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
             // 
             // splitContainer3
             // 
@@ -389,121 +505,6 @@ namespace Login
             this.dataGridViewTextBoxColumn74.HeaderText = "Año";
             this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
             this.dataGridViewTextBoxColumn74.Width = 50;
-            // 
-            // Busqueda2
-            // 
-            this.Busqueda2.Location = new System.Drawing.Point(11, 104);
-            this.Busqueda2.Margin = new System.Windows.Forms.Padding(2);
-            this.Busqueda2.Name = "Busqueda2";
-            this.Busqueda2.Size = new System.Drawing.Size(67, 24);
-            this.Busqueda2.TabIndex = 2;
-            this.Busqueda2.Text = "Buscar";
-            this.Busqueda2.UseVisualStyleBackColor = true;
-            this.Busqueda2.Click += new System.EventHandler(this.Busqueda2_Click);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 80;
-            // 
-            // CodigoProv
-            // 
-            this.CodigoProv.HeaderText = "Codigo Prov.";
-            this.CodigoProv.Name = "CodigoProv";
-            this.CodigoProv.Width = 80;
-            // 
-            // NumPieza
-            // 
-            this.NumPieza.HeaderText = "Num. Pieza";
-            this.NumPieza.Name = "NumPieza";
-            this.NumPieza.Width = 80;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 150;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 60;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            // 
-            // stock1
-            // 
-            this.stock1.HeaderText = "stock Min";
-            this.stock1.Name = "stock1";
-            this.stock1.Visible = false;
-            this.stock1.Width = 60;
-            // 
-            // stockmax
-            // 
-            this.stockmax.HeaderText = "stock Max";
-            this.stockmax.Name = "stockmax";
-            this.stockmax.Visible = false;
-            this.stockmax.Width = 60;
-            // 
-            // stockActual
-            // 
-            this.stockActual.HeaderText = "Stock";
-            this.stockActual.Name = "stockActual";
-            this.stockActual.Width = 60;
-            // 
-            // Clasificacion
-            // 
-            this.Clasificacion.HeaderText = "Compatibilidad";
-            this.Clasificacion.Name = "Clasificacion";
-            this.Clasificacion.Width = 200;
-            // 
-            // MarcaID
-            // 
-            this.MarcaID.HeaderText = "MarcaID";
-            this.MarcaID.Name = "MarcaID";
-            this.MarcaID.Visible = false;
-            this.MarcaID.Width = 60;
-            // 
-            // RubroID
-            // 
-            this.RubroID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.RubroID.HeaderText = "RubroID";
-            this.RubroID.Name = "RubroID";
-            this.RubroID.Visible = false;
-            // 
-            // LadoID
-            // 
-            this.LadoID.HeaderText = "LadoID";
-            this.LadoID.Name = "LadoID";
-            this.LadoID.Visible = false;
-            // 
-            // ProveedorID
-            // 
-            this.ProveedorID.HeaderText = "ProveedorID";
-            this.ProveedorID.Name = "ProveedorID";
-            this.ProveedorID.Visible = false;
-            // 
-            // Ubicacion
-            // 
-            this.Ubicacion.HeaderText = "Ubicacion";
-            this.Ubicacion.Name = "Ubicacion";
-            this.Ubicacion.Width = 80;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
             // 
             // ListadoArticulos
             // 

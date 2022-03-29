@@ -616,7 +616,7 @@ namespace Login
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.CambiaRec);
             this.splitContainer1.Panel1.Controls.Add(this.CambiaBon);
@@ -737,7 +737,7 @@ namespace Login
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.splitContainer2.Panel1.Controls.Add(this.label15);
             this.splitContainer2.Panel1.Controls.Add(this.UsuarioCBX);
             this.splitContainer2.Panel1.Controls.Add(this.Localidad);
@@ -794,7 +794,7 @@ namespace Login
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.splitContainer3.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.splitContainer3.Panel2.Controls.Add(this.label17);
             this.splitContainer3.Panel2.Controls.Add(this.RecFinanNum);
             this.splitContainer3.Panel2.Controls.Add(this.label16);

@@ -39,10 +39,10 @@ namespace Login
             this.CancelarBTN = new System.Windows.Forms.Button();
             this.Agregar = new System.Windows.Forms.Button();
             this.Cuadro = new System.Windows.Forms.DataGridView();
-            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,7 +74,7 @@ namespace Login
             // 
             this.splitContainer1.Panel2.Controls.Add(this.Cuadro);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(340, 441);
+            this.splitContainer1.Size = new System.Drawing.Size(304, 441);
             this.splitContainer1.SplitterDistance = 129;
             this.splitContainer1.TabIndex = 12;
             // 
@@ -83,7 +83,7 @@ namespace Login
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(6, 42);
+            this.label5.Location = new System.Drawing.Point(10, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 15);
             this.label5.TabIndex = 26;
@@ -93,7 +93,7 @@ namespace Login
             // 
             this.ProvinciaCBX.FormattingEnabled = true;
             this.ProvinciaCBX.ItemHeight = 13;
-            this.ProvinciaCBX.Location = new System.Drawing.Point(72, 40);
+            this.ProvinciaCBX.Location = new System.Drawing.Point(13, 37);
             this.ProvinciaCBX.Name = "ProvinciaCBX";
             this.ProvinciaCBX.Size = new System.Drawing.Size(160, 21);
             this.ProvinciaCBX.TabIndex = 1;
@@ -101,7 +101,7 @@ namespace Login
             // 
             // EliminarBTN
             // 
-            this.EliminarBTN.Location = new System.Drawing.Point(252, 70);
+            this.EliminarBTN.Location = new System.Drawing.Point(213, 73);
             this.EliminarBTN.Name = "EliminarBTN";
             this.EliminarBTN.Size = new System.Drawing.Size(75, 23);
             this.EliminarBTN.TabIndex = 7;
@@ -111,7 +111,7 @@ namespace Login
             // 
             // ModificarBTN
             // 
-            this.ModificarBTN.Location = new System.Drawing.Point(252, 40);
+            this.ModificarBTN.Location = new System.Drawing.Point(213, 43);
             this.ModificarBTN.Name = "ModificarBTN";
             this.ModificarBTN.Size = new System.Drawing.Size(75, 23);
             this.ModificarBTN.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace Login
             // descripcionTBX
             // 
             this.descripcionTBX.BackColor = System.Drawing.SystemColors.Window;
-            this.descripcionTBX.Location = new System.Drawing.Point(72, 73);
+            this.descripcionTBX.Location = new System.Drawing.Point(12, 99);
             this.descripcionTBX.MaxLength = 80;
             this.descripcionTBX.Name = "descripcionTBX";
             this.descripcionTBX.Size = new System.Drawing.Size(161, 20);
@@ -133,7 +133,7 @@ namespace Login
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(5, 75);
+            this.label2.Location = new System.Drawing.Point(9, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 15);
             this.label2.TabIndex = 1;
@@ -141,7 +141,7 @@ namespace Login
             // 
             // CancelarBTN
             // 
-            this.CancelarBTN.Location = new System.Drawing.Point(252, 99);
+            this.CancelarBTN.Location = new System.Drawing.Point(213, 102);
             this.CancelarBTN.Name = "CancelarBTN";
             this.CancelarBTN.Size = new System.Drawing.Size(75, 23);
             this.CancelarBTN.TabIndex = 8;
@@ -151,7 +151,7 @@ namespace Login
             // 
             // Agregar
             // 
-            this.Agregar.Location = new System.Drawing.Point(252, 11);
+            this.Agregar.Location = new System.Drawing.Point(213, 14);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(75, 23);
             this.Agregar.TabIndex = 5;
@@ -174,9 +174,30 @@ namespace Login
             this.Cuadro.Name = "Cuadro";
             this.Cuadro.ReadOnly = true;
             this.Cuadro.RowHeadersVisible = false;
-            this.Cuadro.Size = new System.Drawing.Size(340, 308);
+            this.Cuadro.Size = new System.Drawing.Size(304, 308);
             this.Cuadro.TabIndex = 0;
             this.Cuadro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cuadro_CellClick);
+            // 
+            // Importe
+            // 
+            this.Importe.HeaderText = "Provincia_ID";
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            this.Importe.Visible = false;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Localidad";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 270;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // check
             // 
@@ -187,33 +208,12 @@ namespace Login
             this.check.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.check.Width = 30;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Localidad";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 270;
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Provincia_ID";
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            this.Importe.Visible = false;
-            // 
             // Ciudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(340, 441);
+            this.ClientSize = new System.Drawing.Size(304, 441);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
             this.Name = "Ciudad";

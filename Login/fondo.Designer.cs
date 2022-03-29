@@ -32,7 +32,6 @@ namespace Login
             this.Calendario = new System.Windows.Forms.MonthCalendar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.SistemaLabel = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
@@ -54,9 +53,9 @@ namespace Login
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(32, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(759, 29);
+            this.label1.Size = new System.Drawing.Size(673, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = ".EXE DESARROLLOS INFORMÁTICOS && MAC SOLUTIONS";
+            this.label1.Text = ".EXE DESARROLLOS INFORMÁTICOS && SISTEMAC";
             // 
             // label2
             // 
@@ -70,26 +69,15 @@ namespace Login
             this.label2.TabIndex = 2;
             this.label2.Text = "usuario";
             // 
-            // SistemaLabel
-            // 
-            this.SistemaLabel.AutoSize = true;
-            this.SistemaLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SistemaLabel.Font = new System.Drawing.Font("Verdana", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SistemaLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.SistemaLabel.Location = new System.Drawing.Point(42, 24);
-            this.SistemaLabel.Name = "SistemaLabel";
-            this.SistemaLabel.Size = new System.Drawing.Size(270, 29);
-            this.SistemaLabel.TabIndex = 3;
-            this.SistemaLabel.Text = "Sistema de Gestión";
-            // 
             // fondo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BackgroundImage = global::Login.Properties.Resources.vecteezy_abstract_geometric_background_in_dark_blue_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(870, 490);
             this.ControlBox = false;
-            this.Controls.Add(this.SistemaLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Calendario);
@@ -109,7 +97,6 @@ namespace Login
         private System.Windows.Forms.MonthCalendar Calendario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label SistemaLabel;
         private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

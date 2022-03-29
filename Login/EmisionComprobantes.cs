@@ -53,6 +53,9 @@ namespace Login
 				Cuadro.Rows[n].Cells[4].Value = PrecioFinalNum.Value;
 				Cuadro.Rows[n].Cells[5].Value = (cant.Value * PrecioFinalNum.Value);
 				ActualizaSubTotal();
+				LimpiarArticulo();
+				txtCodigo.Text = "";
+				txtCodigo.Focus();
 			}
 			else { MessageBox.Show("Revise los campos ingresados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
 		}
@@ -142,6 +145,8 @@ namespace Login
 						pictureBox1.Image = Image.FromStream(buf);
 					}
 					catch (Exception) { pictureBox1.Image = null; }
+
+					cant.Focus();
 				}
 
                 else { MessageBox.Show("No selecciono ningun artículo", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -274,6 +279,8 @@ namespace Login
 
 			UsuarioCBX.Text = usuario.User;
 			RecFinanNum.Value = Conexion.obtenerRecargoFinanciero((int)MediosPagoCBX.SelectedValue);
+			splitContainer2.Panel1.Focus();
+			NumCliTXT.Focus();
 
 		}
 		
@@ -630,12 +637,21 @@ namespace Login
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-			if (e.KeyChar == (char)Keys.Enter)
-			{
-				BuscarClick(sender, e);
-				cant.Focus(); ;
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarClick(sender, e);
+				cant.Value = 1;
+				agregarClick(sender, e);
+
 
 			}
+        }
+
+        private void EmisionComprobantes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+			
 		}
     }
 }

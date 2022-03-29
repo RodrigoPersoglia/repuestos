@@ -212,7 +212,6 @@ C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Principal.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Prioridad.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Properties.Resources.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Proyeccion.resources
-C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Puesto.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.SeleccionArticulo.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Terminacion.resources
 C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.User.resources

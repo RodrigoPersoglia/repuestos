@@ -69,7 +69,7 @@ namespace Login
             // 
             this.splitContainer1.Panel2.Controls.Add(this.Cuadro);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(280, 441);
+            this.splitContainer1.Size = new System.Drawing.Size(284, 441);
             this.splitContainer1.SplitterDistance = 129;
             this.splitContainer1.TabIndex = 12;
             // 
@@ -146,7 +146,7 @@ namespace Login
             this.Cuadro.Name = "Cuadro";
             this.Cuadro.ReadOnly = true;
             this.Cuadro.RowHeadersVisible = false;
-            this.Cuadro.Size = new System.Drawing.Size(280, 308);
+            this.Cuadro.Size = new System.Drawing.Size(284, 308);
             this.Cuadro.TabIndex = 9;
             this.Cuadro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cuadro_CellClick);
             // 
@@ -171,17 +171,17 @@ namespace Login
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 200;
+            this.Descripcion.Width = 250;
             // 
-            // Aleacion
+            // Marca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(280, 441);
+            this.ClientSize = new System.Drawing.Size(284, 441);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Aleacion";
+            this.Name = "Marca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marca";
             this.Load += new System.EventHandler(this.Aleacion_Load);

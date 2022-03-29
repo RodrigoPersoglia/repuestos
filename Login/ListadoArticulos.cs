@@ -47,7 +47,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[3].Value = (string)x[3];
 						Cuadro.Rows[n].Cells[4].Value = (string)x[4];
 						Cuadro.Rows[n].Cells[5].Value = decimal.ToDouble((decimal)x[5]);
-						Cuadro.Rows[n].Cells[6].Value = (string)x[28];
+						Cuadro.Rows[n].Cells[6].Value = (string)x[30];
 						Cuadro.Rows[n].Cells[7].Value = (int)x[6];
 						Cuadro.Rows[n].Cells[8].Value = (int)x[7];
 						Cuadro.Rows[n].Cells[9].Value = (int)x[8];
@@ -58,7 +58,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[13].Value = (int)x[12];
 						Cuadro.Rows[n].Cells[14].Value = (int)x[13];
 						Cuadro.Rows[n].Cells[15].Value = (string)x[14];
-						Cuadro.Rows[n].Cells[16].Value = (string)x[17];
+						Cuadro.Rows[n].Cells[16].Value = (string)x[19];
 
 					}
 			}
@@ -103,7 +103,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[3].Value = (string)x[3];
 						Cuadro.Rows[n].Cells[4].Value = (string)x[4];
 						Cuadro.Rows[n].Cells[5].Value = decimal.ToDouble((decimal)x[5]);
-						Cuadro.Rows[n].Cells[6].Value = (string)x[28];
+						Cuadro.Rows[n].Cells[6].Value = (string)x[30];
 						Cuadro.Rows[n].Cells[7].Value = (int)x[6];
 						Cuadro.Rows[n].Cells[8].Value = (int)x[7];
 						Cuadro.Rows[n].Cells[9].Value = (int)x[8];
@@ -114,7 +114,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[13].Value = (int)x[12];
 						Cuadro.Rows[n].Cells[14].Value = (int)x[13];
 						Cuadro.Rows[n].Cells[15].Value = (string)x[14];
-						Cuadro.Rows[n].Cells[16].Value = (string)x[17];
+						Cuadro.Rows[n].Cells[16].Value = (string)x[19];
 
 					}
 				}
@@ -140,8 +140,7 @@ namespace Login
 			string codigo = (string)Cuadro.Rows[n].Cells[2].Value;
 			try
 			{
-				string ruta = "//Rodrigo/imagenes/" + codigo + ".bmp";
-				byte[] imageBytes = File.ReadAllBytes(ruta);
+				byte[] imageBytes = File.ReadAllBytes(Conexion.rutaImagen(codigo));
 				MemoryStream buf = new MemoryStream(imageBytes);
 				pictureBox1.Image = Image.FromStream(buf);
 			}
@@ -187,51 +186,6 @@ namespace Login
 
         private void ListadoArticulos_Load(object sender, EventArgs e)
         {
-			//MySqlConnection conectar = Conexion.ObtenerConexion();
-			//DataTable dt = new DataTable();
-			//conectar.Open();
-			//try
-			//{
-			//	MySqlCommand comand = new MySqlCommand("BuscarArticulo", conectar);
-			//	comand.CommandType = CommandType.StoredProcedure;
-			//	comand.Parameters.AddWithValue("@busqueda", "");
-			//	MySqlDataAdapter adp = new MySqlDataAdapter(comand);
-			//	adp.Fill(dt);
-
-
-			//	if (dt.Rows.Count > 0)
-			//	{
-			//		foreach (DataRow x in dt.Rows)
-			//		{
-			//			int n = Cuadro.Rows.Add();
-			//			Cuadro.Rows[n].Cells[0].Value = (int)x[0];
-			//			Cuadro.Rows[n].Cells[1].Value = (string)x[1];
-			//			Cuadro.Rows[n].Cells[2].Value = (string)x[2];
-			//			Cuadro.Rows[n].Cells[3].Value = (string)x[3];
-			//			Cuadro.Rows[n].Cells[4].Value = (string)x[4];
-			//			Cuadro.Rows[n].Cells[5].Value = decimal.ToDouble((decimal)x[5]);
-			//			Cuadro.Rows[n].Cells[6].Value = (string)x[28];
-			//			Cuadro.Rows[n].Cells[7].Value = (int)x[6];
-			//			Cuadro.Rows[n].Cells[8].Value = (int)x[7];
-			//			Cuadro.Rows[n].Cells[9].Value = (int)x[8];
-			//			try { Cuadro.Rows[n].Cells[10].Value = (string)x[9]; }
-			//			catch (Exception) { Cuadro.Rows[n].Cells[10].Value = ""; }
-			//			Cuadro.Rows[n].Cells[11].Value = (int)x[10];
-			//			Cuadro.Rows[n].Cells[12].Value = (int)x[11];
-			//			Cuadro.Rows[n].Cells[13].Value = (int)x[12];
-			//			Cuadro.Rows[n].Cells[14].Value = (int)x[13];
-			//			Cuadro.Rows[n].Cells[15].Value = (string)x[14];
-			//			Cuadro.Rows[n].Cells[16].Value = (string)x[17];
-
-			//		}
-			//	}
-
-			//	else { MessageBox.Show("No se encontraron registros"); }
-			//}
-
-			//catch (MySqlException ex) { MessageBox.Show("Error al buscar seleccion articulo" + ex.Message); }
-			//finally { conectar.Close(); }
-
 
 		}
 
@@ -264,7 +218,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[3].Value = (string)x[3];
 						Cuadro.Rows[n].Cells[4].Value = (string)x[4];
 						Cuadro.Rows[n].Cells[5].Value = decimal.ToDouble((decimal)x[5]);
-						Cuadro.Rows[n].Cells[6].Value = (string)x[28];
+						Cuadro.Rows[n].Cells[6].Value = (string)x[30];
 						Cuadro.Rows[n].Cells[7].Value = (int)x[6];
 						Cuadro.Rows[n].Cells[8].Value = (int)x[7];
 						Cuadro.Rows[n].Cells[9].Value = (int)x[8];
@@ -275,7 +229,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[13].Value = (int)x[12];
 						Cuadro.Rows[n].Cells[14].Value = (int)x[13];
 						Cuadro.Rows[n].Cells[15].Value = (string)x[14];
-						Cuadro.Rows[n].Cells[16].Value = (string)x[17];
+						Cuadro.Rows[n].Cells[16].Value = (string)x[19];
 
 					}
 				}
@@ -342,9 +296,9 @@ namespace Login
 						foreach (DataRow x in dt2.Rows)
 						{
 							int n = Cuadro3.Rows.Add();
-							Cuadro3.Rows[n].Cells[0].Value = (string)x[0];
-							Cuadro3.Rows[n].Cells[1].Value = (string)x[1];
-							Cuadro3.Rows[n].Cells[2].Value = (int)x[2];
+							Cuadro3.Rows[n].Cells[0].Value = (string)x[1];
+							Cuadro3.Rows[n].Cells[1].Value = (string)x[2];
+							Cuadro3.Rows[n].Cells[2].Value = (int)x[3];
 						}
 					}
 				}
@@ -401,7 +355,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[3].Value = (string)x[3];
 						Cuadro.Rows[n].Cells[4].Value = (string)x[4];
 						Cuadro.Rows[n].Cells[5].Value = decimal.ToDouble((decimal)x[5]);
-						Cuadro.Rows[n].Cells[6].Value = (string)x[28];
+						Cuadro.Rows[n].Cells[6].Value = (string)x[30];
 						Cuadro.Rows[n].Cells[7].Value = (int)x[6];
 						Cuadro.Rows[n].Cells[8].Value = (int)x[7];
 						Cuadro.Rows[n].Cells[9].Value = (int)x[8];
@@ -412,7 +366,7 @@ namespace Login
 						Cuadro.Rows[n].Cells[13].Value = (int)x[12];
 						Cuadro.Rows[n].Cells[14].Value = (int)x[13];
 						Cuadro.Rows[n].Cells[15].Value = (string)x[14];
-						Cuadro.Rows[n].Cells[16].Value = (string)x[17];
+						Cuadro.Rows[n].Cells[16].Value = (string)x[19];
 
 					}
 				}
@@ -424,5 +378,10 @@ namespace Login
 			finally { conectar.Close(); }
 
 		}
+
+        private void Cuadro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

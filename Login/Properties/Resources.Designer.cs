@@ -363,6 +363,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_abstract_geometric_background_in_dark_blue_ {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_abstract-geometric-background-in-dark-blue_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wsp {
             get {
                 object obj = ResourceManager.GetObject("wsp", resourceCulture);

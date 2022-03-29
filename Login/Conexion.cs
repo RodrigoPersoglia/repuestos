@@ -69,6 +69,40 @@ namespace Login
 			finally { conectar.Close(); }
 		}
 
+
+		public static void ModificarArticulo(int id, string codigo, string codigoProveedor, string numeroProducto, string descripcion, decimal precio, int stockMin, int stockMax, int stockActual, string observaciones, int Marca_ID, int Rubro_ID, int Lado_ID, int Proveedor_ID, string ubicacion, DateTime fecha, string usuario)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("ModificarArticulo", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p0", id);
+				comand.Parameters.AddWithValue("@p1", codigo);
+				comand.Parameters.AddWithValue("@p2", codigoProveedor);
+				comand.Parameters.AddWithValue("@p3", numeroProducto);
+				comand.Parameters.AddWithValue("@p4", descripcion);
+				comand.Parameters.AddWithValue("@p5", precio);
+				comand.Parameters.AddWithValue("@p6", stockMin);
+				comand.Parameters.AddWithValue("@p7", stockMax);
+				comand.Parameters.AddWithValue("@p8", stockActual);
+				comand.Parameters.AddWithValue("@p9", observaciones);
+				comand.Parameters.AddWithValue("@p10", Marca_ID);
+				comand.Parameters.AddWithValue("@p11", Rubro_ID);
+				comand.Parameters.AddWithValue("@p12", Lado_ID);
+				comand.Parameters.AddWithValue("@p13", Proveedor_ID);
+				comand.Parameters.AddWithValue("@p14", ubicacion);
+				comand.Parameters.AddWithValue("@p15", fecha);
+				comand.Parameters.AddWithValue("@p16", usuario);
+
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Artículo modificado correctamente", "Artículo", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+		}
+
 		public static void AgregarEquivalencia(string codigo, int equivalencia_ID)
 		{
 			MySqlConnection conectar = Conexion.ObtenerConexion();
@@ -2896,16 +2930,164 @@ namespace Login
 		}
 
 
+		public static DateTime GetDate()
+		{
+			var result = DateTime.MinValue;
+
+			// Initialize the list of NIST time servers
+			// http://tf.nist.gov/tf-cgi/servers.cgi
+			string[] servers = new string[] {
+		"nist1-ny.ustiming.org",
+		"nist1-nj.ustiming.org",
+		"nist1-pa.ustiming.org",
+		"time-a.nist.gov",
+		"time-b.nist.gov",
+		"nist1.aol-va.symmetricom.com",
+		"nist1.columbiacountyga.gov",
+		"nist1-chi.ustiming.org",
+		"nist.expertsmi.com",
+		"nist.netservicesgroup.com"
+};
+
+			// Try 5 servers in random order to spread the load
+			Random rnd = new Random();
+			foreach (string server in servers.OrderBy(s => rnd.NextDouble()).Take(1))
+			{
+				try
+				{
+					// Connect to the server (at port 13) and get the response
+					string serverResponse = string.Empty;
+					using (var reader = new StreamReader(new System.Net.Sockets.TcpClient(server, 13).GetStream()))
+					{
+						serverResponse = reader.ReadToEnd();
+					}
+
+					// If a response was received
+					if (!string.IsNullOrEmpty(serverResponse))
+					{
+						// Split the response string ("55596 11-02-14 13:54:11 00 0 0 478.1 UTC(NIST) *")
+						string[] tokens = serverResponse.Split(' ');
+
+						// Check the number of tokens
+						if (tokens.Length >= 6)
+						{
+							// Check the health status
+							string health = tokens[5];
+							if (health == "0")
+							{
+								// Get date and time parts from the server response
+								string[] dateParts = tokens[1].Split('-');
+								string[] timeParts = tokens[2].Split(':');
+
+								// Create a DateTime instance
+								DateTime utcDateTime = new DateTime(
+									Convert.ToInt32(dateParts[0]) + 2000,
+									Convert.ToInt32(dateParts[1]), Convert.ToInt32(dateParts[2]),
+									Convert.ToInt32(timeParts[0]), Convert.ToInt32(timeParts[1]),
+									Convert.ToInt32(timeParts[2]));
+
+								// Convert received (UTC) DateTime value to the local timezone
+								result = utcDateTime.ToLocalTime();
+
+								return result;
+								// Response successfully received; exit the loop
+
+							}
+						}
+
+					}
+
+				}
+				catch
+				{
+					// Ignore exception and try the next server
+				}
+			}
+			return result;
+		}
+
+
+		public static DateTime GetfechaExpiracion()
+		{
+			DateTime fecha = new DateTime();
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "select expira from licencia";
+			try
+			{
+
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
+
+				if (dt.Rows.Count == 1)
+				{
+					foreach (DataRow x in dt.Rows)
+					{
+						fecha = (DateTime)x[0];
+					}
+				}
+					
+
+					
+				return fecha; 
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return fecha; }
+			finally { conectar.Close(); }
+		}
+
+
+		public static bool GetIsActiva()
+		{
+			bool resultado = true;
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "select valida from licencia";
+			try
+			{
+
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
+
+				if (dt.Rows.Count == 1)
+				{
+					foreach (DataRow x in dt.Rows)
+					{
+						resultado = (bool)x[0];
+					}
+				}
 
 
 
+				return resultado;
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return resultado; }
+			finally { conectar.Close(); }
+		}
 
 
+		public static void RevocarLicencia()
+		{
+			string consulta = "update licencia set valida = false";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+			}
 
-
-
-
-
+			finally { conectar.Close(); }
+		}
 
 
 	}

@@ -91,6 +91,7 @@ namespace Login
             this.Telefono2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.CambiaRec = new System.Windows.Forms.Button();
             this.CambiaBon = new System.Windows.Forms.Button();
@@ -112,7 +113,6 @@ namespace Login
             this.SubTotalNUM = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -234,7 +234,7 @@ namespace Login
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(170, 20);
-            this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TabIndex = 11;
             // 
             // label1
             // 
@@ -276,7 +276,7 @@ namespace Login
             0});
             this.cant.Name = "cant";
             this.cant.Size = new System.Drawing.Size(53, 20);
-            this.cant.TabIndex = 4;
+            this.cant.TabIndex = 5;
             this.cant.Value = new decimal(new int[] {
             1,
             0,
@@ -300,7 +300,7 @@ namespace Login
             this.Buscar.Margin = new System.Windows.Forms.Padding(2);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(63, 20);
-            this.Buscar.TabIndex = 3;
+            this.Buscar.TabIndex = 4;
             this.Buscar.Text = "Buscar";
             this.Buscar.UseVisualStyleBackColor = true;
             this.Buscar.Click += new System.EventHandler(this.BuscarClick);
@@ -312,7 +312,7 @@ namespace Login
             this.agregar.Margin = new System.Windows.Forms.Padding(2);
             this.agregar.Name = "agregar";
             this.agregar.Size = new System.Drawing.Size(90, 23);
-            this.agregar.TabIndex = 12;
+            this.agregar.TabIndex = 6;
             this.agregar.Text = "AGREGAR";
             this.agregar.UseVisualStyleBackColor = true;
             this.agregar.Click += new System.EventHandler(this.agregarClick);
@@ -324,7 +324,7 @@ namespace Login
             this.quitar.Margin = new System.Windows.Forms.Padding(2);
             this.quitar.Name = "quitar";
             this.quitar.Size = new System.Drawing.Size(90, 23);
-            this.quitar.TabIndex = 13;
+            this.quitar.TabIndex = 7;
             this.quitar.Text = "QUITAR";
             this.quitar.UseVisualStyleBackColor = true;
             this.quitar.Click += new System.EventHandler(this.QuitarClick);
@@ -336,7 +336,7 @@ namespace Login
             this.ConfirmarBTN.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirmarBTN.Name = "ConfirmarBTN";
             this.ConfirmarBTN.Size = new System.Drawing.Size(90, 47);
-            this.ConfirmarBTN.TabIndex = 20;
+            this.ConfirmarBTN.TabIndex = 9;
             this.ConfirmarBTN.Text = "CONFIRMAR";
             this.ConfirmarBTN.UseVisualStyleBackColor = true;
             this.ConfirmarBTN.Click += new System.EventHandler(this.FacturarClick);
@@ -350,7 +350,7 @@ namespace Login
             this.ImprimeChek.Margin = new System.Windows.Forms.Padding(2);
             this.ImprimeChek.Name = "ImprimeChek";
             this.ImprimeChek.Size = new System.Drawing.Size(128, 20);
-            this.ImprimeChek.TabIndex = 8;
+            this.ImprimeChek.TabIndex = 29;
             this.ImprimeChek.Text = "Imprime Comprobante";
             this.ImprimeChek.UseVisualStyleBackColor = true;
             // 
@@ -396,7 +396,7 @@ namespace Login
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
             this.Cliente.Size = new System.Drawing.Size(176, 20);
-            this.Cliente.TabIndex = 22;
+            this.Cliente.TabIndex = 19;
             // 
             // label6
             // 
@@ -418,7 +418,7 @@ namespace Login
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Size = new System.Drawing.Size(135, 20);
-            this.Telefono.TabIndex = 23;
+            this.Telefono.TabIndex = 20;
             // 
             // Direccion
             // 
@@ -427,7 +427,7 @@ namespace Login
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
             this.Direccion.Size = new System.Drawing.Size(135, 20);
-            this.Direccion.TabIndex = 24;
+            this.Direccion.TabIndex = 21;
             // 
             // SalirBTN
             // 
@@ -437,7 +437,7 @@ namespace Login
             this.SalirBTN.Margin = new System.Windows.Forms.Padding(2);
             this.SalirBTN.Name = "SalirBTN";
             this.SalirBTN.Size = new System.Drawing.Size(76, 47);
-            this.SalirBTN.TabIndex = 21;
+            this.SalirBTN.TabIndex = 10;
             this.SalirBTN.Text = "SALIR";
             this.SalirBTN.UseVisualStyleBackColor = true;
             this.SalirBTN.Click += new System.EventHandler(this.SalirClick);
@@ -473,7 +473,7 @@ namespace Login
             this.PrecioNum.Name = "PrecioNum";
             this.PrecioNum.ReadOnly = true;
             this.PrecioNum.Size = new System.Drawing.Size(95, 20);
-            this.PrecioNum.TabIndex = 6;
+            this.PrecioNum.TabIndex = 12;
             this.PrecioNum.ValueChanged += new System.EventHandler(this.PrecioNum_ValueChanged);
             // 
             // Limpiar
@@ -483,7 +483,7 @@ namespace Login
             this.Limpiar.Margin = new System.Windows.Forms.Padding(2);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(90, 23);
-            this.Limpiar.TabIndex = 14;
+            this.Limpiar.TabIndex = 8;
             this.Limpiar.Text = "LIMPIAR";
             this.Limpiar.UseVisualStyleBackColor = true;
             this.Limpiar.Click += new System.EventHandler(this.LimpiarClick);
@@ -494,7 +494,7 @@ namespace Login
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 20);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -506,7 +506,7 @@ namespace Login
             this.Localidad.Name = "Localidad";
             this.Localidad.ReadOnly = true;
             this.Localidad.Size = new System.Drawing.Size(176, 20);
-            this.Localidad.TabIndex = 25;
+            this.Localidad.TabIndex = 22;
             // 
             // BonificacionNUM
             // 
@@ -526,7 +526,7 @@ namespace Login
             this.BonificacionNUM.Name = "BonificacionNUM";
             this.BonificacionNUM.ReadOnly = true;
             this.BonificacionNUM.Size = new System.Drawing.Size(70, 20);
-            this.BonificacionNUM.TabIndex = 7;
+            this.BonificacionNUM.TabIndex = 14;
             this.BonificacionNUM.ValueChanged += new System.EventHandler(this.BonificacionNUM_ValueChanged);
             // 
             // label2
@@ -560,7 +560,7 @@ namespace Login
             this.PrecioFinalNum.Name = "PrecioFinalNum";
             this.PrecioFinalNum.ReadOnly = true;
             this.PrecioFinalNum.Size = new System.Drawing.Size(95, 20);
-            this.PrecioFinalNum.TabIndex = 11;
+            this.PrecioFinalNum.TabIndex = 18;
             this.PrecioFinalNum.ValueChanged += new System.EventHandler(this.PrecioFinalNum_ValueChanged);
             // 
             // label8
@@ -638,13 +638,23 @@ namespace Login
             this.splitContainer1.SplitterDistance = 270;
             this.splitContainer1.TabIndex = 110;
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(70, 171);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(103, 20);
+            this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged_2);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(187, 230);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 20);
-            this.button2.TabIndex = 111;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Cambiar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -655,7 +665,7 @@ namespace Login
             this.CambiaRec.Margin = new System.Windows.Forms.Padding(2);
             this.CambiaRec.Name = "CambiaRec";
             this.CambiaRec.Size = new System.Drawing.Size(53, 20);
-            this.CambiaRec.TabIndex = 10;
+            this.CambiaRec.TabIndex = 17;
             this.CambiaRec.Text = "Cambiar";
             this.CambiaRec.UseVisualStyleBackColor = true;
             this.CambiaRec.Click += new System.EventHandler(this.CambiaRec_Click);
@@ -666,7 +676,7 @@ namespace Login
             this.CambiaBon.Margin = new System.Windows.Forms.Padding(2);
             this.CambiaBon.Name = "CambiaBon";
             this.CambiaBon.Size = new System.Drawing.Size(53, 20);
-            this.CambiaBon.TabIndex = 8;
+            this.CambiaBon.TabIndex = 15;
             this.CambiaBon.Text = "Cambiar";
             this.CambiaBon.UseVisualStyleBackColor = true;
             this.CambiaBon.Click += new System.EventHandler(this.CambiaBon_Click);
@@ -715,7 +725,7 @@ namespace Login
             this.RecargoNum.Name = "RecargoNum";
             this.RecargoNum.ReadOnly = true;
             this.RecargoNum.Size = new System.Drawing.Size(70, 20);
-            this.RecargoNum.TabIndex = 9;
+            this.RecargoNum.TabIndex = 16;
             this.RecargoNum.ValueChanged += new System.EventHandler(this.RecargoNum_ValueChanged);
             // 
             // splitContainer2
@@ -768,7 +778,7 @@ namespace Login
             this.UsuarioCBX.Location = new System.Drawing.Point(482, 12);
             this.UsuarioCBX.Name = "UsuarioCBX";
             this.UsuarioCBX.Size = new System.Drawing.Size(135, 21);
-            this.UsuarioCBX.TabIndex = 27;
+            this.UsuarioCBX.TabIndex = 23;
             // 
             // splitContainer3
             // 
@@ -831,7 +841,7 @@ namespace Login
             this.RecFinanNum.Name = "RecFinanNum";
             this.RecFinanNum.ReadOnly = true;
             this.RecFinanNum.Size = new System.Drawing.Size(55, 20);
-            this.RecFinanNum.TabIndex = 16;
+            this.RecFinanNum.TabIndex = 25;
             this.RecFinanNum.ValueChanged += new System.EventHandler(this.RecFinanNum_ValueChanged);
             // 
             // label16
@@ -854,7 +864,7 @@ namespace Login
             this.MediosPagoCBX.Location = new System.Drawing.Point(15, 35);
             this.MediosPagoCBX.Name = "MediosPagoCBX";
             this.MediosPagoCBX.Size = new System.Drawing.Size(176, 21);
-            this.MediosPagoCBX.TabIndex = 15;
+            this.MediosPagoCBX.TabIndex = 24;
             this.MediosPagoCBX.SelectionChangeCommitted += new System.EventHandler(this.MediosPagoCBX_SelectionChangeCommitted);
             // 
             // TotalNUM
@@ -870,7 +880,7 @@ namespace Login
             this.TotalNUM.Name = "TotalNUM";
             this.TotalNUM.ReadOnly = true;
             this.TotalNUM.Size = new System.Drawing.Size(95, 20);
-            this.TotalNUM.TabIndex = 19;
+            this.TotalNUM.TabIndex = 28;
             // 
             // label14
             // 
@@ -898,7 +908,7 @@ namespace Login
             this.TotalRecargo.Name = "TotalRecargo";
             this.TotalRecargo.ReadOnly = true;
             this.TotalRecargo.Size = new System.Drawing.Size(95, 20);
-            this.TotalRecargo.TabIndex = 18;
+            this.TotalRecargo.TabIndex = 27;
             // 
             // label13
             // 
@@ -926,7 +936,7 @@ namespace Login
             this.SubTotalNUM.Name = "SubTotalNUM";
             this.SubTotalNUM.ReadOnly = true;
             this.SubTotalNUM.Size = new System.Drawing.Size(95, 20);
-            this.SubTotalNUM.TabIndex = 17;
+            this.SubTotalNUM.TabIndex = 26;
             this.SubTotalNUM.ValueChanged += new System.EventHandler(this.SubTotalNUM_ValueChanged);
             // 
             // label12
@@ -941,16 +951,6 @@ namespace Login
             this.label12.TabIndex = 112;
             this.label12.Text = "Sub-Total:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(70, 171);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(103, 20);
-            this.txtCodigo.TabIndex = 112;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged_2);
-            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // EmisionComprobantes
             // 
@@ -967,6 +967,7 @@ namespace Login
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emisión de comprobantes";
             this.Load += new System.EventHandler(this.factura_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmisionComprobantes_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

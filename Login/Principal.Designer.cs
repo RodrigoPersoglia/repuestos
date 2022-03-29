@@ -12,9 +12,9 @@ namespace Login
 		private System.Windows.Forms.ToolStripMenuItem AgregarArticuloMenu;
 		private System.Windows.Forms.ToolStripMenuItem ModifArt;
 		private System.Windows.Forms.ToolStripMenuItem verListadoToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem agregarProveedores;
+		private System.Windows.Forms.ToolStripMenuItem modificarProveedores;
 		private System.Windows.Forms.ToolStripMenuItem verListadoToolStripMenuItem1;
 		
 		/// <summary>
@@ -47,6 +47,7 @@ namespace Login
             this.clasificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mediosDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeloVehículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AgregarArticuloMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ModifArt = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,9 +56,9 @@ namespace Login
             this.porPorcentajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porImporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradasSalidasDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarProveedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarProveedores = new System.Windows.Forms.ToolStripMenuItem();
             this.verListadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +77,6 @@ namespace Login
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ponerContadoresEnCeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modeloVehículoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,7 +88,7 @@ namespace Login
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.artículosToolStripMenuItem,
-            this.clientesToolStripMenuItem,
+            this.proveedoresToolStripMenuItem,
             this.salirToolStripMenuItem,
             this.clientesToolStripMenuItem1,
             this.facturaciónToolStripMenuItem,
@@ -155,14 +155,21 @@ namespace Login
             resources.ApplyResources(this.marcaVehiculoToolStripMenuItem, "marcaVehiculoToolStripMenuItem");
             this.marcaVehiculoToolStripMenuItem.Click += new System.EventHandler(this.marcaVehiculoToolStripMenuItem_Click);
             // 
+            // modeloVehículoToolStripMenuItem
+            // 
+            this.modeloVehículoToolStripMenuItem.Image = global::Login.Properties.Resources.configDatos;
+            this.modeloVehículoToolStripMenuItem.Name = "modeloVehículoToolStripMenuItem";
+            resources.ApplyResources(this.modeloVehículoToolStripMenuItem, "modeloVehículoToolStripMenuItem");
+            this.modeloVehículoToolStripMenuItem.Click += new System.EventHandler(this.modeloVehículoToolStripMenuItem_Click);
+            // 
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AgregarArticuloMenu,
             this.ModifArt,
-            this.verListadoToolStripMenuItem,
+            this.entradasSalidasDeArtículosToolStripMenuItem,
             this.cambioDePreciosToolStripMenuItem,
-            this.entradasSalidasDeArtículosToolStripMenuItem});
+            this.verListadoToolStripMenuItem});
             this.artículosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             resources.ApplyResources(this.artículosToolStripMenuItem, "artículosToolStripMenuItem");
@@ -218,29 +225,29 @@ namespace Login
             resources.ApplyResources(this.entradasSalidasDeArtículosToolStripMenuItem, "entradasSalidasDeArtículosToolStripMenuItem");
             this.entradasSalidasDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.entradasSalidasDeArtículosToolStripMenuItem_Click);
             // 
-            // clientesToolStripMenuItem
+            // proveedoresToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem1,
-            this.modificarToolStripMenuItem,
+            this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarProveedores,
+            this.modificarProveedores,
             this.verListadoToolStripMenuItem1});
-            this.clientesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            resources.ApplyResources(this.clientesToolStripMenuItem, "clientesToolStripMenuItem");
+            this.proveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            resources.ApplyResources(this.proveedoresToolStripMenuItem, "proveedoresToolStripMenuItem");
             // 
-            // agregarToolStripMenuItem1
+            // agregarProveedores
             // 
-            this.agregarToolStripMenuItem1.Image = global::Login.Properties.Resources.agregar;
-            this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
-            resources.ApplyResources(this.agregarToolStripMenuItem1, "agregarToolStripMenuItem1");
-            this.agregarToolStripMenuItem1.Click += new System.EventHandler(this.AgregarToolStripMenuItem1Click);
+            this.agregarProveedores.Image = global::Login.Properties.Resources.agregar;
+            this.agregarProveedores.Name = "agregarProveedores";
+            resources.ApplyResources(this.agregarProveedores, "agregarProveedores");
+            this.agregarProveedores.Click += new System.EventHandler(this.AgregarToolStripMenuItem1Click);
             // 
-            // modificarToolStripMenuItem
+            // modificarProveedores
             // 
-            this.modificarToolStripMenuItem.Image = global::Login.Properties.Resources.modificar;
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            resources.ApplyResources(this.modificarToolStripMenuItem, "modificarToolStripMenuItem");
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.ModificarToolStripMenuItemClick);
+            this.modificarProveedores.Image = global::Login.Properties.Resources.modificar;
+            this.modificarProveedores.Name = "modificarProveedores";
+            resources.ApplyResources(this.modificarProveedores, "modificarProveedores");
+            this.modificarProveedores.Click += new System.EventHandler(this.ModificarToolStripMenuItemClick);
             // 
             // verListadoToolStripMenuItem1
             // 
@@ -371,13 +378,6 @@ namespace Login
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             resources.ApplyResources(this.ayudaToolStripMenuItem, "ayudaToolStripMenuItem");
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
-            // 
-            // modeloVehículoToolStripMenuItem
-            // 
-            this.modeloVehículoToolStripMenuItem.Image = global::Login.Properties.Resources.configDatos;
-            this.modeloVehículoToolStripMenuItem.Name = "modeloVehículoToolStripMenuItem";
-            resources.ApplyResources(this.modeloVehículoToolStripMenuItem, "modeloVehículoToolStripMenuItem");
-            this.modeloVehículoToolStripMenuItem.Click += new System.EventHandler(this.modeloVehículoToolStripMenuItem_Click);
             // 
             // Principal
             // 

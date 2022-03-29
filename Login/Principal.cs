@@ -12,6 +12,7 @@ namespace Login
 	public partial class Principal : Form
 	{
 		private Usuario usuario { get; }
+		DateTime fechaActual;
 		public Principal()
 		{InitializeComponent();}
 
@@ -96,7 +97,7 @@ namespace Login
 			}
 			if (contador == 0)
 			{
-				ModificarArticulo nuevoart = new ModificarArticulo();
+				ModificarArticulo nuevoart = new ModificarArticulo(usuario);
 				nuevoart.MdiParent = this;
 				nuevoart.Show();
 			}
@@ -121,35 +122,72 @@ namespace Login
 			fond.Show();
 
 			//opciones de menu principal
-			clientesToolStripMenuItem.Visible = usuario.TablaCliente;
-			archivoToolStripMenuItem.Visible = usuario.TablaArchivos;
-			//matricesToolStripMenuItem.Visible = usuario.TablaMatrices;
-			//PedidosToolStripMenuItem.Visible = usuario.TablaPedidos;
-			artículosToolStripMenuItem.Visible = usuario.TablaArticulos;
-			usuarioToolStripMenuItem.Visible = usuario.Tablausuario;
-			//reportesToolStripMenuItem.Visible = usuario.TablaReporte;
-			//opciones de articulos
-			AgregarArticuloMenu.Visible = usuario.AltaArticulos;
-			//EliminarArticuloMenu.Visible = usuario.BajaArticulos;
-			ModifArt.Visible = usuario.ModificaArticulos;
-			//opciones de cliente
-			agregarToolStripMenuItem1.Visible = usuario.AltaClientes;
-			modificarToolStripMenuItem.Visible = usuario.ModificaClientes;
-			//opciones de pedidos
-			//AgregarPedidoMenu.Visible = usuario.AltaPedidos;
-			//ModificarPedidoMenu.Visible = usuario.ModificaPedidos;
-			//detallaDeFabricaciónMenu.Visible = usuario.DetallePedidos;
-			//opciones de matrices
-			//agregarToolStripMenuItem2.Visible = usuario.AltaMatrices;
-			//modificarToolStripMenuItem1.Visible = usuario.ModificaMatrices;
-			//toolStripMenuItem1.Visible = usuario.Nitrurado;
-			//reporteMatricesPesadasToolStripMenuItem.Visible = true;
+			clientesToolStripMenuItem1.Visible = usuario.TablaCliente;
+			agregarToolStripMenuItem.Visible = usuario.AltaClientes;
+			modificarToolStripMenuItem1.Visible = usuario.ModificaClientes;
 
-			if (usuario.User  != "Rodrigo")
+	
+
+			artículosToolStripMenuItem.Visible = usuario.TablaArticulos;
+			AgregarArticuloMenu.Visible = usuario.AltaArticulos;
+			entradasSalidasDeArtículosToolStripMenuItem.Visible = usuario.BajaArticulos;
+			ModifArt.Visible = usuario.ModificaArticulos;
+			cambioDePreciosToolStripMenuItem.Visible = usuario.Nitrurado;
+
+
+
+			facturaciónToolStripMenuItem.Visible = usuario.TablaPedidos;
+			facturarToolStripMenuItem.Visible = usuario.AltaPedidos;
+			emisiónPresupuestosToolStripMenuItem.Visible = usuario.ModificaPedidos;
+			anulaciónDeComprobantesToolStripMenuItem.Visible = usuario.DetallePedidos;
+
+
+			proveedoresToolStripMenuItem.Visible = usuario.TablaMatrices;
+			agregarProveedores.Visible = usuario.AltaMatrices;
+			modificarProveedores.Visible = usuario.ModificaMatrices;
+           
+
+
+
+            usuarioToolStripMenuItem.Visible = usuario.Tablausuario;
+			reportesToolStripMenuItem.Visible = usuario.TablaReporte;
+			archivoToolStripMenuItem.Visible = usuario.TablaArchivos;
+            
+
+
+            if (usuario.User  == "Administrador")
             {
-				ControlBox = false;
+				mantenimientoToolStripMenuItem.Visible = true;
+
+            }
+            else { mantenimientoToolStripMenuItem.Visible = false; }
+
+
+			try
+			{
+				fechaActual = DateTime.Today;
+				DateTime fechaExpiracion = Conexion.GetfechaExpiracion();
+				bool activa = Conexion.GetIsActiva();
+
+                if (!activa)
+                {
+					AutoClosingMessageBox.Show("La Licencia ha expirado. Comuniquese con su proveedor de sistemas", "Notificación del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information, 4000);
+					System.Windows.Forms.Application.Exit();
+				}
+                else
+                {
+                    if (fechaExpiracion <= fechaActual)
+                    {
+						Conexion.RevocarLicencia();
+						AutoClosingMessageBox.Show("La Licencia ha expirado. Comuniquese con su proveedor de sistemas", "Notificación del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information, 4000);
+						System.Windows.Forms.Application.Exit();
+					}
+                }
 
 			}
+
+			
+			catch (Exception) { }
 
 		}
 		
@@ -644,30 +682,7 @@ namespace Login
 			contador = 0;
         }
 
-        private void puestosDeTrabajoToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			int contador = 0;
-			foreach (Form f in Application.OpenForms)
-			{
-				if (f is Puesto)
-				{
-					f.Show();
-					if (f.WindowState == FormWindowState.Minimized)
-						f.WindowState = FormWindowState.Normal;
-					f.BringToFront();
-					contador++;
-					return;
-				}
 
-			}
-			if (contador == 0)
-			{
-				Puesto puesto = new Puesto();
-				puesto.MdiParent = this;
-				puesto.Show();
-			}
-			contador = 0;
-		}
 
         private void clasificaciónToolStripMenuItem_Click(object sender, EventArgs e)
 		{

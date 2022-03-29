@@ -31,7 +31,7 @@ namespace Login
             label2.Text = "Usuario: " + user.User;
             label2.Location = new Point(this.Width - 10 - label2.Width, 10);
             label1.Location = new Point(20, this.Height - 20 - label1.Height);
-            SistemaLabel.Location = new Point(20, 20);
+            //SistemaLabel.Location = new Point(20, 20);
         }
 
         private void fondo_Click(object sender, EventArgs e)

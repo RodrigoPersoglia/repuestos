@@ -30,6 +30,17 @@ namespace Login
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.NitruradoMatrices = new System.Windows.Forms.CheckBox();
+            this.ModificaMatrices = new System.Windows.Forms.CheckBox();
+            this.AltaMatrices = new System.Windows.Forms.CheckBox();
+            this.DetallePedidos = new System.Windows.Forms.CheckBox();
+            this.ModificaPedidos = new System.Windows.Forms.CheckBox();
+            this.AltaPedidos = new System.Windows.Forms.CheckBox();
+            this.ModificaArticulos = new System.Windows.Forms.CheckBox();
+            this.BajaArticulos = new System.Windows.Forms.CheckBox();
+            this.AltaArticulos = new System.Windows.Forms.CheckBox();
+            this.ModificaCliente = new System.Windows.Forms.CheckBox();
+            this.AltaCliente = new System.Windows.Forms.CheckBox();
             this.ReporteCKB = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.UsuarioCKB = new System.Windows.Forms.CheckBox();
@@ -47,17 +58,6 @@ namespace Login
             this.Agregar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Cuadro = new System.Windows.Forms.DataGridView();
-            this.AltaCliente = new System.Windows.Forms.CheckBox();
-            this.ModificaCliente = new System.Windows.Forms.CheckBox();
-            this.BajaArticulos = new System.Windows.Forms.CheckBox();
-            this.AltaArticulos = new System.Windows.Forms.CheckBox();
-            this.ModificaArticulos = new System.Windows.Forms.CheckBox();
-            this.DetallePedidos = new System.Windows.Forms.CheckBox();
-            this.ModificaPedidos = new System.Windows.Forms.CheckBox();
-            this.AltaPedidos = new System.Windows.Forms.CheckBox();
-            this.NitruradoMatrices = new System.Windows.Forms.CheckBox();
-            this.ModificaMatrices = new System.Windows.Forms.CheckBox();
-            this.AltaMatrices = new System.Windows.Forms.CheckBox();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +80,7 @@ namespace Login
             this.altamat = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bajamat = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.nitru = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -97,6 +98,7 @@ namespace Login
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.NitruradoMatrices);
             this.splitContainer1.Panel1.Controls.Add(this.ModificaMatrices);
             this.splitContainer1.Panel1.Controls.Add(this.AltaMatrices);
@@ -134,6 +136,116 @@ namespace Login
             this.splitContainer1.SplitterDistance = 175;
             this.splitContainer1.TabIndex = 12;
             // 
+            // NitruradoMatrices
+            // 
+            this.NitruradoMatrices.AutoSize = true;
+            this.NitruradoMatrices.Location = new System.Drawing.Point(322, 150);
+            this.NitruradoMatrices.Name = "NitruradoMatrices";
+            this.NitruradoMatrices.Size = new System.Drawing.Size(108, 17);
+            this.NitruradoMatrices.TabIndex = 31;
+            this.NitruradoMatrices.Text = "Cambio de precio";
+            this.NitruradoMatrices.UseVisualStyleBackColor = true;
+            // 
+            // ModificaMatrices
+            // 
+            this.ModificaMatrices.AutoSize = true;
+            this.ModificaMatrices.Location = new System.Drawing.Point(431, 130);
+            this.ModificaMatrices.Name = "ModificaMatrices";
+            this.ModificaMatrices.Size = new System.Drawing.Size(69, 17);
+            this.ModificaMatrices.TabIndex = 30;
+            this.ModificaMatrices.Text = "Modificar";
+            this.ModificaMatrices.UseVisualStyleBackColor = true;
+            // 
+            // AltaMatrices
+            // 
+            this.AltaMatrices.AutoSize = true;
+            this.AltaMatrices.Location = new System.Drawing.Point(431, 110);
+            this.AltaMatrices.Name = "AltaMatrices";
+            this.AltaMatrices.Size = new System.Drawing.Size(63, 17);
+            this.AltaMatrices.TabIndex = 29;
+            this.AltaMatrices.Text = "Agregar";
+            this.AltaMatrices.UseVisualStyleBackColor = true;
+            // 
+            // DetallePedidos
+            // 
+            this.DetallePedidos.AutoSize = true;
+            this.DetallePedidos.Location = new System.Drawing.Point(431, 70);
+            this.DetallePedidos.Name = "DetallePedidos";
+            this.DetallePedidos.Size = new System.Drawing.Size(73, 17);
+            this.DetallePedidos.TabIndex = 28;
+            this.DetallePedidos.Text = "Anulación";
+            this.DetallePedidos.UseVisualStyleBackColor = true;
+            // 
+            // ModificaPedidos
+            // 
+            this.ModificaPedidos.AutoSize = true;
+            this.ModificaPedidos.Location = new System.Drawing.Point(431, 50);
+            this.ModificaPedidos.Name = "ModificaPedidos";
+            this.ModificaPedidos.Size = new System.Drawing.Size(90, 17);
+            this.ModificaPedidos.TabIndex = 27;
+            this.ModificaPedidos.Text = "Presupuestos";
+            this.ModificaPedidos.UseVisualStyleBackColor = true;
+            // 
+            // AltaPedidos
+            // 
+            this.AltaPedidos.AutoSize = true;
+            this.AltaPedidos.Location = new System.Drawing.Point(431, 30);
+            this.AltaPedidos.Name = "AltaPedidos";
+            this.AltaPedidos.Size = new System.Drawing.Size(94, 17);
+            this.AltaPedidos.TabIndex = 26;
+            this.AltaPedidos.Text = "Comprobantes";
+            this.AltaPedidos.UseVisualStyleBackColor = true;
+            // 
+            // ModificaArticulos
+            // 
+            this.ModificaArticulos.AutoSize = true;
+            this.ModificaArticulos.Location = new System.Drawing.Point(322, 110);
+            this.ModificaArticulos.Name = "ModificaArticulos";
+            this.ModificaArticulos.Size = new System.Drawing.Size(69, 17);
+            this.ModificaArticulos.TabIndex = 25;
+            this.ModificaArticulos.Text = "Modificar";
+            this.ModificaArticulos.UseVisualStyleBackColor = true;
+            // 
+            // BajaArticulos
+            // 
+            this.BajaArticulos.AutoSize = true;
+            this.BajaArticulos.Location = new System.Drawing.Point(322, 130);
+            this.BajaArticulos.Name = "BajaArticulos";
+            this.BajaArticulos.Size = new System.Drawing.Size(105, 17);
+            this.BajaArticulos.TabIndex = 24;
+            this.BajaArticulos.Text = "Entradas/salidas";
+            this.BajaArticulos.UseVisualStyleBackColor = true;
+            // 
+            // AltaArticulos
+            // 
+            this.AltaArticulos.AutoSize = true;
+            this.AltaArticulos.Location = new System.Drawing.Point(322, 90);
+            this.AltaArticulos.Name = "AltaArticulos";
+            this.AltaArticulos.Size = new System.Drawing.Size(63, 17);
+            this.AltaArticulos.TabIndex = 23;
+            this.AltaArticulos.Text = "Agregar";
+            this.AltaArticulos.UseVisualStyleBackColor = true;
+            // 
+            // ModificaCliente
+            // 
+            this.ModificaCliente.AutoSize = true;
+            this.ModificaCliente.Location = new System.Drawing.Point(322, 50);
+            this.ModificaCliente.Name = "ModificaCliente";
+            this.ModificaCliente.Size = new System.Drawing.Size(69, 17);
+            this.ModificaCliente.TabIndex = 22;
+            this.ModificaCliente.Text = "Modificar";
+            this.ModificaCliente.UseVisualStyleBackColor = true;
+            // 
+            // AltaCliente
+            // 
+            this.AltaCliente.AutoSize = true;
+            this.AltaCliente.Location = new System.Drawing.Point(322, 30);
+            this.AltaCliente.Name = "AltaCliente";
+            this.AltaCliente.Size = new System.Drawing.Size(63, 17);
+            this.AltaCliente.TabIndex = 21;
+            this.AltaCliente.Text = "Agregar";
+            this.AltaCliente.UseVisualStyleBackColor = true;
+            // 
             // ReporteCKB
             // 
             this.ReporteCKB.AutoSize = true;
@@ -149,7 +261,7 @@ namespace Login
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(224, 118);
+            this.label1.Location = new System.Drawing.Point(220, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 19;
@@ -170,9 +282,9 @@ namespace Login
             this.MatricesCKB.AutoSize = true;
             this.MatricesCKB.Location = new System.Drawing.Point(413, 91);
             this.MatricesCKB.Name = "MatricesCKB";
-            this.MatricesCKB.Size = new System.Drawing.Size(85, 17);
+            this.MatricesCKB.Size = new System.Drawing.Size(105, 17);
             this.MatricesCKB.TabIndex = 8;
-            this.MatricesCKB.Text = "Ver Matrices";
+            this.MatricesCKB.Text = "Ver Proveedores";
             this.MatricesCKB.UseVisualStyleBackColor = true;
             this.MatricesCKB.CheckedChanged += new System.EventHandler(this.MatricesCKB_CheckedChanged);
             // 
@@ -181,9 +293,9 @@ namespace Login
             this.PedidosCKB.AutoSize = true;
             this.PedidosCKB.Location = new System.Drawing.Point(413, 8);
             this.PedidosCKB.Name = "PedidosCKB";
-            this.PedidosCKB.Size = new System.Drawing.Size(83, 17);
+            this.PedidosCKB.Size = new System.Drawing.Size(62, 17);
             this.PedidosCKB.TabIndex = 6;
-            this.PedidosCKB.Text = "Ver Pedidos";
+            this.PedidosCKB.Text = "Emisión";
             this.PedidosCKB.UseVisualStyleBackColor = true;
             this.PedidosCKB.CheckedChanged += new System.EventHandler(this.PedidosCKB_CheckedChanged);
             // 
@@ -242,9 +354,10 @@ namespace Login
             // ContraseñaTBX
             // 
             this.ContraseñaTBX.BackColor = System.Drawing.SystemColors.Window;
-            this.ContraseñaTBX.Location = new System.Drawing.Point(112, 70);
+            this.ContraseñaTBX.Location = new System.Drawing.Point(12, 90);
             this.ContraseñaTBX.MaxLength = 40;
             this.ContraseñaTBX.Name = "ContraseñaTBX";
+            this.ContraseñaTBX.PasswordChar = '*';
             this.ContraseñaTBX.Size = new System.Drawing.Size(160, 20);
             this.ContraseñaTBX.TabIndex = 2;
             // 
@@ -253,7 +366,7 @@ namespace Login
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(23, 70);
+            this.label2.Location = new System.Drawing.Point(12, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 15);
             this.label2.TabIndex = 1;
@@ -272,7 +385,7 @@ namespace Login
             // UsuarioTBX
             // 
             this.UsuarioTBX.BackColor = System.Drawing.SystemColors.Window;
-            this.UsuarioTBX.Location = new System.Drawing.Point(112, 25);
+            this.UsuarioTBX.Location = new System.Drawing.Point(12, 30);
             this.UsuarioTBX.MaxLength = 40;
             this.UsuarioTBX.Name = "UsuarioTBX";
             this.UsuarioTBX.Size = new System.Drawing.Size(160, 20);
@@ -293,7 +406,7 @@ namespace Login
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(44, 25);
+            this.label3.Location = new System.Drawing.Point(12, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 2;
@@ -336,116 +449,6 @@ namespace Login
             this.Cuadro.TabIndex = 0;
             this.Cuadro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cuadro_CellClick);
             // 
-            // AltaCliente
-            // 
-            this.AltaCliente.AutoSize = true;
-            this.AltaCliente.Location = new System.Drawing.Point(322, 28);
-            this.AltaCliente.Name = "AltaCliente";
-            this.AltaCliente.Size = new System.Drawing.Size(44, 17);
-            this.AltaCliente.TabIndex = 21;
-            this.AltaCliente.Text = "Alta";
-            this.AltaCliente.UseVisualStyleBackColor = true;
-            // 
-            // ModificaCliente
-            // 
-            this.ModificaCliente.AutoSize = true;
-            this.ModificaCliente.Location = new System.Drawing.Point(322, 48);
-            this.ModificaCliente.Name = "ModificaCliente";
-            this.ModificaCliente.Size = new System.Drawing.Size(86, 17);
-            this.ModificaCliente.TabIndex = 22;
-            this.ModificaCliente.Text = "Modificación";
-            this.ModificaCliente.UseVisualStyleBackColor = true;
-            // 
-            // BajaArticulos
-            // 
-            this.BajaArticulos.AutoSize = true;
-            this.BajaArticulos.Location = new System.Drawing.Point(322, 113);
-            this.BajaArticulos.Name = "BajaArticulos";
-            this.BajaArticulos.Size = new System.Drawing.Size(47, 17);
-            this.BajaArticulos.TabIndex = 24;
-            this.BajaArticulos.Text = "Baja";
-            this.BajaArticulos.UseVisualStyleBackColor = true;
-            // 
-            // AltaArticulos
-            // 
-            this.AltaArticulos.AutoSize = true;
-            this.AltaArticulos.Location = new System.Drawing.Point(322, 93);
-            this.AltaArticulos.Name = "AltaArticulos";
-            this.AltaArticulos.Size = new System.Drawing.Size(44, 17);
-            this.AltaArticulos.TabIndex = 23;
-            this.AltaArticulos.Text = "Alta";
-            this.AltaArticulos.UseVisualStyleBackColor = true;
-            // 
-            // ModificaArticulos
-            // 
-            this.ModificaArticulos.AutoSize = true;
-            this.ModificaArticulos.Location = new System.Drawing.Point(322, 133);
-            this.ModificaArticulos.Name = "ModificaArticulos";
-            this.ModificaArticulos.Size = new System.Drawing.Size(86, 17);
-            this.ModificaArticulos.TabIndex = 25;
-            this.ModificaArticulos.Text = "Modificación";
-            this.ModificaArticulos.UseVisualStyleBackColor = true;
-            // 
-            // DetallePedidos
-            // 
-            this.DetallePedidos.AutoSize = true;
-            this.DetallePedidos.Location = new System.Drawing.Point(431, 68);
-            this.DetallePedidos.Name = "DetallePedidos";
-            this.DetallePedidos.Size = new System.Drawing.Size(83, 17);
-            this.DetallePedidos.TabIndex = 28;
-            this.DetallePedidos.Text = "Detalle Fab.";
-            this.DetallePedidos.UseVisualStyleBackColor = true;
-            // 
-            // ModificaPedidos
-            // 
-            this.ModificaPedidos.AutoSize = true;
-            this.ModificaPedidos.Location = new System.Drawing.Point(431, 48);
-            this.ModificaPedidos.Name = "ModificaPedidos";
-            this.ModificaPedidos.Size = new System.Drawing.Size(86, 17);
-            this.ModificaPedidos.TabIndex = 27;
-            this.ModificaPedidos.Text = "Modificación";
-            this.ModificaPedidos.UseVisualStyleBackColor = true;
-            // 
-            // AltaPedidos
-            // 
-            this.AltaPedidos.AutoSize = true;
-            this.AltaPedidos.Location = new System.Drawing.Point(431, 28);
-            this.AltaPedidos.Name = "AltaPedidos";
-            this.AltaPedidos.Size = new System.Drawing.Size(44, 17);
-            this.AltaPedidos.TabIndex = 26;
-            this.AltaPedidos.Text = "Alta";
-            this.AltaPedidos.UseVisualStyleBackColor = true;
-            // 
-            // NitruradoMatrices
-            // 
-            this.NitruradoMatrices.AutoSize = true;
-            this.NitruradoMatrices.Location = new System.Drawing.Point(431, 147);
-            this.NitruradoMatrices.Name = "NitruradoMatrices";
-            this.NitruradoMatrices.Size = new System.Drawing.Size(69, 17);
-            this.NitruradoMatrices.TabIndex = 31;
-            this.NitruradoMatrices.Text = "Nitrurado";
-            this.NitruradoMatrices.UseVisualStyleBackColor = true;
-            // 
-            // ModificaMatrices
-            // 
-            this.ModificaMatrices.AutoSize = true;
-            this.ModificaMatrices.Location = new System.Drawing.Point(431, 127);
-            this.ModificaMatrices.Name = "ModificaMatrices";
-            this.ModificaMatrices.Size = new System.Drawing.Size(86, 17);
-            this.ModificaMatrices.TabIndex = 30;
-            this.ModificaMatrices.Text = "Modificación";
-            this.ModificaMatrices.UseVisualStyleBackColor = true;
-            // 
-            // AltaMatrices
-            // 
-            this.AltaMatrices.AutoSize = true;
-            this.AltaMatrices.Location = new System.Drawing.Point(431, 107);
-            this.AltaMatrices.Name = "AltaMatrices";
-            this.AltaMatrices.Size = new System.Drawing.Size(44, 17);
-            this.AltaMatrices.TabIndex = 29;
-            this.AltaMatrices.Text = "Alta";
-            this.AltaMatrices.UseVisualStyleBackColor = true;
-            // 
             // check
             // 
             this.check.HeaderText = " ";
@@ -476,7 +479,7 @@ namespace Login
             // 
             // Direccion
             // 
-            this.Direccion.HeaderText = "Ver Cliente";
+            this.Direccion.HeaderText = "Ver Clientes";
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
             this.Direccion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -485,7 +488,7 @@ namespace Login
             // 
             // Localidad
             // 
-            this.Localidad.HeaderText = "Ver Articulo";
+            this.Localidad.HeaderText = "Ver Articulos";
             this.Localidad.Name = "Localidad";
             this.Localidad.ReadOnly = true;
             this.Localidad.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -503,7 +506,7 @@ namespace Login
             // 
             // Telefono1
             // 
-            this.Telefono1.HeaderText = "Ver Pedidos";
+            this.Telefono1.HeaderText = "Ver Emisión";
             this.Telefono1.Name = "Telefono1";
             this.Telefono1.ReadOnly = true;
             this.Telefono1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -512,7 +515,7 @@ namespace Login
             // 
             // Telefono2
             // 
-            this.Telefono2.HeaderText = "Ver Matrices";
+            this.Telefono2.HeaderText = "Ver Proveedores";
             this.Telefono2.Name = "Telefono2";
             this.Telefono2.ReadOnly = true;
             this.Telefono2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -544,7 +547,7 @@ namespace Login
             // 
             // bajarticulo
             // 
-            this.bajarticulo.HeaderText = "Baja Artículo";
+            this.bajarticulo.HeaderText = "Mov. Artículo";
             this.bajarticulo.Name = "bajarticulo";
             this.bajarticulo.ReadOnly = true;
             // 
@@ -568,39 +571,51 @@ namespace Login
             // 
             // altpedido
             // 
-            this.altpedido.HeaderText = "Alta Pedido";
+            this.altpedido.HeaderText = "Alta Comprobante";
             this.altpedido.Name = "altpedido";
             this.altpedido.ReadOnly = true;
             // 
             // MOdifiPedido
             // 
-            this.MOdifiPedido.HeaderText = "Modifica Pedido";
+            this.MOdifiPedido.HeaderText = "Alta Presupuesto";
             this.MOdifiPedido.Name = "MOdifiPedido";
             this.MOdifiPedido.ReadOnly = true;
             // 
             // detall
             // 
-            this.detall.HeaderText = "Detalle Pedido";
+            this.detall.HeaderText = "Anulacion comprobantes";
             this.detall.Name = "detall";
             this.detall.ReadOnly = true;
             // 
             // altamat
             // 
-            this.altamat.HeaderText = "Alta Matriz";
+            this.altamat.HeaderText = "Alta Proveedor";
             this.altamat.Name = "altamat";
             this.altamat.ReadOnly = true;
             // 
             // bajamat
             // 
-            this.bajamat.HeaderText = "Modifica Matriz";
+            this.bajamat.HeaderText = "Modifica  Proveedor";
             this.bajamat.Name = "bajamat";
             this.bajamat.ReadOnly = true;
             // 
             // nitru
             // 
-            this.nitru.HeaderText = "Nitrurado";
+            this.nitru.HeaderText = "Cambio Precio";
             this.nitru.Name = "nitru";
             this.nitru.ReadOnly = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(12, 150);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(216, 15);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "No elimine al usuario \"Administrador\"";
             // 
             // User
             // 
@@ -655,6 +670,7 @@ namespace Login
         private System.Windows.Forms.CheckBox AltaArticulos;
         private System.Windows.Forms.CheckBox ModificaCliente;
         private System.Windows.Forms.CheckBox AltaCliente;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn check;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
