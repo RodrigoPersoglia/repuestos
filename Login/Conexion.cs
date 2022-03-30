@@ -2521,6 +2521,48 @@ namespace Login
 
 		}
 
+		public static Comprobante GetComprobantePorNumero( int numero)
+		{
+			Comprobante comprobante = new Comprobante();
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "select * from factura f where f.numero="+numero+" limit 1";
+			try
+			{
+
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
+
+				foreach (DataRow x in dt.Rows)
+				{
+
+					comprobante.ID = (int)x[0];
+					comprobante.Numero = (int)x[1];
+					comprobante.FechaHora = (DateTime)x[2];
+					comprobante.SubTotal = (decimal)x[3];
+					comprobante.Financiación = (decimal)x[4];
+					comprobante.Total = (decimal)x[5];
+					comprobante.ClienteID = (int)x[6];
+					comprobante.Cliente = (string)x[7];
+					comprobante.Direccion = (string)x[8];
+					comprobante.Localidad = (string)x[9];
+					comprobante.CP = (string)x[10];
+					comprobante.Usuario = (string)x[11];
+					comprobante.MedioPagoID = (int)x[12];
+					//               if ((int)x[13] == 1) { comprobante.Activa = true; }
+					//else { comprobante.Activa = false; }
+
+				}
+				return comprobante;
+			}
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return comprobante; }
+			finally { conectar.Close(); }
+
+		}
+
 
 		public static void AgregarPresupuesto(decimal subTotal, decimal iva, decimal total, int cliente_ID, string cliente, string direccion, string localidad, string cp, string usuario, DataTable detalleFactura, int medioPago)
 		{
@@ -3088,6 +3130,94 @@ namespace Login
 
 			finally { conectar.Close(); }
 		}
+
+
+		public static Cliente ObtenerClientePorComprobante(int numero)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("BuscarClientePorFactura", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p1", numero);
+				MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+				adp.Fill(dt);
+				if (dt.Rows.Count == 1)
+				{
+					Cliente cliente = new Cliente();
+					foreach (DataRow x in dt.Rows)
+					{
+						cliente.ID = (int)x[0];
+						cliente.Numero = (int)x[1];
+						cliente.Alias = (string)x[2];
+
+						if (x[3] != null)
+						{
+							try { cliente.RazonSocial = (string)x[3]; }
+							catch (Exception) { }
+						}
+
+						if (x[4] != null)
+						{
+							try { cliente.Telefono1 = (string)x[4]; }
+							catch (Exception) { }
+						}
+
+						if (x[5] != null)
+						{
+							try { cliente.Telefono2 = (string)x[5]; }
+							catch (Exception) { }
+						}
+
+						cliente.Direccion = (string)x[6];
+						cliente.Ciudad = (string)x[7];
+					}
+					return cliente;
+				}
+				else
+				{
+					return null;
+				}
+
+			}
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
+
+		public static DataTable ObtenerDetalleComprobante(int numero)
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand("ObtenerDetalleFactura", conectar);
+				comand.CommandType = CommandType.StoredProcedure;
+				comand.Parameters.AddWithValue("@p1", numero);
+				MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+				adp.Fill(dt);
+				if (dt.Rows.Count > 0)
+				{
+
+					return dt;
+				}
+				else {return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
+
+
+
+
+
+
+
+
 
 
 	}

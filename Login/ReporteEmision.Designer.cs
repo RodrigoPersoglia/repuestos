@@ -68,6 +68,8 @@ namespace Login
             this.EstadoCBX = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ImporteTXT = new System.Windows.Forms.TextBox();
+            this.Reimprimir = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -265,6 +267,7 @@ namespace Login
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitContainer1.Panel1.Controls.Add(this.Reimprimir);
             this.splitContainer1.Panel1.Controls.Add(this.Fecha2DTP);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
@@ -351,6 +354,18 @@ namespace Login
             this.ImporteTXT.Size = new System.Drawing.Size(100, 22);
             this.ImporteTXT.TabIndex = 46;
             this.ImporteTXT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Reimprimir
+            // 
+            this.Reimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reimprimir.Location = new System.Drawing.Point(453, 85);
+            this.Reimprimir.Margin = new System.Windows.Forms.Padding(2);
+            this.Reimprimir.Name = "Reimprimir";
+            this.Reimprimir.Size = new System.Drawing.Size(145, 24);
+            this.Reimprimir.TabIndex = 55;
+            this.Reimprimir.Text = "Re-Imprimir Selección";
+            this.Reimprimir.UseVisualStyleBackColor = true;
+            this.Reimprimir.Click += new System.EventHandler(this.Reimprimir_Click);
             // 
             // ReporteEmision
             // 
@@ -623,5 +638,7 @@ namespace Login
         private System.Windows.Forms.DataGridViewTextBoxColumn MedioPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emisor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button Reimprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

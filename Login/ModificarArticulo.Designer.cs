@@ -380,6 +380,11 @@ namespace Login
             0,
             0,
             0});
+            this.stockActualNum.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
             this.stockActualNum.Name = "stockActualNum";
             this.stockActualNum.Size = new System.Drawing.Size(200, 19);
             this.stockActualNum.TabIndex = 8;
@@ -692,10 +697,11 @@ namespace Login
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(598, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 

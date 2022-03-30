@@ -41,12 +41,6 @@ namespace Login
             this.label1 = new System.Windows.Forms.Label();
             this.Busquedatext = new System.Windows.Forms.TextBox();
             this.Cuadro = new System.Windows.Forms.DataGridView();
-            this.Buscar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Cancelar = new System.Windows.Forms.Button();
-            this.Aceptar = new System.Windows.Forms.Button();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoProv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +57,12 @@ namespace Login
             this.ProveedorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buscar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Cancelar = new System.Windows.Forms.Button();
+            this.Aceptar = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -135,86 +135,6 @@ namespace Login
             this.Cuadro.Size = new System.Drawing.Size(634, 298);
             this.Cuadro.TabIndex = 2;
             this.Cuadro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Selecccioncelda);
-            // 
-            // Buscar
-            // 
-            this.Buscar.Location = new System.Drawing.Point(189, 74);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(2);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(67, 24);
-            this.Buscar.TabIndex = 3;
-            this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
-            this.Buscar.Click += new System.EventHandler(this.BuscarClick);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 19);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "SELECCCIÓN";
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancelar.Location = new System.Drawing.Point(556, 50);
-            this.Cancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(67, 24);
-            this.Cancelar.TabIndex = 27;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = true;
-            // 
-            // Aceptar
-            // 
-            this.Aceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Aceptar.Location = new System.Drawing.Point(556, 22);
-            this.Aceptar.Margin = new System.Windows.Forms.Padding(2);
-            this.Aceptar.Name = "Aceptar";
-            this.Aceptar.Size = new System.Drawing.Size(67, 24);
-            this.Aceptar.TabIndex = 28;
-            this.Aceptar.Text = "Aceptar";
-            this.Aceptar.UseVisualStyleBackColor = true;
-            this.Aceptar.Click += new System.EventHandler(this.AceptarClick);
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.Cancelar);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.Aceptar);
-            this.splitContainer1.Panel1.Controls.Add(this.Buscar);
-            this.splitContainer1.Panel1.Controls.Add(this.Busquedatext);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.Cuadro);
-            this.splitContainer1.Size = new System.Drawing.Size(634, 432);
-            this.splitContainer1.SplitterDistance = 130;
-            this.splitContainer1.TabIndex = 29;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(288, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
             // 
             // ID
             // 
@@ -313,6 +233,87 @@ namespace Login
             // 
             this.Proveedor.HeaderText = "Proveedor";
             this.Proveedor.Name = "Proveedor";
+            // 
+            // Buscar
+            // 
+            this.Buscar.Location = new System.Drawing.Point(189, 74);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(67, 24);
+            this.Buscar.TabIndex = 3;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.Click += new System.EventHandler(this.BuscarClick);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(8, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 19);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "SELECCCIÓN";
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancelar.Location = new System.Drawing.Point(556, 50);
+            this.Cancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(67, 24);
+            this.Cancelar.TabIndex = 27;
+            this.Cancelar.Text = "Cancelar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // Aceptar
+            // 
+            this.Aceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Aceptar.Location = new System.Drawing.Point(556, 22);
+            this.Aceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.Aceptar.Name = "Aceptar";
+            this.Aceptar.Size = new System.Drawing.Size(67, 24);
+            this.Aceptar.TabIndex = 28;
+            this.Aceptar.Text = "Aceptar";
+            this.Aceptar.UseVisualStyleBackColor = true;
+            this.Aceptar.Click += new System.EventHandler(this.AceptarClick);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.Cancelar);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.Aceptar);
+            this.splitContainer1.Panel1.Controls.Add(this.Buscar);
+            this.splitContainer1.Panel1.Controls.Add(this.Busquedatext);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.Cuadro);
+            this.splitContainer1.Size = new System.Drawing.Size(634, 432);
+            this.splitContainer1.SplitterDistance = 130;
+            this.splitContainer1.TabIndex = 29;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(288, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(227, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
             // 
             // SeleccionArticulo
             // 

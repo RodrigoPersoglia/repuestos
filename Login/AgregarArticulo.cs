@@ -33,8 +33,6 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				//newRow["descripcion"] = "Seleccione";
-				//dt.Rows.InsertAt(newRow, 0);
 				MarcaCBX.DataSource = dt;
 				MarcaCBX.DisplayMember = "descripcion";
 				MarcaCBX.ValueMember = "ID";
@@ -51,8 +49,6 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				//newRow["descripcion"] = "Seleccione";
-				//dt.Rows.InsertAt(newRow, 0);
 				RubroCBX.DataSource = dt;
 				RubroCBX.DisplayMember = "descripcion";
 				RubroCBX.ValueMember = "ID";
@@ -68,8 +64,6 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				//newRow["descripcion"] = "Seleccione";
-				//dt.Rows.InsertAt(newRow, 0);
 				LadoCBX.DataSource = dt;
 				LadoCBX.DisplayMember = "descripcion";
 				LadoCBX.ValueMember = "ID";
@@ -86,8 +80,6 @@ namespace Login
 				DataTable dt = new DataTable();
 				dt.Load(reader);
 				DataRow newRow = dt.NewRow();
-				//newRow["Alias"] = "Seleccione";
-				//dt.Rows.InsertAt(newRow, 0);
 				ProveedorCBX.DataSource = dt;
 				ProveedorCBX.DisplayMember = "Alias";
 				ProveedorCBX.ValueMember = "ID";

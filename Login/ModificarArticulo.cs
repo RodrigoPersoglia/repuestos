@@ -485,6 +485,14 @@ namespace Login
 				}
 				catch (Exception) { }
 
+				try
+				{
+					byte[] imageBytes = File.ReadAllBytes(Conexion.rutaImagen(articulo.Codigo));
+					MemoryStream buf = new MemoryStream(imageBytes);
+					pictureBox1.Image = Image.FromStream(buf);
+				}
+				catch (Exception) { pictureBox1.Image = null; }
+
 
 			}
         }

@@ -222,7 +222,7 @@ namespace Login
             // 
             this.Numero.HeaderText = "Numero";
             this.Numero.Name = "Numero";
-            this.Numero.Visible = false;
+            this.Numero.Width = 60;
             // 
             // Alias
             // 

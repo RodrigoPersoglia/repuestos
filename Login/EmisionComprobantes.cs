@@ -201,7 +201,7 @@ namespace Login
 						if (Conexion.Validar(UsuarioCBX.Text))
 						{
 							dt = Convert_to_DT(Cuadro);
-							Conexion.AgregarFactura(SubTotalNUM.Value, TotalRecargo.Value, TotalNUM.Value, cliente.ID, Cliente.Text, Direccion.Text, Localidad.Text, cliente.CP, "Rodrigo", Convert_to_DT(Cuadro),(int)MediosPagoCBX.SelectedValue);
+							Conexion.AgregarFactura(SubTotalNUM.Value, TotalRecargo.Value, TotalNUM.Value, cliente.ID, Cliente.Text, Direccion.Text, Localidad.Text, cliente.CP, UsuarioCBX.Text, Convert_to_DT(Cuadro),(int)MediosPagoCBX.SelectedValue);
                             if (ImprimeChek.Checked)
                             {
 								comprobante = Conexion.GetUltimoComprobante();
@@ -277,8 +277,8 @@ namespace Login
 			catch (MySqlException ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 			finally { conectar.Close(); }
 
-			UsuarioCBX.Text = usuario.User;
-			RecFinanNum.Value = Conexion.obtenerRecargoFinanciero((int)MediosPagoCBX.SelectedValue);
+			UsuarioCBX.Text = usuario.User; try { RecFinanNum.Value = Conexion.obtenerRecargoFinanciero((int)MediosPagoCBX.SelectedValue); } catch (Exception) { }
+			
 			splitContainer2.Panel1.Focus();
 			NumCliTXT.Focus();
 
