@@ -630,7 +630,7 @@ namespace Login
 			Pen lineaGruesa = new Pen(Color.Black, 3);
 			int x0 = 40;
 			int xfin = 745;
-			e.Graphics.DrawLine(lineaFina, x0, 600, xfin + x0, 600);
+			e.Graphics.DrawLine(lineaFina, x0, 560, xfin + x0, 560);
 
 			//Estructura lineas gruesas
 			e.Graphics.DrawRectangle(lineaGruesa, new Rectangle(x0, 205, xfin, 40));
@@ -697,7 +697,7 @@ namespace Login
 			e.Graphics.DrawString("Total de artículos:  " + cantidadArticulos.ToString(), Arial10, Brushes.Black, x0 + 10, 495);
 
 			//segunda parte *****************************************************************
-			int diferencia = 560;
+			int diferencia = 520;
 
 			e.Graphics.DrawRectangle(lineaGruesa, new Rectangle(x0, 245 + diferencia, xfin, 40));
 			e.Graphics.DrawRectangle(lineaGruesa, new Rectangle(x0, 245 + diferencia, 80, 280));
