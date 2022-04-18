@@ -1,0 +1,2 @@
+el formato decimal debe estar en "." en vez de "," hay que cambiar la configuracion regional
+las imagenes de los articulos deben estan en formato .jpg y con una relacion de 2:1

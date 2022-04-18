@@ -1,0 +1,424 @@
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.csproj.ResolveComReference.cache
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.AgregarArticulo.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.AgregarCiudad.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.AgregarCliente.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.AgregarMatriz.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.AgregarPedido.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.Contacto.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.DetalleFabricacion.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.EliminarArticulo.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.factura.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.Login.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ListadoArticulos.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ListadoClientes.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ListadoPedidos.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ModificarArticulo.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ModificarCliente.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ModificarMatriz.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.ModificarPedido.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.Principal.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.Proyeccion.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.SeleccionArticulo.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.VentanaSeleccion2.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.Principal.es-AR.resources
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Pedidos.exe.config
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Pedidos.exe
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Pedidos.pdb
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\es-AR\Pedidos.resources.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\MySql.Data.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Google.Protobuf.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Zstandard.Net.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\Renci.SshNet.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\System.Memory.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\System.Buffers.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\bin\Debug\MySql.Data.xml
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Pedidos.exe.config
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\es-AR\Pedidos.resources.dll
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Pedidos.exe
+C:\Users\usuario\Downloads\PedidosPublico-main\Login\obj\Debug\Pedidos.pdb
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Pedidos.exe.config
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.csproj.ResolveComReference.cache
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.AgregarArticulo.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.AgregarCiudad.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.AgregarCliente.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.AgregarMatriz.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.AgregarPedido.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Contacto.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.DetalleFabricacion.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.EliminarArticulo.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.EnProduccion.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.factura.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Login.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ListadoArticulos.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ListadoClientes.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ListadoPedidos.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ModificarArticulo.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ModificarCliente.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ModificarMatriz.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ModificarPedido.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Principal.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Proyeccion.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.SeleccionArticulo.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.VentanaSeleccion2.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Principal.es-AR.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Pedidos.exe
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Pedidos.pdb
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Pedidos.exe.config
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Pedidos.exe
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Pedidos.pdb
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\es-AR\Pedidos.resources.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Google.Protobuf.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Zstandard.Net.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\Renci.SshNet.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\System.Memory.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\System.Buffers.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\usuario\Desktop\Pedidos\Login\bin\Debug\MySql.Data.xml
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\es-AR\Pedidos.resources.dll
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.User.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.NombreServidor.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ReporteProduccion.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Nitrurado.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Ciudad.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Puesto.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Clasificacion.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Prioridad.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Aleacion.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Temple.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.Terminacion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Pedidos.exe.config
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Pedidos.exe
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Pedidos.pdb
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\es-AR\Pedidos.resources.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\MySql.Data.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Google.Protobuf.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Zstandard.Net.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\Renci.SshNet.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\System.Memory.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\System.Buffers.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\bin\Debug\MySql.Data.xml
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Pedidos.exe.config
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.csproj.ResolveComReference.cache
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.AgregarArticulo.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.AgregarCiudad.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.AgregarCliente.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.AgregarMatriz.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.AgregarPedido.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Aleacion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Ciudad.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Clasificacion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Contacto.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.DetalleFabricacion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.EliminarArticulo.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.EnProduccion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.factura.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Login.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.fondo.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ListadoArticulos.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ListadoClientes.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ListadoPedidos.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ModificarArticulo.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ModificarCliente.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ModificarMatriz.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ModificarPedido.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Nitrurado.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.NombreServidor.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Principal.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Prioridad.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Proyeccion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Puesto.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ReporteProduccion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.SeleccionArticulo.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Temple.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Terminacion.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.User.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.VentanaSeleccion2.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.Principal.es-AR.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\es-AR\Pedidos.resources.dll
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Pedidos.exe
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Pedidos.pdb
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.fondo.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ReporteNitrurado.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ReporteMatricesPesadas.resources
+C:\Users\usuario\Desktop\Pedidos - copia\Login\obj\Debug\Login.ReporteNitrurado.resources
+C:\Users\usuario\Desktop\Pedidos\Login\obj\Debug\Login.ReporteMatricesPesadas.resources
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\MySql.Data.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Google.Protobuf.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Zstandard.Net.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Renci.SshNet.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\System.Memory.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\System.Buffers.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\MySql.Data.xml
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.csproj.ResolveComReference.cache
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarArticulo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarCiudad.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarMatriz.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Ciudad.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Clasificacion.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Contacto.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EliminarArticulo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EnProduccion.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Login.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.fondo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ListadoArticulos.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ModificarArticulo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ModificarMatriz.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Nitrurado.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.NombreServidor.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Principal.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Prioridad.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Proyeccion.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.SeleccionArticulo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Terminacion.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.User.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.VentanaSeleccion2.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Principal.es-AR.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarProvedor.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ModificarProveedor.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.SeleccionProvedores.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ListadoProveedores.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Rubro.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.BusquedaRapida.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AgregarCliente.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ListadoClientes.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ModificarCliente.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Repuestos.exe.config
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Repuestos.exe
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Repuestos.pdb
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\es-AR\Repuestos.resources.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Google.Protobuf.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Zstandard.Net.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\Renci.SshNet.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\System.Memory.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\System.Buffers.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\bin\Debug\MySql.Data.xml
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Repuestos.exe.config
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.csproj.ResolveComReference.cache
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.AgregarArticulo.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.AgregarCiudad.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.AgregarCliente.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.AgregarProvedor.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.AgregarMatriz.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Aleacion.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.BusquedaRapida.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Ciudad.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Clasificacion.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Contacto.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.EliminarArticulo.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.EnProduccion.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.factura.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Login.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.fondo.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ListadoArticulos.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ListadoClientes.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ListadoProveedores.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ModificarArticulo.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ModificarCliente.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ModificarProveedor.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ModificarMatriz.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Nitrurado.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.NombreServidor.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Principal.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Prioridad.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Proyeccion.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Puesto.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ReporteMatricesPesadas.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.ReporteNitrurado.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.SeleccionArticulo.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.SeleccionProvedores.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Rubro.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Terminacion.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.User.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.VentanaSeleccion2.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.Principal.es-AR.resources
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\es-AR\Repuestos.resources.dll
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Repuestos.exe
+C:\Users\usuario\Desktop\Nueva carpeta\repuestos\Login\obj\Debug\Repuestos.pdb
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Repuestos.exe.config
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Repuestos.exe
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\Repuestos.pdb
+C:\Users\usuario\Desktop\repuestos\Login\bin\Debug\es-AR\Repuestos.resources.dll
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Repuestos.exe.config
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\es-AR\Repuestos.resources.dll
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Repuestos.exe
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Repuestos.pdb
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Validacion.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EmisionComprobantes.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.MediosPago.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.AnulacionComprobantes.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Repuestos.exe.config
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Repuestos.exe
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Google.Protobuf.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Memory.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Buffers.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\MySql.Data.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.csproj.ResolveComReference.cache
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.AgregarArticulo.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.AgregarCiudad.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.AgregarCliente.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.AgregarProvedor.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.AgregarMatriz.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.AnulacionComprobantes.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.BusquedaRapida.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Ciudad.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Clasificacion.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Contacto.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.EliminarArticulo.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.EnProduccion.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.EmisionComprobantes.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Login.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.fondo.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ListadoArticulos.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ListadoClientes.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ListadoProveedores.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.MediosPago.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ModificarArticulo.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ModificarCliente.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ModificarProveedor.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ModificarMatriz.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Nitrurado.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.NombreServidor.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Principal.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Prioridad.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Proyeccion.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.SeleccionArticulo.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.SeleccionProvedores.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Rubro.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Terminacion.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.User.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Validacion.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.VentanaSeleccion2.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Principal.es-AR.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\es-AR\Repuestos.resources.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Repuestos.exe
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Repuestos.pdb
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Repuestos.pdb
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\es-AR\Repuestos.resources.dll
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EmisionPresupuesto.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.RestablecerContadores.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteEmision.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteStock.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.CambioPrecios.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.EntradasSalidas.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ReporteMovimientos.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.Marca.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.MarcaVehiculo.resources
+C:\Users\usuario\Desktop\repuestos\Login\obj\Debug\Login.ModeloAuto.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\MySql.Data.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\ZstdNet.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.Marca.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.CambioPrecios.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.EmisionPresupuesto.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.EntradasSalidas.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.MarcaVehiculo.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ModeloAuto.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ReporteEmision.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ReporteMovimientos.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.ReporteStock.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\obj\Debug\Login.RestablecerContadores.resources
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Buffers.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Memory.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Rodrigo\Desktop\repuestos-master\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
