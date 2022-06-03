@@ -39,7 +39,8 @@ namespace Login
             // 
             this.Calendario.BackColor = System.Drawing.SystemColors.Window;
             this.Calendario.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Calendario.Location = new System.Drawing.Point(124, 141);
+            this.Calendario.Location = new System.Drawing.Point(186, 217);
+            this.Calendario.Margin = new System.Windows.Forms.Padding(14);
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 0;
             this.Calendario.MouseEnter += new System.EventHandler(this.Calendario_MouseEnter);
@@ -51,11 +52,12 @@ namespace Login
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(32, 75);
+            this.label1.Location = new System.Drawing.Point(48, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(673, 29);
+            this.label1.Size = new System.Drawing.Size(1028, 44);
             this.label1.TabIndex = 1;
-            this.label1.Text = ".EXE DESARROLLOS INFORMÁTICOS && SISTEMAC";
+            this.label1.Text = ".EXE DESARROLLOS INFORMÁTICOS && SYSTEMAC";
             // 
             // label2
             // 
@@ -63,25 +65,27 @@ namespace Login
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(384, 236);
+            this.label2.Location = new System.Drawing.Point(576, 363);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 18);
+            this.label2.Size = new System.Drawing.Size(101, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "usuario";
             // 
             // fondo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::Login.Properties.Resources.vecteezy_abstract_geometric_background_in_dark_blue_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(870, 490);
+            this.ClientSize = new System.Drawing.Size(1305, 754);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Calendario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "fondo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fondo";

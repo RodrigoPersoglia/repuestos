@@ -209,6 +209,7 @@ namespace Login
 								//ImprimirDuplicado(sender, e);
 								//imprimir();
 								CreaTicket.imprimir(comprobante,dt);
+                                if (Duplicado.Checked) { CreaTicket.imprimir(comprobante, dt); }
 							}
 
 							LimpiarCliente();

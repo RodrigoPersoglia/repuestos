@@ -3212,10 +3212,49 @@ namespace Login
 		}
 
 
+		public static void SetImpresora(string Pathimpresora)
+		{
+			string consulta = $"update empresa e set ImpresoraFactura = '{Pathimpresora}' where e.id = '1'";
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			try
+			{
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				comand.ExecuteNonQuery();
+				AutoClosingMessageBox.Show("Impresora modificada correctamente", "Modelo", MessageBoxButtons.OK, MessageBoxIcon.Information, 1600);
+			}
+			catch (Exception ex) { MessageBox.Show("Error " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+			finally { conectar.Close(); }
+
+		}
 
 
+		public static string GetImpresora()
+		{
+			MySqlConnection conectar = Conexion.ObtenerConexion();
+			conectar.Open();
+			DataTable dt = new DataTable();
+			MySqlDataReader reader;
+			string consulta = "SELECT ImpresoraFactura FROM empresa e WHERE e.ID = '1'";
+			try
+			{
 
+				MySqlCommand comand = new MySqlCommand(consulta, conectar);
+				reader = comand.ExecuteReader();
+				dt.Load(reader);
 
+				if (dt.Rows.Count > 0)
+				{
+
+					return dt.Rows[0].ItemArray[0].ToString();
+				}
+				else { return null; }
+
+			}
+
+			catch (Exception ex) { MessageBox.Show("Error al buscar " + ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error); return null; }
+			finally { conectar.Close(); }
+		}
 
 
 

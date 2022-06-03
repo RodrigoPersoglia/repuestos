@@ -102,6 +102,7 @@ namespace Login
             this.label15 = new System.Windows.Forms.Label();
             this.UsuarioCBX = new System.Windows.Forms.ComboBox();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.Duplicado = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.RecFinanNum = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
@@ -168,24 +169,26 @@ namespace Login
             this.Cuadro.DefaultCellStyle = dataGridViewCellStyle3;
             this.Cuadro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cuadro.Location = new System.Drawing.Point(0, 0);
-            this.Cuadro.Margin = new System.Windows.Forms.Padding(2);
+            this.Cuadro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cuadro.Name = "Cuadro";
             this.Cuadro.ReadOnly = true;
             this.Cuadro.RowHeadersVisible = false;
             this.Cuadro.RowHeadersWidth = 30;
             this.Cuadro.RowTemplate.Height = 24;
-            this.Cuadro.Size = new System.Drawing.Size(634, 247);
+            this.Cuadro.Size = new System.Drawing.Size(640, 257);
             this.Cuadro.TabIndex = 100;
             this.Cuadro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seleccioncelda);
             // 
             // check
             // 
             this.check.HeaderText = "check";
+            this.check.MinimumWidth = 8;
             this.check.Name = "check";
             this.check.ReadOnly = true;
             this.check.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.check.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.check.Visible = false;
+            this.check.Width = 150;
             // 
             // Código
             // 
@@ -193,6 +196,7 @@ namespace Login
             this.Código.MinimumWidth = 6;
             this.Código.Name = "Código";
             this.Código.ReadOnly = true;
+            this.Código.Width = 150;
             // 
             // Descripción
             // 
@@ -218,6 +222,7 @@ namespace Login
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
+            this.Precio.Width = 150;
             // 
             // Subtotal
             // 
@@ -230,7 +235,7 @@ namespace Login
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(70, 200);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(170, 20);
@@ -268,7 +273,7 @@ namespace Login
             this.cant.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cant.ForeColor = System.Drawing.SystemColors.Window;
             this.cant.Location = new System.Drawing.Point(187, 350);
-            this.cant.Margin = new System.Windows.Forms.Padding(2);
+            this.cant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cant.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -289,7 +294,7 @@ namespace Login
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(40, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -299,7 +304,7 @@ namespace Login
             // Buscar
             // 
             this.Buscar.Location = new System.Drawing.Point(177, 170);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(2);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(63, 20);
             this.Buscar.TabIndex = 4;
@@ -311,7 +316,7 @@ namespace Login
             // 
             this.agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregar.Location = new System.Drawing.Point(51, 387);
-            this.agregar.Margin = new System.Windows.Forms.Padding(2);
+            this.agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.agregar.Name = "agregar";
             this.agregar.Size = new System.Drawing.Size(90, 23);
             this.agregar.TabIndex = 6;
@@ -323,7 +328,7 @@ namespace Login
             // 
             this.quitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quitar.Location = new System.Drawing.Point(150, 387);
-            this.quitar.Margin = new System.Windows.Forms.Padding(2);
+            this.quitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quitar.Name = "quitar";
             this.quitar.Size = new System.Drawing.Size(90, 23);
             this.quitar.TabIndex = 7;
@@ -334,10 +339,10 @@ namespace Login
             // ConfirmarBTN
             // 
             this.ConfirmarBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmarBTN.Location = new System.Drawing.Point(452, 32);
-            this.ConfirmarBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirmarBTN.Location = new System.Drawing.Point(452, 51);
+            this.ConfirmarBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ConfirmarBTN.Name = "ConfirmarBTN";
-            this.ConfirmarBTN.Size = new System.Drawing.Size(90, 47);
+            this.ConfirmarBTN.Size = new System.Drawing.Size(90, 36);
             this.ConfirmarBTN.TabIndex = 9;
             this.ConfirmarBTN.Text = "CONFIRMAR";
             this.ConfirmarBTN.UseVisualStyleBackColor = true;
@@ -349,9 +354,9 @@ namespace Login
             this.ImprimeChek.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ImprimeChek.ForeColor = System.Drawing.Color.White;
             this.ImprimeChek.Location = new System.Drawing.Point(452, 8);
-            this.ImprimeChek.Margin = new System.Windows.Forms.Padding(2);
+            this.ImprimeChek.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ImprimeChek.Name = "ImprimeChek";
-            this.ImprimeChek.Size = new System.Drawing.Size(128, 20);
+            this.ImprimeChek.Size = new System.Drawing.Size(138, 20);
             this.ImprimeChek.TabIndex = 29;
             this.ImprimeChek.Text = "Imprime Comprobante";
             this.ImprimeChek.UseVisualStyleBackColor = true;
@@ -372,7 +377,7 @@ namespace Login
             // NumCliTXT
             // 
             this.NumCliTXT.Location = new System.Drawing.Point(90, 56);
-            this.NumCliTXT.Margin = new System.Windows.Forms.Padding(2);
+            this.NumCliTXT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NumCliTXT.Name = "NumCliTXT";
             this.NumCliTXT.Size = new System.Drawing.Size(68, 20);
             this.NumCliTXT.TabIndex = 1;
@@ -394,7 +399,7 @@ namespace Login
             // Cliente
             // 
             this.Cliente.Location = new System.Drawing.Point(229, 57);
-            this.Cliente.Margin = new System.Windows.Forms.Padding(2);
+            this.Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
             this.Cliente.Size = new System.Drawing.Size(176, 20);
@@ -416,7 +421,7 @@ namespace Login
             // Telefono
             // 
             this.Telefono.Location = new System.Drawing.Point(482, 58);
-            this.Telefono.Margin = new System.Windows.Forms.Padding(2);
+            this.Telefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Size = new System.Drawing.Size(135, 20);
@@ -425,7 +430,7 @@ namespace Login
             // Direccion
             // 
             this.Direccion.Location = new System.Drawing.Point(90, 81);
-            this.Direccion.Margin = new System.Windows.Forms.Padding(2);
+            this.Direccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
             this.Direccion.Size = new System.Drawing.Size(135, 20);
@@ -435,10 +440,10 @@ namespace Login
             // 
             this.SalirBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.SalirBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalirBTN.Location = new System.Drawing.Point(546, 32);
-            this.SalirBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.SalirBTN.Location = new System.Drawing.Point(546, 51);
+            this.SalirBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SalirBTN.Name = "SalirBTN";
-            this.SalirBTN.Size = new System.Drawing.Size(76, 47);
+            this.SalirBTN.Size = new System.Drawing.Size(76, 36);
             this.SalirBTN.TabIndex = 10;
             this.SalirBTN.Text = "SALIR";
             this.SalirBTN.UseVisualStyleBackColor = true;
@@ -466,7 +471,7 @@ namespace Login
             0,
             0});
             this.PrecioNum.Location = new System.Drawing.Point(88, 230);
-            this.PrecioNum.Margin = new System.Windows.Forms.Padding(2);
+            this.PrecioNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PrecioNum.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -482,7 +487,7 @@ namespace Login
             // 
             this.Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Limpiar.Location = new System.Drawing.Point(150, 421);
-            this.Limpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.Limpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(90, 23);
             this.Limpiar.TabIndex = 8;
@@ -493,7 +498,7 @@ namespace Login
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(162, 56);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 20);
             this.button1.TabIndex = 2;
@@ -504,7 +509,7 @@ namespace Login
             // Localidad
             // 
             this.Localidad.Location = new System.Drawing.Point(229, 81);
-            this.Localidad.Margin = new System.Windows.Forms.Padding(2);
+            this.Localidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Localidad.Name = "Localidad";
             this.Localidad.ReadOnly = true;
             this.Localidad.Size = new System.Drawing.Size(176, 20);
@@ -519,7 +524,7 @@ namespace Login
             0,
             0});
             this.BonificacionNUM.Location = new System.Drawing.Point(113, 258);
-            this.BonificacionNUM.Margin = new System.Windows.Forms.Padding(2);
+            this.BonificacionNUM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BonificacionNUM.Maximum = new decimal(new int[] {
             99,
             0,
@@ -553,7 +558,7 @@ namespace Login
             0,
             0});
             this.PrecioFinalNum.Location = new System.Drawing.Point(145, 320);
-            this.PrecioFinalNum.Margin = new System.Windows.Forms.Padding(2);
+            this.PrecioFinalNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PrecioFinalNum.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -581,7 +586,7 @@ namespace Login
             // Telefono2
             // 
             this.Telefono2.Location = new System.Drawing.Point(482, 81);
-            this.Telefono2.Margin = new System.Windows.Forms.Padding(2);
+            this.Telefono2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Telefono2.Name = "Telefono2";
             this.Telefono2.ReadOnly = true;
             this.Telefono2.Size = new System.Drawing.Size(135, 20);
@@ -636,14 +641,14 @@ namespace Login
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(908, 462);
-            this.splitContainer1.SplitterDistance = 270;
+            this.splitContainer1.Size = new System.Drawing.Size(894, 481);
+            this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 110;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(70, 171);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(103, 20);
             this.txtCodigo.TabIndex = 3;
@@ -653,7 +658,7 @@ namespace Login
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(187, 230);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 20);
             this.button2.TabIndex = 13;
@@ -664,7 +669,7 @@ namespace Login
             // CambiaRec
             // 
             this.CambiaRec.Location = new System.Drawing.Point(187, 288);
-            this.CambiaRec.Margin = new System.Windows.Forms.Padding(2);
+            this.CambiaRec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CambiaRec.Name = "CambiaRec";
             this.CambiaRec.Size = new System.Drawing.Size(53, 20);
             this.CambiaRec.TabIndex = 17;
@@ -675,7 +680,7 @@ namespace Login
             // CambiaBon
             // 
             this.CambiaBon.Location = new System.Drawing.Point(187, 258);
-            this.CambiaBon.Margin = new System.Windows.Forms.Padding(2);
+            this.CambiaBon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CambiaBon.Name = "CambiaBon";
             this.CambiaBon.Size = new System.Drawing.Size(53, 20);
             this.CambiaBon.TabIndex = 15;
@@ -718,7 +723,7 @@ namespace Login
             0,
             0});
             this.RecargoNum.Location = new System.Drawing.Point(113, 288);
-            this.RecargoNum.Margin = new System.Windows.Forms.Padding(2);
+            this.RecargoNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RecargoNum.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -756,8 +761,8 @@ namespace Login
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(634, 462);
-            this.splitContainer2.SplitterDistance = 114;
+            this.splitContainer2.Size = new System.Drawing.Size(640, 481);
+            this.splitContainer2.SplitterDistance = 118;
             this.splitContainer2.TabIndex = 0;
             // 
             // label15
@@ -795,6 +800,7 @@ namespace Login
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.Duplicado);
             this.splitContainer3.Panel2.Controls.Add(this.label17);
             this.splitContainer3.Panel2.Controls.Add(this.RecFinanNum);
             this.splitContainer3.Panel2.Controls.Add(this.label16);
@@ -808,9 +814,22 @@ namespace Login
             this.splitContainer3.Panel2.Controls.Add(this.ConfirmarBTN);
             this.splitContainer3.Panel2.Controls.Add(this.ImprimeChek);
             this.splitContainer3.Panel2.Controls.Add(this.SalirBTN);
-            this.splitContainer3.Size = new System.Drawing.Size(634, 344);
-            this.splitContainer3.SplitterDistance = 247;
+            this.splitContainer3.Size = new System.Drawing.Size(640, 359);
+            this.splitContainer3.SplitterDistance = 257;
             this.splitContainer3.TabIndex = 0;
+            // 
+            // Duplicado
+            // 
+            this.Duplicado.Checked = true;
+            this.Duplicado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Duplicado.ForeColor = System.Drawing.Color.White;
+            this.Duplicado.Location = new System.Drawing.Point(452, 31);
+            this.Duplicado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Duplicado.Name = "Duplicado";
+            this.Duplicado.Size = new System.Drawing.Size(138, 20);
+            this.Duplicado.TabIndex = 121;
+            this.Duplicado.Text = "Imprime Duplicado";
+            this.Duplicado.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -834,7 +853,7 @@ namespace Login
             0,
             0});
             this.RecFinanNum.Location = new System.Drawing.Point(15, 61);
-            this.RecFinanNum.Margin = new System.Windows.Forms.Padding(2);
+            this.RecFinanNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RecFinanNum.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -873,7 +892,7 @@ namespace Login
             // 
             this.TotalNUM.DecimalPlaces = 2;
             this.TotalNUM.Location = new System.Drawing.Point(325, 59);
-            this.TotalNUM.Margin = new System.Windows.Forms.Padding(2);
+            this.TotalNUM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TotalNUM.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -901,7 +920,7 @@ namespace Login
             // 
             this.TotalRecargo.DecimalPlaces = 2;
             this.TotalRecargo.Location = new System.Drawing.Point(325, 34);
-            this.TotalRecargo.Margin = new System.Windows.Forms.Padding(2);
+            this.TotalRecargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TotalRecargo.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -929,7 +948,7 @@ namespace Login
             // 
             this.SubTotalNUM.DecimalPlaces = 2;
             this.SubTotalNUM.Location = new System.Drawing.Point(325, 9);
-            this.SubTotalNUM.Margin = new System.Windows.Forms.Padding(2);
+            this.SubTotalNUM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubTotalNUM.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -960,11 +979,11 @@ namespace Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.CancelButton = this.SalirBTN;
-            this.ClientSize = new System.Drawing.Size(908, 462);
+            this.ClientSize = new System.Drawing.Size(894, 481);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmisionComprobantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emisión de comprobantes";
@@ -1036,5 +1055,6 @@ namespace Login
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.CheckBox Duplicado;
     }
 }

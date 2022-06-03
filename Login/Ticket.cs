@@ -33,19 +33,15 @@ namespace Login
 
         string ticket = "";
         string parte1, parte2;
-        //string impresora = "80mm Thermal Printer"; // nombre exacto de la impresora como esta en el panel de control
-        static string impresora = "";
+        static string impresora = Conexion.GetImpresora();
         int max, cort;
 
         public static void imprimir(Comprobante comprobante, DataTable dt)
         {
-            PrintDialog printDialog1 = new PrintDialog();
-            impresora = printDialog1.PrinterSettings.PrinterName.ToString();
-
             CreaTicket Ticket1 = new CreaTicket();
             Ticket1.AbreCajon();  //abre el cajon
             Ticket1.LineasAsterisco();
-            Ticket1.TextoCentro("Repuestos RPM"); // imprime en el centro "Venta mostrador"
+            Ticket1.TextoCentro("Repuestos Omar"); // imprime en el centro "Venta mostrador"
             Ticket1.LineasAsterisco();
             Ticket1.TextoCentro("");
             Ticket1.TextoIzquierda("Usuario: " + comprobante.Usuario);
@@ -83,14 +79,10 @@ namespace Login
 
         public static void Reimprimir(Comprobante comprobante, DataTable dt)
         {
-            PrintDialog printDialog1 = new PrintDialog();
-            DialogResult result = printDialog1.ShowDialog();
-            impresora = printDialog1.PrinterSettings.PrinterName.ToString();
-
             CreaTicket Ticket1 = new CreaTicket();
             Ticket1.AbreCajon();  //abre el cajon
             Ticket1.LineasAsterisco();
-            Ticket1.TextoCentro("Repuestos RPM"); // imprime en el centro "Venta mostrador"
+            Ticket1.TextoCentro("Repuestos Omar"); // imprime en el centro "Venta mostrador"
             Ticket1.LineasAsterisco();
             Ticket1.TextoCentro("");
             Ticket1.TextoIzquierda("Usuario: " + comprobante.Usuario);

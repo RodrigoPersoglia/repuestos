@@ -784,6 +784,116 @@
   <data name="ponerContadoresEnCeroToolStripMenuItem.Text" xml:space="preserve">
     <value>Reestablecer Contadores</value>
   </data>
+  <data name="configurarImpresorasToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfwSA0DIO/e8LVwEc8M0etgVQbAnsIjNQyAvGMASFfJ
+        AMhnAMwTHqlhAOQZALpSBkA+A2Ce8EgNAyDPANCVMgDyGQDzhEdqGAB5BoCulAGQzwCYJzxSwwDIMwB0
+        pQyAfAbAPOGRGgZAngGgK2UA5DMA5gmP1DAA8gwAXSkDIJ8BME94pIYBkGcA6EoZAPkMgHnCIzUMgDwD
+        QFfKAMhnAMwTHqlhAOQZALpSBkA+A2Ce8EgNAyDPANCVMgDyGQDzhEdqGAB5BoCulAGQzwCYJzxSwwDI
+        MwB0pQyAfAbAPOGRGgZAngGgK2UA5DMA5gmP1DAA8gwAXSkDIJ8BME94pIYBkGcA6EoZAPkMgHnCIzUM
+        gDwDQFfKAMhnAMwTHqlhAOQZALpSBkA+A2Ce8EgNAyDPANCVMgDyGQDzhEdqGAB5BoCulAGQzwCYJzxS
+        wwDIMwB0pQyAfAbAPOGRGgZAngGgK2UA5DMA5gmP1DAA8gwAXSkDIJ8BME94pIYBkGcA6EoZAPkMgHnC
+        IzUMgDwDQFfKAMhnAMwTHqlhAOQZALpSBkA+A2Ce8EgNAyDPANCVMgDyGQDzhEdqGAB5BoCulAGQzwCY
+        JzxSwwDIMwB0pQyAfAbAPOGRGgZAngGgK2UA5DMA5gmP1DAA8o4B8ENwEQZAPgNgnvBIDQMA2IEBsKfw
+        SA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfwSA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfw
+        SA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfwSA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfw
+        SA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfwSA0DANiBAbCn8EgNAwDYgQGwp/BIDQMA2IEBsKfw
+        SA0DANiBAbCn8EgNAwDYgQGwp/BIDQMg78/gYqLXwaoMgD2FR2oYAHn3BukqPTNEr4NVGQB7Co/UMADy
+        DABdKQMgnwEwT3ikhgGQZwDoShkA+QyAecIjNQyAPANAV8oAyGcAzBMeqWEA5BkAulIGQD4DYJ7wSA0D
+        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
+        9dBD/w8vNz76LvAXDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="configurarImpresorasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 34</value>
+  </data>
+  <data name="configurarImpresorasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Configurar Impresoras</value>
+  </data>
   <data name="mantenimientoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 29</value>
   </data>
@@ -5324,16 +5434,73 @@
         //8=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>.Exe Desarrollos infomáticos &amp; Sistemac</value>
+    <value>.Exe Desarrollos infomáticos &amp; Systemac</value>
   </data>
   <data name="&gt;&gt;archivoToolStripMenuItem.Name" xml:space="preserve">
     <value>archivoToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;archivoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;artículosToolStripMenuItem.Name" xml:space="preserve">
+    <value>artículosToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;artículosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proveedoresToolStripMenuItem.Name" xml:space="preserve">
+    <value>proveedoresToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;proveedoresToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientesToolStripMenuItem1.Name" xml:space="preserve">
+    <value>clientesToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;clientesToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;facturaciónToolStripMenuItem.Name" xml:space="preserve">
+    <value>facturaciónToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;facturaciónToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
+    <value>reportesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;reportesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;usuarioToolStripMenuItem.Name" xml:space="preserve">
+    <value>usuarioToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;usuarioToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mantenimientoToolStripMenuItem.Name" xml:space="preserve">
+    <value>mantenimientoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;mantenimientoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ayudaToolStripMenuItem.Name" xml:space="preserve">
+    <value>ayudaToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ayudaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;configurarImpresorasToolStripMenuItem.Name" xml:space="preserve">
+    <value>configurarImpresorasToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;configurarImpresorasToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ciudadesToolStripMenuItem.Name" xml:space="preserve">
@@ -5378,12 +5545,6 @@
   <data name="&gt;&gt;modeloVehículoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;artículosToolStripMenuItem.Name" xml:space="preserve">
-    <value>artículosToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;artículosToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;AgregarArticuloMenu.Name" xml:space="preserve">
     <value>AgregarArticuloMenu</value>
   </data>
@@ -5426,12 +5587,6 @@
   <data name="&gt;&gt;verListadoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;proveedoresToolStripMenuItem.Name" xml:space="preserve">
-    <value>proveedoresToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;proveedoresToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;agregarProveedores.Name" xml:space="preserve">
     <value>agregarProveedores</value>
   </data>
@@ -5456,12 +5611,6 @@
   <data name="&gt;&gt;salirToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;clientesToolStripMenuItem1.Name" xml:space="preserve">
-    <value>clientesToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;clientesToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;agregarToolStripMenuItem.Name" xml:space="preserve">
     <value>agregarToolStripMenuItem</value>
   </data>
@@ -5478,12 +5627,6 @@
     <value>listadoToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;listadoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;facturaciónToolStripMenuItem.Name" xml:space="preserve">
-    <value>facturaciónToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;facturaciónToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;facturarToolStripMenuItem.Name" xml:space="preserve">
@@ -5504,12 +5647,6 @@
   <data name="&gt;&gt;anulaciónDeComprobantesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
-    <value>reportesToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;reportesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;comprobantesEmitidosToolStripMenuItem.Name" xml:space="preserve">
     <value>comprobantesEmitidosToolStripMenuItem</value>
   </data>
@@ -5528,28 +5665,10 @@
   <data name="&gt;&gt;movimientosDeArtículosToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;usuarioToolStripMenuItem.Name" xml:space="preserve">
-    <value>usuarioToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;usuarioToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mantenimientoToolStripMenuItem.Name" xml:space="preserve">
-    <value>mantenimientoToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;mantenimientoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ponerContadoresEnCeroToolStripMenuItem.Name" xml:space="preserve">
     <value>ponerContadoresEnCeroToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ponerContadoresEnCeroToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ayudaToolStripMenuItem.Name" xml:space="preserve">
-    <value>ayudaToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ayudaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -55,8 +55,11 @@ namespace Login
             //Calendario.BackColor = Color.Gray;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
 
     }
 }
